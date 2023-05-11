@@ -12,7 +12,8 @@ jobs:
       id: changed-xmls
       uses: tj-actions/changed-files@v35
       with:
-        files: **/*.xml
+        files: |
+          **/*.xml
     - name: Lint info.xml
       uses: korelstar/xmllint-problem-matcher@v1
       uses: ChristophWurst/xmllint-action@v1
