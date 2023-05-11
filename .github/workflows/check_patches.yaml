@@ -16,7 +16,7 @@ jobs:
           **/*.xml
     - name: Lint info.xml
       uses: korelstar/xmllint-problem-matcher@v1
-      uses: ChristophWurst/xmllint-action@v1
+      uses: ChristophWurst/xmllint-action@master
       with:
         xml-file: ${{ steps.changed-xmls.outputs.all_changed_files}}
         xml-schema-file: ./schema.xsd
