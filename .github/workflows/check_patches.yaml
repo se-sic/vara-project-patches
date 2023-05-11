@@ -14,8 +14,9 @@ jobs:
       with:
         files: |
           **/*.xml
+    - name: xmllint problem matcher
+      uses: korelstar/xmllint-problem-matcher@v1.1.0
     - name: Lint info.xml
-      uses: korelstar/xmllint-problem-matcher@v1
       uses: ChristophWurst/xmllint-action@master
       with:
         xml-file: ${{ steps.changed-xmls.outputs.all_changed_files}}
