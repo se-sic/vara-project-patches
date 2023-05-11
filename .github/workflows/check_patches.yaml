@@ -1,0 +1,21 @@
+name: Check patchfiles against schema
+
+on: [push]
+
+jobs:
+  xml-linters:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+    - name: Get changed XML files
+      id: changed-xmls
+      uses: tj-actions/changed-files@v35
+      with:
+        files: **/*.xml
+    - name: Lint info.xml
+      uses: korelstar/xmllint-problem-matcher@v1
+      uses: ChristophWurst/xmllint-action@v1
+      with:
+        xml-file: ${{ steps.changed-xmls.outputs.all_changed_files}}
+        xml-schema-file: ./schema.xsd
