@@ -2,7 +2,7 @@
 	<repository>github.com/se-sic/FeaturePerfCSCollection.git</repository>
 	<patches>
 		<patch>
-			<shortname>patch-1</shortname>
+			<shortname>patch-7</shortname>
 			<description>
 			This is an example patch. It has a description so people know what is happening.
 			</description>

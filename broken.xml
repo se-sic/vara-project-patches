@@ -3,7 +3,7 @@
 	<patches>
 		<patch>
 			<description>
-			This is an example patch. It has a description so people know what is happening.
+			This is a example patch. It has a description so people know what is happening.
 			</description>
 			<path>bug.patch</path>
 			<include_revisions>
