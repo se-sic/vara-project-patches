@@ -8,17 +8,17 @@
 			</description>
 			<path>bug.patch</path>
 			<include_revisions>
-				<single_revision>hash1</single_revision>
+				<single_revision>8ca5cc28e6746eef7340064b5d843631841bf31e</single_revision>
 				<revision_range>
-					<start>hash2</start>
-					<end>hash3</end>
+					<start>01f9f1f07bef22d4248e8349aba4f0c1f204607e</start>
+					<end>4300ea495e7f013f68e785fdde5c4ead81297999</end>
 				</revision_range>
 			</include_revisions>
 			<exclude_revisions>
-				<single_revision>hash4</single_revision>
+				<single_revision>01f9f1f07bef22d4248e8349aba4f0c1f204607e</single_revision>
 				<revision_range>
-					<start>hash5</start>
-					<end>hash6</end>
+					<start>01f9f1f07bef22d4248e8349aba4f0c1f204607e</start>
+					<end>4300ea495e7f013f68e785fdde5c4ead81297999</end>
 				</revision_range>
 			</exclude_revisions>
 		</patch>
