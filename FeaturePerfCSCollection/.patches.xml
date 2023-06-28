@@ -1,5 +1,5 @@
 <config>
-	<repository>github.com/se-sic/FeaturePerfCSCollection.git</repository>
+	<repository>git@github.com:se-sic/FeaturePerfCSCollection.git</repository>
 	<patches>
 		<patch>
 			<shortname>patch-10</shortname>
