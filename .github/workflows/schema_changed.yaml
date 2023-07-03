@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - 'schema.xsd'
+  workflow_dispatch:
 
 jobs:
   xml-linters:
