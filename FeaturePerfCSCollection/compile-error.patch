@@ -1,0 +1,12 @@
+diff --git a/src/SingleLocalSimple/SLSmain.cpp b/src/SingleLocalSimple/SLSmain.cpp
+index 46fcdca..52af7cf 100644
+--- a/src/SingleLocalSimple/SLSmain.cpp
++++ b/src/SingleLocalSimple/SLSmain.cpp
+@@ -17,5 +17,7 @@ int main(int argc, char *argv[]) {
+     fpcsc::sleep_for_secs(2);
+   }
+ 
++  COMPILATION ERROR
++
+   return 0;
+ }
