@@ -1,9 +1,9 @@
-name: Check patchfiles against schema
+name: Validate all XMLs once the schema changes
 
 on: 
   push:
     paths:
-      - '**.xml'
+      - 'schema.xsd'
 
 jobs:
   xml-linters:
@@ -11,16 +11,18 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-    - name: Get changed XML files
-      id: changed-xmls
-      uses: tj-actions/changed-files@v35
+    - name: Get all XML files
+      id: list-xmls
+      uses: mirko-felice/list-files-action@v3.0.5
       with:
-        files: |
-          **/*.xml
+        repo: ${{ github.repository }}
+        ref: ${{ github.ref }}
+        path: "."
+        ext: ".xml"
     - name: xmllint problem matcher
       uses: korelstar/xmllint-problem-matcher@v1.1.0
     - name: Lint info.xml
       uses: ChristophWurst/xmllint-action@master
       with:
-        xml-file: ${{ steps.changed-xmls.outputs.all_changed_files}}
+        xml-file: ${{ steps.list-files.outputs.paths }}
         xml-schema-file: ./schema.xsd
