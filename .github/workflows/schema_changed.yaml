@@ -25,5 +25,5 @@ jobs:
     - name: Lint info.xml
       uses: ChristophWurst/xmllint-action@master
       with:
-        xml-file: ${{ steps.list-xmls.outputs.paths }}
+        xml-file: ${{ fromJson(steps.list-xmls.outputs.paths) }}
         xml-schema-file: ./schema.xsd
