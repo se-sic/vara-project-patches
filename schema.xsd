@@ -36,8 +36,8 @@ elementFormDefault = "qualified">
 		<xs:element name="shortname" type="xs:string"/>
 		<xs:element name="description" type="xs:string"/>
 		<xs:element name="path" type="xs:string"/>
-		<xs:element name="include_revisions" type="revisions_type"/>
-		<xs:element name="exclude_revisions" type="revisions_type"/>
+		<xs:element name="include_revisions" type="revisions_type" minOccurs="0"/>
+		<xs:element name="exclude_revisions" type="revisions_type" minOccurs="0"/>
 	</xs:all>
 </xs:complexType>
 </xs:schema>
