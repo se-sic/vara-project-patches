@@ -3,6 +3,6 @@ include_revisions:
   revision_range:
     start: a8c3a8722f491622d2db45e450561955a5dec058
     end:   master
-path: SynthSAContextSensitivity_regression_1.patch
+path: regression_1.patch
 project_name: FeaturePerfCSCollection
 shortname: regress_compress_memlimit
