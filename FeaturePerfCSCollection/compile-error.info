@@ -1,0 +1,4 @@
+description: Patch that breaks compilation
+path: compile-error.patch
+project_name: FeaturePerfCSCollection
+shortname: compile-error
