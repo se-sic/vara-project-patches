@@ -1,7 +1,7 @@
 description: "Patch that adds a regression that only affects workloads with a large memory limit"
 include_revisions:
   revision_range:
-    start: a8c3a8722f491622d2db45e450561955a5dec058
+    start: 06eac0edb6886a7e487867c8d5629cb2409b54fd
     end:   master
 path: regression_2.patch
 project_name: FeaturePerfCSCollection
