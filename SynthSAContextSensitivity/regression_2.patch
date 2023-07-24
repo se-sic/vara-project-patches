@@ -1,0 +1,12 @@
+diff --git a/projects/SynthSAContextSensitivity/main.cpp b/projects/SynthSAContextSensitivity/main.cpp
+index 344a2e2..a1dd8b4 100644
+--- a/projects/SynthSAContextSensitivity/main.cpp
++++ b/projects/SynthSAContextSensitivity/main.cpp
+@@ -79,6 +79,7 @@ int main(int argc, char *argv[]) {
+   } else if (boundsChecks(MemoryLimit) < 1024) { // 256 =< x < 1024
+     Result = compute(UserInput, 16);             // leads to imprecise results
+   } else {
++    fp_util::sleep_for_secs(7);
+     Result = compute(UserInput, 250);
+   }
+ 
