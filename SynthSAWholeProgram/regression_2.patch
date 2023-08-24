@@ -1,0 +1,13 @@
+diff --git a/projects/SynthSAWholeProgram/compute.cpp b/projects/SynthSAWholeProgram/compute.cpp
+index a74fc65..19494b6 100644
+--- a/projects/SynthSAWholeProgram/compute.cpp
++++ b/projects/SynthSAWholeProgram/compute.cpp
+@@ -37,7 +37,7 @@ std::vector<uint64_t> librarySearch(std::string_view Data,
+   while (LastPos != Data.npos) {
+     LastPos = Data.find(Pattern, LastPos);
+ 
+-    fp_util::sleep_for_millisecs(30);
++    fp_util::sleep_for_millisecs(60);
+     if (LastPos != Data.npos) {
+       FoundIdxs.push_back(LastPos);
+       LastPos++;

@@ -1,0 +1,13 @@
+diff --git a/projects/SynthSAWholeProgram/compute.cpp b/projects/SynthSAWholeProgram/compute.cpp
+index a74fc65..a8f80a3 100644
+--- a/projects/SynthSAWholeProgram/compute.cpp
++++ b/projects/SynthSAWholeProgram/compute.cpp
+@@ -15,7 +15,7 @@ std::vector<uint64_t> naiveSearch(std::string_view Data,
+     int j;
+ 
+     for (j = 0; j < M; j++) {
+-      fp_util::sleep_for_millisecs(30);
++      fp_util::sleep_for_millisecs(60);
+       if (Data[i + j] != Pattern[j]) {
+         break;
+       }
