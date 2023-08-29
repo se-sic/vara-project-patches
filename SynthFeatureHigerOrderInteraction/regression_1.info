@@ -1,0 +1,8 @@
+description: "Patch that adds a regression that only affects configs with F1,F2,F3"
+include_revisions:
+  revision_range:
+    start: 96848fadf1c490e8c7f0b4b5230fcce29b41ca6e
+    end:   master
+path: regression_1.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_and_f1_f2_f3

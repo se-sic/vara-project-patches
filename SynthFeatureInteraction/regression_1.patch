@@ -1,0 +1,12 @@
+diff --git a/projects/SynthFeatureInteraction/main.cpp b/projects/SynthFeatureInteraction/main.cpp
+index 5f5029e..74fef3f 100644
+--- a/projects/SynthFeatureInteraction/main.cpp
++++ b/projects/SynthFeatureInteraction/main.cpp
+@@ -64,6 +64,7 @@ int main(int argc, char *argv[]) {
+   fp_util::sleep_for_millisecs(111);
+ 
+   if (F1 && F2 && F3) {
++    fp_util::sleep_for_millisecs(140);
+     fp_util::sleep_for_millisecs(123);
+   }
+ 

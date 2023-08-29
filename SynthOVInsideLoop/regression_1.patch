@@ -1,0 +1,12 @@
+diff --git a/projects/SynthOVInsideLoop/main.cpp b/projects/SynthOVInsideLoop/main.cpp
+index fe91e78..30e3125 100644
+--- a/projects/SynthOVInsideLoop/main.cpp
++++ b/projects/SynthOVInsideLoop/main.cpp
+@@ -29,6 +29,7 @@ std::vector<uint32_t> findMaxLenSubarray(std::vector<uint32_t> DataArray, int S,
+     for (int j = i; j < DataArray.size(); j++) {
+       Target += DataArray[j];
+       if (Verbose) {
++        fp_util::sleep_for_millisecs(120);
+         std::cout << "CurrentTarget " << Target << '\n';
+       }
+ 
