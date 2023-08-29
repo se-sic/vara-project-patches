@@ -1,7 +1,7 @@
 description: "Patch that adds a regression that only affects rec_limit and thereby all configs"
 include_revisions:
   revision_range:
-    start: 96848fadf1c490e8c7f0b4b5230fcce29b41ca6e
+    start: daf81de0738cb861b800c4dae1a805e8dabaa544
     end:   master
 path: regression_1.patch
 project_name: FeaturePerfCSCollection
