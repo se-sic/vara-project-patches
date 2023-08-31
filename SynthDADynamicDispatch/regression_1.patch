@@ -1,0 +1,12 @@
+diff --git a/projects/SynthDADynamicDispatch/main.cpp b/projects/SynthDADynamicDispatch/main.cpp
+index 90d60c3..a0b6700 100644
+--- a/projects/SynthDADynamicDispatch/main.cpp
++++ b/projects/SynthDADynamicDispatch/main.cpp
+@@ -72,6 +72,7 @@ public:
+ 
+     while (Low < High) {
+       fp_util::sleep_for_millisecs(100);
++      fp_util::sleep_for_millisecs(200);
+       if (LocalData[Low] + LocalData[High] == TargetSum) {
+         return {
+             std::tuple<uint32_t, uint32_t>{LocalData[Low], LocalData[High]}};
