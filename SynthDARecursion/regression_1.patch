@@ -1,0 +1,12 @@
+diff --git a/projects/SynthDARecursion/main.cpp b/projects/SynthDARecursion/main.cpp
+index 39a1e7c..3c01594 100644
+--- a/projects/SynthDARecursion/main.cpp
++++ b/projects/SynthDARecursion/main.cpp
+@@ -47,6 +47,7 @@ void Partition(std::vector<std::vector<std::string>> &Result,
+       Tmp.push_back(SubString);
+ 
+       if (RecLimit > Depth) {
++        std::this_thread::sleep_for(std::chrono::milliseconds(70));
+         Partition(Result, BaseString, i + 1, Tmp, Depth + 1);
+       }
+ 

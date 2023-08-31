@@ -1,0 +1,8 @@
+description: "Patch that adds a regression that only affects sorting-based searchers"
+include_revisions:
+  revision_range:
+    start: 04de0642afe35a42931e03c670b588e8f294dcfc
+    end:   master
+path: regression_1.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_sorting

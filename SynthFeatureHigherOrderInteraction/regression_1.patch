@@ -1,0 +1,12 @@
+diff --git a/projects/SynthFeatureHigherOrderInteraction/main.cpp b/projects/SynthFeatureHigherOrderInteraction/main.cpp
+index f9b6cd0..449771f 100644
+--- a/projects/SynthFeatureHigherOrderInteraction/main.cpp
++++ b/projects/SynthFeatureHigherOrderInteraction/main.cpp
+@@ -70,6 +70,7 @@ int main(int argc, char *argv[]) {
+                 fp_util::sleep_for_millisecs(700);
+ 
+                 if (F8) {
++                  fp_util::sleep_for_millisecs(150);
+                   fp_util::sleep_for_millisecs(800);
+                 }
+               }
