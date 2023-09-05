@@ -1,0 +1,25 @@
+Submodule dune-grid contains modified content
+diff --git a/dune-grid/dune/grid/uggrid/uggrid.cc b/dune-grid/dune/grid/uggrid/uggrid.cc
+index 9a49416eb..ab68babd3 100644
+--- a/dune-grid/dune/grid/uggrid/uggrid.cc
++++ b/dune-grid/dune/grid/uggrid/uggrid.cc
+@@ -264,6 +264,19 @@ bool UGGrid < dim >::adapt()
+ {
+   assert(multigrid_);
+ 
++    // Artificial regression with busy waiting
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++            std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(10);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++        for (long counter = 0; counter < 100'000; ++counter) {
++            asm volatile("" : "+g"(counter) : :); // prevent optimization
++        }
++        current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++                std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
+   // Set UG's currBVP variable to the BVP corresponding to this
+   // grid.  This is necessary if we have more than one UGGrid in use.
+   UG_NS<dim>::Set_Current_BVP(multigrid_->theBVP);

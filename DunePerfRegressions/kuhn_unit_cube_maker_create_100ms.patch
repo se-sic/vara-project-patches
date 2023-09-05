@@ -1,0 +1,34 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+index e088ff8..dbee0c6 100644
+--- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
++++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+@@ -25,6 +25,21 @@
+ #include <dune/alugrid/grid.hh>
+ #endif
+ 
++inline void busy_sleep_for_millisecs(unsigned Millisecs) {
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++            std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++        for (long counter = 0; counter < 100'000; ++counter) {
++            asm volatile("" : "+g"(counter) : :); // prevent optimization
++        }
++        current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++                std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
++}
++
+ //////////////////////////////////////////////////////////////////////
+ //
+ // UnitTriangle
+@@ -229,6 +244,7 @@ public:
+             vid[0] = 0; vid[1] = 2; vid[2] = 3; vid[3] = 7; gf.insertElement(type, vid);
+         }
+ 
++        busy_sleep_for_millisecs(100);
+         std::unique_ptr<Grid> gp(gf.createGrid());
+         gp->loadBalance();
+         return gp;

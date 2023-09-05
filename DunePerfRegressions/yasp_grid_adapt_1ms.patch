@@ -1,0 +1,25 @@
+Submodule dune-grid contains modified content
+diff --git a/dune-grid/dune/grid/yaspgrid.hh b/dune-grid/dune/grid/yaspgrid.hh
+index 078d70424..ffc5986bc 100644
+--- a/dune-grid/dune/grid/yaspgrid.hh
++++ b/dune-grid/dune/grid/yaspgrid.hh
+@@ -1312,6 +1312,19 @@ namespace Dune {
+     //! map adapt to global refine
+     bool adapt ()
+     {
++        // Artificial regression with busy waiting
++        auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++                std::chrono::high_resolution_clock::now().time_since_epoch());
++        auto end_us = start_us + std::chrono::milliseconds(1);
++        auto current_us = start_us;
++
++        while (current_us < end_us) {
++            for (long counter = 0; counter < 100'000; ++counter) {
++                asm volatile("" : "+g"(counter) : :); // prevent optimization
++            }
++            current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++                    std::chrono::high_resolution_clock::now().time_since_epoch());
++        }
+       globalRefine(adaptRefCount);
+       return (adaptRefCount > 0);
+     }

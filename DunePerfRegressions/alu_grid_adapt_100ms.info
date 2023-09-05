@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 100ms into the adapt method of
+  the alu grid.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: alu_grid_adapt_100ms.patch
+project_name: DunePerfRegressions
+shortname: alu_grid_adapt_100ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- grid

@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 1000ms into the apply method of
+  the gradient solver.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: gradient_solver_apply_1000ms.patch
+project_name: DunePerfRegressions
+shortname: gradient_solver_apply_1000ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- solver

@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 10ms into the apply method of
+  the loop solver.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: loop_solver_apply_10ms.patch
+project_name: DunePerfRegressions
+shortname: loop_solver_apply_10ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- solver

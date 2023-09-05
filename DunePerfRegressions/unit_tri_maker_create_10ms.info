@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 10ms into the create method of
+  the unit tri maker.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: unit_tri_maker_create_10ms.patch
+project_name: DunePerfRegressions
+shortname: unit_tri_maker_create_10ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- maker

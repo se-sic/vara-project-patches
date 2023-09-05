@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 1000ms into the create method
+  of the seqilu preconditioner.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: seqilu_preconditioner_create_1000ms.patch
+project_name: DunePerfRegressions
+shortname: seqilu_preconditioner_create_1000ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- preconditioner

@@ -1,0 +1,40 @@
+Submodule dune-istl contains modified content
+diff --git a/dune-istl/dune/istl/solver.hh b/dune-istl/dune/istl/solver.hh
+index e25e9e08..857234d5 100644
+--- a/dune-istl/dune/istl/solver.hh
++++ b/dune-istl/dune/istl/solver.hh
+@@ -23,6 +23,21 @@
+ #include "operators.hh"
+ #include "scalarproducts.hh"
+ 
++inline void busy_sleep_for_millisecs(unsigned Millisecs) {
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++            std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++        for (long counter = 0; counter < 100'000; ++counter) {
++            asm volatile("" : "+g"(counter) : :); // prevent optimization
++        }
++        current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++                std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
++}
++
+ namespace Dune
+ {
+ /**
+diff --git a/dune-istl/dune/istl/solvers.hh b/dune-istl/dune/istl/solvers.hh
+index 5a7e901e..a23b36fc 100644
+--- a/dune-istl/dune/istl/solvers.hh
++++ b/dune-istl/dune/istl/solvers.hh
+@@ -626,6 +626,8 @@ namespace Dune {
+      */
+     virtual void apply (X& x, X& b, InverseOperatorResult& res)
+     {
++      busy_sleep_for_millisecs(1000);
++
+       using std::sqrt;
+       using std::abs;
+       Iteration iteration(*this, res);

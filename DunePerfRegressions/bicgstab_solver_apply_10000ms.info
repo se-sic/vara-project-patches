@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 10000ms into the apply method
+  of the bicgstab solver.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: bicgstab_solver_apply_10000ms.patch
+project_name: DunePerfRegressions
+shortname: bicgstab_solver_apply_10000ms
+tags:
+- dune
+- compile-time
+- regression
+- template
+- solver
