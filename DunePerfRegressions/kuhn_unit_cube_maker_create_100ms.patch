@@ -1,10 +1,11 @@
-diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-index e088ff8..dbee0c6 100644
---- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-+++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-@@ -25,6 +25,21 @@
- #include <dune/alugrid/grid.hh>
- #endif
+Submodule dune-alugrid contains modified content
+diff --git a/dune-alugrid/dune/alugrid/grid.hh b/dune-alugrid/dune/alugrid/grid.hh
+index b8fea0a9..4f877c5c 100644
+--- a/dune-alugrid/dune/alugrid/grid.hh
++++ b/dune-alugrid/dune/alugrid/grid.hh
+@@ -23,4 +23,19 @@
+ 
+ #endif // else if HAVE_ALUGRID
  
 +inline void busy_sleep_for_millisecs(unsigned Millisecs) {
 +    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
@@ -21,14 +22,17 @@ index e088ff8..dbee0c6 100644
 +    }
 +}
 +
- //////////////////////////////////////////////////////////////////////
- //
- // UnitTriangle
-@@ -229,6 +244,7 @@ public:
-             vid[0] = 0; vid[1] = 2; vid[2] = 3; vid[3] = 7; gf.insertElement(type, vid);
-         }
- 
+ #endif // #ifndef DUNE_ALUGRID_HH
+diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+index e088ff8..4393a1f 100644
+--- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
++++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+@@ -202,7 +202,7 @@ class __attribute__((feature_variable("GridMaker"))) KuhnTriangulatedUnitCubeMak
+ public:
+     static std::unique_ptr<Grid> create() {
+         Dune::GridFactory<Grid> gf;
+-
 +        busy_sleep_for_millisecs(100);
-         std::unique_ptr<Grid> gp(gf.createGrid());
-         gp->loadBalance();
-         return gp;
+         int fake_argc = 0;
+         char **fake_argv = NULL;
+ 

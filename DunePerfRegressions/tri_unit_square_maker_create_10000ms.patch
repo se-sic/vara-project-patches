@@ -1,10 +1,11 @@
-diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-index e088ff8..b9cb28a 100644
---- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-+++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
-@@ -25,6 +25,21 @@
- #include <dune/alugrid/grid.hh>
- #endif
+Submodule dune-alugrid contains modified content
+diff --git a/dune-alugrid/dune/alugrid/grid.hh b/dune-alugrid/dune/alugrid/grid.hh
+index b8fea0a9..4f877c5c 100644
+--- a/dune-alugrid/dune/alugrid/grid.hh
++++ b/dune-alugrid/dune/alugrid/grid.hh
+@@ -23,4 +23,19 @@
+ 
+ #endif // else if HAVE_ALUGRID
  
 +inline void busy_sleep_for_millisecs(unsigned Millisecs) {
 +    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
@@ -21,18 +22,21 @@ index e088ff8..b9cb28a 100644
 +    }
 +}
 +
- //////////////////////////////////////////////////////////////////////
- //
- // UnitTriangle
-@@ -88,6 +103,7 @@ public:
-         vid[0] = 0; vid[1] = 1; vid[2] = 2; gf.insertElement(type, vid);
-         vid[0] = 1; vid[1] = 2; vid[2] = 3; gf.insertElement(type, vid);
- 
+ #endif // #ifndef DUNE_ALUGRID_HH
+diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+index e088ff8..e8be103 100644
+--- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
++++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+@@ -76,7 +76,7 @@ public:
+     static std::unique_ptr<Grid> create() {
+         Dune::GridFactory<Grid> gf;
+         Dune::FieldVector<typename Grid::ctype, 2> pos;
+-
 +        busy_sleep_for_millisecs(10000);
-         return std::unique_ptr<Grid>(gf.createGrid());
-     }
- };
-@@ -98,6 +114,7 @@ class __attribute__((feature_variable("GridMaker"))) TriangulatedUnitSquareMaker
+         pos[0] = 0; pos[1] = 0; gf.insertVertex(pos);
+         pos[0] = 1; pos[1] = 0; gf.insertVertex(pos);
+         pos[0] = 0; pos[1] = 1; gf.insertVertex(pos);
+@@ -98,6 +98,7 @@ class __attribute__((feature_variable("GridMaker"))) TriangulatedUnitSquareMaker
    typedef Dune::ALUGrid<2,2,Dune::simplex,Dune::nonconforming> Grid;
  public:
    static std::unique_ptr<Grid> create() {
