@@ -4,7 +4,7 @@ include_revisions:
   revision_range:
     start: 559e763958113c8e6c31a3569127781cadb5a535
 path: unit_tetra_maker_create_10ms.patch
-project_name: DunePerfRegressions
+project_name: DunePerfRegression
 shortname: unit_tetra_maker_create_10ms
 tags:
 - dune

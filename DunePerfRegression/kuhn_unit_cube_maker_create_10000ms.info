@@ -4,7 +4,7 @@ include_revisions:
   revision_range:
     start: 559e763958113c8e6c31a3569127781cadb5a535
 path: kuhn_unit_cube_maker_create_10000ms.patch
-project_name: DunePerfRegressions
+project_name: DunePerfRegression
 shortname: kuhn_unit_cube_maker_create_10000ms
 tags:
 - dune
