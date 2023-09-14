@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 10000ms into feature a.
+include_revisions:
+  revision_range:
+    start: 5c2c0535b55e1accbc74d2084954a8a56f564b87
+path: feature-a-10000ms.patch
+project_name: SynthCTTraitBased
+shortname: feature-a-10000ms
+tags:
+- traits
+- compile-time
+- regression
+- template
+- 10000ms
+- synthetic

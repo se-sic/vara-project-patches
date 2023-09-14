@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index 64c262c..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit 64c262cd710cbc10b612ed86953b318e7892f16f
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTTraitBased/main.cpp b/projects/SynthCTTraitBased/main.cpp
+index 629a693..9ac902b 100644
+--- a/projects/SynthCTTraitBased/main.cpp
++++ b/projects/SynthCTTraitBased/main.cpp
+@@ -12,7 +12,7 @@ template <typename AlgoTy> struct ConfigTraits {
+ 
+   __attribute__((feature_variable("B"))) static void featureB(AlgoTy &Algo,
+                                                               size_t n) {
+-    Algo.runFeatureB(n);
++    Algo.runFeatureB( n + 100 );
+   }
+ 
+   __attribute__((feature_variable("C"))) static void featureC(AlgoTy &Algo,
