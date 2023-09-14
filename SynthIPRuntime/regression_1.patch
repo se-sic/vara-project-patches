@@ -1,5 +1,5 @@
 diff --git a/projects/SynthIPRuntime/main.cpp b/projects/SynthIPRuntime/main.cpp
-index 106ad7a..b0b7c72 100644
+index 697c963..ebe4050 100644
 --- a/projects/SynthIPRuntime/main.cpp
 +++ b/projects/SynthIPRuntime/main.cpp
 @@ -1,3 +1,5 @@
@@ -8,7 +8,7 @@ index 106ad7a..b0b7c72 100644
  #include <cstring>
  #include <iostream>
  #include <stdio.h>
-@@ -651,6 +653,7 @@ int main(int argc, char **argv) {
+@@ -657,6 +659,7 @@ int main(int argc, char **argv) {
        size_t what_size = buff_size;
  
        while (what_size > 0) {
