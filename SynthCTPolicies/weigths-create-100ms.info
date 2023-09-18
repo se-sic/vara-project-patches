@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 100ms into weigths create.
+include_revisions:
+  revision_range:
+    start: 0768d712a2aa9b7bb3c414b742930a5e8d9ef3a7
+path: weigths-create-100ms.patch
+project_name: SynthCTPolicies
+shortname: weigths-create-100ms
+tags:
+- policy
+- compile-time
+- regression
+- template
+- 100ms
+- synthetic

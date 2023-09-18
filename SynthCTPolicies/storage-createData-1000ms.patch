@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index 64c262c..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit 64c262cd710cbc10b612ed86953b318e7892f16f
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTPolicies/main.cpp b/projects/SynthCTPolicies/main.cpp
+index 1b5ebae..851dc64 100644
+--- a/projects/SynthCTPolicies/main.cpp
++++ b/projects/SynthCTPolicies/main.cpp
+@@ -53,7 +53,7 @@ struct RandomStoragePolicy {
+   __attribute__((feature_variable("Storage"))) vector<double>
+   createData(size_t n) {
+     // TODO
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 1000 );
+     return {};
+   }
+ };
