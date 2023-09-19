@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 1000ms into cache init.
+include_revisions:
+  revision_range:
+    start: 8c976a890eef105d22defbf28f8a5430abec2131
+path: cache-init-1000ms.patch
+project_name: SynthCTCRTP
+shortname: cache-init-1000ms
+tags:
+- crtp
+- compile-time
+- regression
+- template
+- 1000ms
+- synthetic

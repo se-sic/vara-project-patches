@@ -1,0 +1,14 @@
+description: Introduces an artificial regression of 10000ms into cache getCached.
+include_revisions:
+  revision_range:
+    start: 8c976a890eef105d22defbf28f8a5430abec2131
+path: cache-getCached-10000ms.patch
+project_name: SynthCTCRTP
+shortname: cache-getCached-10000ms
+tags:
+- crtp
+- compile-time
+- regression
+- template
+- 10000ms
+- synthetic
