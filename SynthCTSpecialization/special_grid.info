@@ -1,0 +1,16 @@
+description: Configuration with special grid.
+include_revisions:
+  revision_range:
+    start: 5c2c0535b55e1accbc74d2084954a8a56f564b87
+path: interaction-abc-10000ms.patch
+project_name: SynthCTTraitBased
+shortname: interaction-abc-10000ms
+tags:
+- traits
+- compile-time
+- regression
+- template
+- 10000ms
+- synthetic
+feature_tags:
+- SpecialGrid

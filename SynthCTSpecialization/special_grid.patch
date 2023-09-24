@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTSpecialization/main.cpp b/projects/SynthCTSpecialization/main.cpp
+index b371d52..520b8c2 100644
+--- a/projects/SynthCTSpecialization/main.cpp
++++ b/projects/SynthCTSpecialization/main.cpp
+@@ -76,7 +76,7 @@ void applyToGrid(GridTy &Grid, SpecialApplier &Apply) {
+ }
+ 
+ void run() {
+-  NormalGrid NGrid{};
++  SpecialGrid NGrid{};
+   NormalApplier NApplier{};
+   NormalSolver NSolver{};
+ 
