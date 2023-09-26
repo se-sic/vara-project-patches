@@ -1,0 +1,13 @@
+diff --git a/projects/SynthIPCombined/main.cpp b/projects/SynthIPCombined/main.cpp
+index b8a13df..5de05af 100644
+--- a/projects/SynthIPCombined/main.cpp
++++ b/projects/SynthIPCombined/main.cpp
+@@ -616,7 +616,7 @@ int main(int argc, char **argv) {
+       decompress = true;
+   }
+ 
+-  using MyConfig = YALZ77Configurator<false, false>;
++  using MyConfig = YALZ77Configurator<false, true>;
+ 
+   const size_t BUFSIZE = getBufsize(MyConfig::small, decompress);
+ 
