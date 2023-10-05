@@ -6,3 +6,6 @@ include_revisions:
 path: regression_1.patch
 project_name: FeaturePerfCSCollection
 shortname: reg_decompress_data
+tags:
+- regression
+- perf_prec
