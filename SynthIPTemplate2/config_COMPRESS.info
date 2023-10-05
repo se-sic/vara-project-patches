@@ -1,0 +1,12 @@
+description: "Patch for configuration (COMPRESS)"
+include_revisions:
+  revision_range:
+    start: 45b18e4224be6977f41572d250b4c0c224953684
+    end:   master
+path: config_COMPRESS.patch
+project_name: FeaturePerfCSCollection
+shortname: config_COMPRESS
+feature_tags:
+- Compress
+- no_fastmode
+- no_smallmode
