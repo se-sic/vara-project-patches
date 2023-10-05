@@ -1,0 +1,12 @@
+diff --git a/projects/SynthDARecursion/main.cpp b/projects/SynthDARecursion/main.cpp
+index 39a1e7c..1397c17 100644
+--- a/projects/SynthDARecursion/main.cpp
++++ b/projects/SynthDARecursion/main.cpp
+@@ -66,6 +66,7 @@ int main(int argc, char *argv[]) {
+   RecLimit = fp_util::getFeatureValue(argc, argv, "--limit", 4096);
+ 
+   if (Reverse) {
++    fp_util::busy_sleep_for_millisecs(400);
+     std::reverse(InputString.begin(), InputString.end());
+   }
+ 
