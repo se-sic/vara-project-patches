@@ -1,0 +1,15 @@
+diff --git a/projects/SynthSAWholeProgram/service.cpp b/projects/SynthSAWholeProgram/service.cpp
+index df02f6d..1a0d496 100644
+--- a/projects/SynthSAWholeProgram/service.cpp
++++ b/projects/SynthSAWholeProgram/service.cpp
+@@ -2,7 +2,10 @@
+ #include "compute.h"
+ #include "config.h"
+ 
++#include "fp_util/sleep.h"
++
+ uint64_t countPattern(std::string_view Data, std::string_view Pattern) {
++  fp_util::busy_sleep_for_secs(1);
+   return getPatternIdxs(Data, Pattern).size();
+ }
+ 
