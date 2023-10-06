@@ -1,7 +1,7 @@
 description: "Inserts small regression into the data handling of the compressor"
 include_revisions:
   revision_range:
-    start: TODO
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
     end:   master
 path: regression_2.patch
 project_name: FeaturePerfCSCollection
