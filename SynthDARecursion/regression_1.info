@@ -6,3 +6,6 @@ include_revisions:
 path: regression_1.patch
 project_name: FeaturePerfCSCollection
 shortname: regress_rec_limit
+tags:
+- regression
+- perf_prec

@@ -1,11 +1,11 @@
-description: "Patch that adds a regression that affects only the recursive fib computation"
+description: "Patch that adds a regression that affects pattern counting"
 include_revisions:
   revision_range:
     start: 06eac0edb6886a7e487867c8d5629cb2409b54fd
     end:   master
-path: regression_1.patch
+path: regression_3.patch
 project_name: FeaturePerfCSCollection
-shortname: regress_rec_fib_onesec
+shortname: regress_pattern_counting
 tags:
 - regression
 - perf_prec
