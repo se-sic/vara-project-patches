@@ -15,7 +15,7 @@ index 1d0d963..9108ee3 100644
        }
  
        if (state.state == state_t::READ_DATA) {
-+        fp_util::busy_sleep_for_millisecs(10);
++        fp_util::busy_sleep_for_secs(10);
  
          size_t len = state.msg;
  
