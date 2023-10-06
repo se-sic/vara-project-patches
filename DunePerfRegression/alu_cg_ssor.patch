@@ -1,0 +1,15 @@
+diff --git a/dune-performance-regressions/src/poisson-alugrid.cc b/dune-performance-regressions/src/poisson-alugrid.cc
+index a6d9a55..9bced24 100644
+--- a/dune-performance-regressions/src/poisson-alugrid.cc
++++ b/dune-performance-regressions/src/poisson-alugrid.cc
+@@ -56,8 +56,8 @@ int main(int argc, char** argv)
+       poisson<GV,
+               FEM,
+               Dune::PDELab::ConformingDirichletConstraints,
+-              Dune::CGSolver,
+-              PreconditionMarker::SeqILU>(gv,fem,"poisson_ALU_Pk_2d",q);
++              Dune::CGSolver,
++              PreconditionMarker::SeqSSOR>(gv,fem,"poisson_ALU_Pk_2d",q);
+     }
+ #endif
+ 

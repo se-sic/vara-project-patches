@@ -13,3 +13,4 @@ tags:
 - template
 - solver
 - 10000ms
+- BiCGSTABSolver
