@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_gradient_richardson.patch
 project_name: DunePerfRegression
 shortname: yasp_gradient_richardson
+tags:
+- configuration
+- compile-time
+- GradientSolver
+- Richardson
+- no-gridmaker
+- YaspGrid
+- dune

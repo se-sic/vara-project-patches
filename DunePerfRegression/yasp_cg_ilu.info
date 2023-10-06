@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_cg_ilu.patch
 project_name: DunePerfRegression
 shortname: yasp_cg_ilu
+tags:
+- configuration
+- compile-time
+- CGSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+- dune

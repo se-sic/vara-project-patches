@@ -12,11 +12,11 @@ path: ug_unittri_gradient_richardson.patch
 project_name: DunePerfRegression
 shortname: ug_unittri_gradient_richardson
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - UnitTriangleMaker
 - Richardson
 - GradientSolver
+- UGGrid
+- dune

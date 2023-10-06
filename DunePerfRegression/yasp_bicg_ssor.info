@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_bicg_ssor.patch
 project_name: DunePerfRegression
 shortname: yasp_bicg_ssor
+tags:
+- configuration
+- compile-time
+- BiCGSTABSolver
+- SeqSSOR
+- no-gridmaker
+- YaspGrid
+- dune

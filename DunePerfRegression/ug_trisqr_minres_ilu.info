@@ -12,11 +12,11 @@ path: ug_trisqr_minres_ilu.patch
 project_name: DunePerfRegression
 shortname: ug_trisqr_minres_ilu
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - TriangulatedUnitSquareMaker
 - SeqILU
 - MINRESSolver
+- UGGrid
+- dune

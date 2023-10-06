@@ -12,11 +12,11 @@ path: ug_trisqr_cg_ssor.patch
 project_name: DunePerfRegression
 shortname: ug_trisqr_cg_ssor
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - TriangulatedUnitSquareMaker
 - SeqSSOR
 - CGSolver
+- UGGrid
+- dune

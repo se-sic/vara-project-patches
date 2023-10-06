@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_minres_ssor.patch
 project_name: DunePerfRegression
 shortname: yasp_minres_ssor
+tags:
+- configuration
+- compile-time
+- MINRESSolver
+- SeqSSOR
+- no-gridmaker
+- YaspGrid
+- dune

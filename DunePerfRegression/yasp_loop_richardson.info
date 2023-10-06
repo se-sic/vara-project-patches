@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_loop_richardson.patch
 project_name: DunePerfRegression
 shortname: yasp_loop_richardson
+tags:
+- configuration
+- compile-time
+- LoopSolver
+- Richardson
+- no-gridmaker
+- YaspGrid
+- dune

@@ -12,11 +12,11 @@ path: ug_unittri_loop_richardson.patch
 project_name: DunePerfRegression
 shortname: ug_unittri_loop_richardson
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - UnitTriangleMaker
 - Richardson
 - LoopSolver
+- UGGrid
+- dune

@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_bicg_richardson.patch
 project_name: DunePerfRegression
 shortname: yasp_bicg_richardson
+tags:
+- configuration
+- compile-time
+- BiCGSTABSolver
+- Richardson
+- no-gridmaker
+- YaspGrid
+- dune

@@ -12,7 +12,6 @@ path: ug_trisqr_minres_ssor.patch
 project_name: DunePerfRegression
 shortname: ug_trisqr_minres_ssor
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
@@ -20,3 +19,4 @@ tags:
 - SeqSSOR
 - MINRESSolver
 - UGGrid
+- dune

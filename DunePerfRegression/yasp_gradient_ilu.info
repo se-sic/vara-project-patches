@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_gradient_ilu.patch
 project_name: DunePerfRegression
 shortname: yasp_gradient_ilu
+tags:
+- configuration
+- compile-time
+- GradientSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+- dune

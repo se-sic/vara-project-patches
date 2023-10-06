@@ -12,11 +12,11 @@ path: ug_trisqr_gradient_ilu.patch
 project_name: DunePerfRegression
 shortname: ug_trisqr_gradient_ilu
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - TriangulatedUnitSquareMaker
 - SeqILU
 - GradientSolver
+- UGGrid
+- dune

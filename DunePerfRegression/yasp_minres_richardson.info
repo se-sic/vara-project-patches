@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_minres_richardson.patch
 project_name: DunePerfRegression
 shortname: yasp_minres_richardson
+tags:
+- configuration
+- compile-time
+- MINRESSolver
+- Richardson
+- no-gridmaker
+- YaspGrid
+- dune

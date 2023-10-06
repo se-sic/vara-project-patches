@@ -12,11 +12,11 @@ path: ug_trisqr_minres_richardson.patch
 project_name: DunePerfRegression
 shortname: ug_trisqr_minres_richardson
 tags:
-- Dune
 - configuration
 - compile-time
 - synthetic
-- ug
 - TriangulatedUnitSquareMaker
 - Richardson
 - MINRESSolver
+- UGGrid
+- dune

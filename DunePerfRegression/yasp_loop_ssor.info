@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_loop_ssor.patch
 project_name: DunePerfRegression
 shortname: yasp_loop_ssor
+tags:
+- configuration
+- compile-time
+- LoopSolver
+- SeqSSOR
+- no-gridmaker
+- YaspGrid
+- dune

@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_bicg_ilu.patch
 project_name: DunePerfRegression
 shortname: yasp_bicg_ilu
+tags:
+- configuration
+- compile-time
+- BiCGSTABSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+- dune

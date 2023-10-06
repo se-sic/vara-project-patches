@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_gradient_ssor.patch
 project_name: DunePerfRegression
 shortname: yasp_gradient_ssor
+tags:
+- configuration
+- compile-time
+- GradientSolver
+- SeqSSOR
+- no-gridmaker
+- YaspGrid
+- dune

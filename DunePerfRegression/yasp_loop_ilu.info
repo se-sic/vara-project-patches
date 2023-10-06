@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_loop_ilu.patch
 project_name: DunePerfRegression
 shortname: yasp_loop_ilu
+tags:
+- configuration
+- compile-time
+- LoopSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+- dune

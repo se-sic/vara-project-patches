@@ -11,3 +11,11 @@ include_revisions:
 path: yasp_cg_ssor.patch
 project_name: DunePerfRegression
 shortname: yasp_cg_ssor
+tags:
+- configuration
+- compile-time
+- CGSolver
+- SeqSSOR
+- no-gridmaker
+- YaspGrid
+- dune
