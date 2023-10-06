@@ -1,0 +1,21 @@
+description: Changes the configuration of the ALUGrid  examples to use the LoopSolver
+  and Richardson preconditoner
+feature_tags:
+- LoopSolver
+- Richardson
+- ALUGrid
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: alu_loop_richardson.patch
+project_name: DunePerfRegression
+shortname: alu_loop_richardson
+tags:
+- configuration
+- compile-time
+- LoopSolver
+- Richardson
+- no-gridmaker
+- ALUGrid
+- dune
