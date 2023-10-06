@@ -1,0 +1,22 @@
+description: Changes the configuration of Dune for the UG Example to use TriangulatedUnitSquareMaker
+  with the BICGSTABSolver and SeqILU preconditioner.
+feature_tags:
+- ug
+- TriangulatedUnitSquareMaker
+- SeqILU
+- BICGSTABSolver
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: ug_trisqr_bicg_ilu.patch
+project_name: DunePerfRegression
+shortname: ug_trisqr_bicg_ilu
+tags:
+- Dune
+- configuration
+- compile-time
+- synthetic
+- ug
+- TriangulatedUnitSquareMaker
+- SeqILU
+- BICGSTABSolver
