@@ -1,0 +1,12 @@
+description: Changes the configuration of the YASP examples to use the LoopSolver
+  and Richardson preconditoner
+feature_tags:
+- LoopSolver
+- Richardson
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: yasp_loop_richardson.patch
+project_name: DunePerfRegression
+shortname: yasp_loop_richardson
