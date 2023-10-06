@@ -1,0 +1,11 @@
+description: "Inserts small regression into the data handling of the decompressor"
+include_revisions:
+  revision_range:
+    start: 793035062810ea3a2d9a10f831cd199fbbb82090
+    end:   master
+path: regression_1.patch
+project_name: FeaturePerfCSCollection
+shortname: reg_decompress_data
+tags:
+- regression
+- perf_prec

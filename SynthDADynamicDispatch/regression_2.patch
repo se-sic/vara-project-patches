@@ -1,0 +1,13 @@
+diff --git a/projects/SynthDADynamicDispatch/main.cpp b/projects/SynthDADynamicDispatch/main.cpp
+index 90d60c3..d3d601a 100644
+--- a/projects/SynthDADynamicDispatch/main.cpp
++++ b/projects/SynthDADynamicDispatch/main.cpp
+@@ -99,7 +99,7 @@ public:
+     std::unordered_map<int, int> Map;
+ 
+     for (int i = 0; i < Data.size(); i++) {
+-      fp_util::sleep_for_millisecs(100);
++      fp_util::sleep_for_millisecs(200);
+       if (auto Entry = Map.find(TargetSum - Data[i]); Entry != Map.end()) {
+         return {std::tuple<uint32_t, uint32_t>{Data[Entry->second], Data[i]}};
+       }
