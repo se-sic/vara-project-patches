@@ -1,10 +1,10 @@
 description: Changes the configuration of Dune for the UG Example to use UnitTriangleMaker
   with the LoopSolver and SeqSSOR preconditioner.
 feature_tags:
-- ug
 - UnitTriangleMaker
 - SeqSSOR
 - LoopSolver
+- UGGrid
 include_revisions:
   revision_range:
     start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d

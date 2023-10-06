@@ -1,10 +1,10 @@
 description: Changes the configuration of Dune for the UG Example to use TriangulatedUnitSquareMaker
   with the MINRESSolver and SeqSSOR preconditioner.
 feature_tags:
-- ug
 - TriangulatedUnitSquareMaker
 - SeqSSOR
 - MINRESSolver
+- UGGrid
 include_revisions:
   revision_range:
     start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
@@ -16,7 +16,7 @@ tags:
 - configuration
 - compile-time
 - synthetic
-- ug
 - TriangulatedUnitSquareMaker
 - SeqSSOR
 - MINRESSolver
+- UGGrid

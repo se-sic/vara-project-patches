@@ -4,6 +4,7 @@ feature_tags:
 - MINRESSolver
 - Richardson
 - no-gridmaker
+- YaspGrid
 include_revisions:
   revision_range:
     start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
