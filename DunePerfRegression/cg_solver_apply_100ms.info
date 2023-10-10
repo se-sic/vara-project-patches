@@ -14,3 +14,4 @@ tags:
 - solver
 - 100ms
 - perf_prec
+- CGSolver

@@ -1,0 +1,24 @@
+diff --git a/dune-performance-regressions/src/poisson-ug-pk-2d.cc b/dune-performance-regressions/src/poisson-ug-pk-2d.cc
+index f54b162..95537f5 100644
+--- a/dune-performance-regressions/src/poisson-ug-pk-2d.cc
++++ b/dune-performance-regressions/src/poisson-ug-pk-2d.cc
+@@ -38,7 +38,7 @@ int main(int argc, char** argv)
+ #if HAVE_DUNE_UGGRID
+         {
+       // make grid
+-      std::shared_ptr<Dune::UGGrid<2> > grid(TriangulatedUnitSquareMaker<Dune::UGGrid<2> >::create());
++      std::shared_ptr<Dune::UGGrid<2> > grid(UnitTriangleMaker<Dune::UGGrid<2> >::create());
+       grid->globalRefine(4);
+ 
+       // get view
+@@ -56,8 +56,8 @@ int main(int argc, char** argv)
+       poisson<GV,
+               FEM,
+               Dune::PDELab::ConformingDirichletConstraints,
+-              Dune::CGSolver,
+-              PreconditionMarker::SeqILU>(gv,fem,"poisson_UG_Pk_2d",q);
++              Dune::BiCGSTABSolver,
++              PreconditionMarker::Richardson>(gv,fem,"poisson_UG_Pk_2d",q);
+     }
+ #endif
+ 

@@ -1,0 +1,21 @@
+description: Changes the configuration of the ALUGrid  examples to use the CGSolver
+  and Richardson preconditoner
+feature_tags:
+- CGSolver
+- Richardson
+- ALUGrid
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: alu_cg_richardson.patch
+project_name: DunePerfRegression
+shortname: alu_cg_richardson
+tags:
+- configuration
+- compile-time
+- CGSolver
+- Richardson
+- no-gridmaker
+- ALUGrid
+- dune

@@ -1,0 +1,21 @@
+description: Changes the configuration of the ALUGrid  examples to use the LoopSolver
+  and SeqSSOR preconditoner
+feature_tags:
+- LoopSolver
+- SeqSSOR
+- ALUGrid
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: alu_loop_ssor.patch
+project_name: DunePerfRegression
+shortname: alu_loop_ssor
+tags:
+- configuration
+- compile-time
+- LoopSolver
+- SeqSSOR
+- no-gridmaker
+- ALUGrid
+- dune
