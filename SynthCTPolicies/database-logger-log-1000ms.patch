@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTPolicies/Logging.h b/projects/SynthCTPolicies/Logging.h
+index d17c502..6d2d0a8 100644
+--- a/projects/SynthCTPolicies/Logging.h
++++ b/projects/SynthCTPolicies/Logging.h
+@@ -25,7 +25,7 @@ struct ExpensiveLogger {
+ struct DataBaseLogger {
+   __attribute__((feature_variable("Logging"))) static void
+   log(const std::string &s) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 1000 );
+     logToDB(s);
+     busy_sleep_for_millisecs(1000);
+   }

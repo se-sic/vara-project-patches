@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTPolicies/Storage.h b/projects/SynthCTPolicies/Storage.h
+index 9c4d7bc..dd0d2d2 100644
+--- a/projects/SynthCTPolicies/Storage.h
++++ b/projects/SynthCTPolicies/Storage.h
+@@ -30,7 +30,7 @@ private:
+ };
+ 
+ struct DefaultStoragePolicy {
+-  void init(std::vector<double> &) { busy_sleep_for_millisecs(1000); }
++  void init(std::vector<double> &) { busy_sleep_for_millisecs(1000 + 1 ); }
+ 
+   void get(std::vector<double> &, size_t) { busy_sleep_for_millisecs(1000); }
+ };

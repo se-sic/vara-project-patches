@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 10000ms into the processC function
+  of the StorageWithC of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: c04c8f975270f73bb64e5295757bf30ef498c20a
+path: storage-c-processC-10000ms.patch
+project_name: SynthCTTraitBased
+shortname: storage-c-processC-10000ms
+tags:
+- compile-time
+- regression
+- template
+- 10000ms
+- synthetic
+- StorageWithC
+- SynthCTTraitBased

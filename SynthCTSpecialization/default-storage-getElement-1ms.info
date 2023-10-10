@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 1ms into the getElement function
+  of the DefaultStorage of SynthCTSpecialization.
+include_revisions:
+  revision_range:
+    start: c04c8f975270f73bb64e5295757bf30ef498c20a
+path: default-storage-getElement-1ms.patch
+project_name: SynthCTSpecialization
+shortname: default-storage-getElement-1ms
+tags:
+- compile-time
+- regression
+- template
+- 1ms
+- synthetic
+- DefaultStorage
+- SynthCTSpecialization

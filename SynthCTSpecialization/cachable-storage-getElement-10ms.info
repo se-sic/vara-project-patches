@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 10ms into the getElement function
+  of the CachableStorage of SynthCTSpecialization.
+include_revisions:
+  revision_range:
+    start: c04c8f975270f73bb64e5295757bf30ef498c20a
+path: cachable-storage-getElement-10ms.patch
+project_name: SynthCTSpecialization
+shortname: cachable-storage-getElement-10ms
+tags:
+- compile-time
+- regression
+- template
+- 10ms
+- synthetic
+- CachableStorage
+- SynthCTSpecialization
