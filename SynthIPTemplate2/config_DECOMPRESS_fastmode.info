@@ -1,0 +1,12 @@
+description: "Patch for configuration (DECOMPRESS, fastmode)"
+include_revisions:
+  revision_range:
+    start: 45b18e4224be6977f41572d250b4c0c224953684
+    end:   master
+path: config_DECOMPRESS_fastmode.patch
+project_name: FeaturePerfCSCollection
+shortname: config_DECOMPRESS_fastmode
+feature_tags:
+- Decompress
+- fastmode
+- no_smallmode
