@@ -1,0 +1,21 @@
+description: Changes the configuration of the ALUGrid  examples to use the CGSolver
+  and SeqILU preconditoner
+feature_tags:
+- CGSolver
+- SeqILU
+- ALUGrid
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: alu_cg_ilu.patch
+project_name: DunePerfRegression
+shortname: alu_cg_ilu
+tags:
+- configuration
+- compile-time
+- CGSolver
+- SeqILU
+- no-gridmaker
+- ALUGrid
+- dune

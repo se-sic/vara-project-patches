@@ -1,0 +1,21 @@
+description: Changes the configuration of the ALUGrid  examples to use the MINRESSolver
+  and SeqILU preconditoner
+feature_tags:
+- MINRESSolver
+- SeqILU
+- ALUGrid
+- no-gridmaker
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: alu_minres_ilu.patch
+project_name: DunePerfRegression
+shortname: alu_minres_ilu
+tags:
+- configuration
+- compile-time
+- MINRESSolver
+- SeqILU
+- no-gridmaker
+- ALUGrid
+- dune

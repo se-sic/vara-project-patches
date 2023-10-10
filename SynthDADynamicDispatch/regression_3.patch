@@ -1,0 +1,13 @@
+diff --git a/projects/SynthDADynamicDispatch/main.cpp b/projects/SynthDADynamicDispatch/main.cpp
+index 90d60c3..9284fe9 100644
+--- a/projects/SynthDADynamicDispatch/main.cpp
++++ b/projects/SynthDADynamicDispatch/main.cpp
+@@ -43,7 +43,7 @@ public:
+ 
+     for (int i = 0; i < Data.size() - 1; i++) {
+       for (int j = i + 1; j < Data.size(); j++) {
+-        fp_util::sleep_for_millisecs(100);
++        fp_util::sleep_for_millisecs(200);
+         if (Data[i] + Data[j] == TargetSum) {
+           return {std::tuple<uint32_t, uint32_t>{Data[i], Data[j]}};
+         }

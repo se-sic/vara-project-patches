@@ -1,0 +1,22 @@
+diff --git a/projects/SynthIPCombined/main.cpp b/projects/SynthIPCombined/main.cpp
+index e6685d5..e2a044d 100644
+--- a/projects/SynthIPCombined/main.cpp
++++ b/projects/SynthIPCombined/main.cpp
+@@ -4,6 +4,8 @@
+ #include <stdio.h>
+ #include <vector>
+ 
++#include "fp_util/sleep.h"
++
+ /// This is a synthetic case study using templates and load-time parameters
+ /// for configuration.
+ ///
+@@ -265,6 +267,8 @@ struct compress_t {
+ 
+     size_t blocksize = offsets.blocksize;
+ 
++    fp_util::busy_sleep_for_millisecs(1);
++
+     while (i != e) {
+ 
+       unsigned char c = *i;

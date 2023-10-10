@@ -1,0 +1,11 @@
+description: "Patch that adds a regression that affects brut-force and hash-based searchers"
+include_revisions:
+  revision_range:
+    start: 04de0642afe35a42931e03c670b588e8f294dcfc
+    end:   master
+path: regression_4.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_brut_force_and_hash
+tags:
+- regression
+- perf_prec

@@ -1,0 +1,21 @@
+description: Changes the configuration of the YASP examples to use the BiCGSTABSolver
+  and SeqILU preconditoner
+feature_tags:
+- BiCGSTABSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+include_revisions:
+  revision_range:
+    start: 332a9af0b7e3336dd72c4f4b74e09df525b6db0d
+path: yasp_bicg_ilu.patch
+project_name: DunePerfRegression
+shortname: yasp_bicg_ilu
+tags:
+- configuration
+- compile-time
+- BiCGSTABSolver
+- SeqILU
+- no-gridmaker
+- YaspGrid
+- dune

@@ -6,3 +6,6 @@ include_revisions:
 path: regression_2.patch
 project_name: FeaturePerfCSCollection
 shortname: regress_library_search
+tags:
+- regression
+- perf_prec
