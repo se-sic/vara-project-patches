@@ -1,5 +1,5 @@
 diff --git a/projects/SynthIPCombined/main.cpp b/projects/SynthIPCombined/main.cpp
-index e6685d5..e122ad4 100644
+index e6685d5..e2a044d 100644
 --- a/projects/SynthIPCombined/main.cpp
 +++ b/projects/SynthIPCombined/main.cpp
 @@ -4,6 +4,8 @@
@@ -11,11 +11,12 @@ index e6685d5..e122ad4 100644
  /// This is a synthetic case study using templates and load-time parameters
  /// for configuration.
  ///
-@@ -266,6 +268,7 @@ struct compress_t {
+@@ -265,6 +267,8 @@ struct compress_t {
+ 
      size_t blocksize = offsets.blocksize;
  
++    fp_util::busy_sleep_for_millisecs(1);
++
      while (i != e) {
-+      fp_util::busy_sleep_for_millisecs(10);
  
        unsigned char c = *i;
- 
