@@ -21,7 +21,7 @@ The SynthCTTraitBased project exposes 2 configuration options that can be switch
     - OtherStorageWithC -- A Storage type that uses feature `C`
     - StorageWithD -- A Storage type that uses feature `D`
     - StorageWithCD -- A Storage type that uses feature `C` and `D` and exposes an interaction between them,
-    
+
 ## Configuration Patches
 
 There are configuration patches for the whole configuration spaces available. The `feature_tags` of the info files will contain the names of the configuration options that are activated
