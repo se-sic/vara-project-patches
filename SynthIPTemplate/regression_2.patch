@@ -1,5 +1,5 @@
 diff --git a/projects/SynthIPTemplate/main.cpp b/projects/SynthIPTemplate/main.cpp
-index 49bf78a..fbdd502 100644
+index 49bf78a..538014d 100644
 --- a/projects/SynthIPTemplate/main.cpp
 +++ b/projects/SynthIPTemplate/main.cpp
 @@ -4,6 +4,8 @@
@@ -11,11 +11,12 @@ index 49bf78a..fbdd502 100644
  /// This is a synthetic case study using templates for configuration.
  /// Not all features can be properly annotated into the source code because
  /// they happen at compile time.
-@@ -267,6 +269,7 @@ struct compress_t {
+@@ -266,6 +268,8 @@ struct compress_t {
+ 
      size_t blocksize = offsets.blocksize;
  
++    fp_util::busy_sleep_for_millisecs(1);
++
      while (i != e) {
-+      fp_util::busy_sleep_for_millisecs(10);
  
        unsigned char c = *i;
- 
