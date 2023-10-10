@@ -1,0 +1,21 @@
+description: Changes the configuration of the SynthCTPolicies example to use the SmoothingTransformerPolicy,
+  DefaultStoragePolicy and DataBaseLogger
+feature_tags:
+- SmoothingTransformerPolicy
+- DefaultStoragePolicy
+- DataBaseLogger
+- SynthCTPolicies
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: smoothing-transformer_default-storage_database-logger.patch
+project_name: SynthCTPolicies
+shortname: smoothing-transformer_default-storage_database-logger
+tags:
+- configuration
+- compile-time
+- SmoothingTransformerPolicy
+- DataBaseLogger
+- DefaultStoragePolicy
+- SynthCTPolicies
+- synthetic

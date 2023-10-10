@@ -1,0 +1,22 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTPolicies/main.cpp b/projects/SynthCTPolicies/main.cpp
+index 2dd82e5..aac85fa 100644
+--- a/projects/SynthCTPolicies/main.cpp
++++ b/projects/SynthCTPolicies/main.cpp
+@@ -24,8 +24,8 @@ private:
+ };
+ 
+ int main(/* int argc, char *argv[] */) {
+-  using StorageTy = Storage<DefaultStoragePolicy, DevNullPolicy>;
+-  using TransformerTy = Transformer<DefaultTransformerPolicy, DevNullPolicy>;
++  using StorageTy = Storage<DefaultStoragePolicy, ExpensiveLogger>;
++  using TransformerTy = Transformer<DefaultTransformerPolicy, ExpensiveLogger>;
+ 
+   GenericAlgorithm<StorageTy, TransformerTy> Impl{};
+   Impl.run();

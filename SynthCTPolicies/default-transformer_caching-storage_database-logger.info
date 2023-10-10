@@ -1,0 +1,21 @@
+description: Changes the configuration of the SynthCTPolicies example to use the DefaultTransformerPolicy,
+  CachingStoragePolicy and DataBaseLogger
+feature_tags:
+- DefaultTransformerPolicy
+- CachingStoragePolicy
+- DataBaseLogger
+- SynthCTPolicies
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: default-transformer_caching-storage_database-logger.patch
+project_name: SynthCTPolicies
+shortname: default-transformer_caching-storage_database-logger
+tags:
+- configuration
+- compile-time
+- DefaultTransformerPolicy
+- DataBaseLogger
+- CachingStoragePolicy
+- SynthCTPolicies
+- synthetic

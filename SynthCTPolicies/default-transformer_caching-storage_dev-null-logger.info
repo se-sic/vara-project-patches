@@ -1,0 +1,21 @@
+description: Changes the configuration of the SynthCTPolicies example to use the DefaultTransformerPolicy,
+  CachingStoragePolicy and DevNullPolicy
+feature_tags:
+- DefaultTransformerPolicy
+- CachingStoragePolicy
+- DevNullPolicy
+- SynthCTPolicies
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: default-transformer_caching-storage_dev-null-logger.patch
+project_name: SynthCTPolicies
+shortname: default-transformer_caching-storage_dev-null-logger
+tags:
+- configuration
+- compile-time
+- DefaultTransformerPolicy
+- DevNullPolicy
+- CachingStoragePolicy
+- SynthCTPolicies
+- synthetic

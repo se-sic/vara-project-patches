@@ -1,0 +1,21 @@
+description: Changes the configuration of the SynthCTPolicies example to use the DefaultTransformerPolicy,
+  DefaultStoragePolicy and ExpensiveLogger
+feature_tags:
+- DefaultTransformerPolicy
+- DefaultStoragePolicy
+- ExpensiveLogger
+- SynthCTPolicies
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: default-transformer_default-storage_expensive-logger.patch
+project_name: SynthCTPolicies
+shortname: default-transformer_default-storage_expensive-logger
+tags:
+- configuration
+- compile-time
+- DefaultTransformerPolicy
+- ExpensiveLogger
+- DefaultStoragePolicy
+- SynthCTPolicies
+- synthetic
