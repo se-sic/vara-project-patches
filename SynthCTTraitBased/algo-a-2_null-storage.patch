@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTTraitBased/main.cpp b/projects/SynthCTTraitBased/main.cpp
+index 13651a9..dcfb437 100644
+--- a/projects/SynthCTTraitBased/main.cpp
++++ b/projects/SynthCTTraitBased/main.cpp
+@@ -61,7 +61,7 @@ private:
+ };
+ 
+ int main() {
+-  GenericImpl<NullAlgorithm, NullStorage> Impl{};
++  GenericImpl<OtherAlgorithmWithA, NullStorage> Impl{};
+   Impl.run();
+ 
+   return 0;

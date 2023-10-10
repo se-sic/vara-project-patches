@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..c0894ed 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
+diff --git a/projects/SynthCTSpecialization/main.cpp b/projects/SynthCTSpecialization/main.cpp
+index 8610c0d..cb7bb77 100644
+--- a/projects/SynthCTSpecialization/main.cpp
++++ b/projects/SynthCTSpecialization/main.cpp
+@@ -12,7 +12,7 @@ template <typename AlgoTy, typename StorageTy> void run() {
+ }
+ 
+ int main(/* int argc, char *argv[] */) {
+-  run<DefaultAlgorithm, DefaultStorage>();
++  run<DirectSolvingAlgorithm, BoundCheckingStorage>();
+ 
+   return 0;
+ }

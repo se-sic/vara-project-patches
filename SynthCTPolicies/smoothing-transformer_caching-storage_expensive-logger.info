@@ -1,0 +1,21 @@
+description: Changes the configuration of the SynthCTPolicies example to use the SmoothingTransformerPolicy,
+  CachingStoragePolicy and ExpensiveLogger
+feature_tags:
+- SmoothingTransformerPolicy
+- CachingStoragePolicy
+- ExpensiveLogger
+- SynthCTPolicies
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: smoothing-transformer_caching-storage_expensive-logger.patch
+project_name: SynthCTPolicies
+shortname: smoothing-transformer_caching-storage_expensive-logger
+tags:
+- configuration
+- compile-time
+- SmoothingTransformerPolicy
+- ExpensiveLogger
+- CachingStoragePolicy
+- SynthCTPolicies
+- synthetic

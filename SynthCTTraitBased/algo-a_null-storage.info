@@ -1,0 +1,19 @@
+description: Changes the configuration of the SynthCTTraitBased example to use the
+  AlgorithmWithA and NullStorage
+feature_tags:
+- AlgorithmWithA
+- NullStorage
+- SynthCTTraitBased
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: algo-a_null-storage.patch
+project_name: SynthCTTraitBased
+shortname: algo-a_null-storage
+tags:
+- configuration
+- compile-time
+- AlgorithmWithA
+- NullStorage
+- SynthCTTraitBased
+- synthetic
