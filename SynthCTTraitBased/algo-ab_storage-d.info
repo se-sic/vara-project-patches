@@ -1,0 +1,19 @@
+description: Changes the configuration of the SynthCTTraitBased example to use the
+  AlgorithmWithAB and StorageWithD
+feature_tags:
+- AlgorithmWithAB
+- StorageWithD
+- SynthCTTraitBased
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: algo-ab_storage-d.patch
+project_name: SynthCTTraitBased
+shortname: algo-ab_storage-d
+tags:
+- configuration
+- compile-time
+- AlgorithmWithAB
+- StorageWithD
+- SynthCTTraitBased
+- synthetic

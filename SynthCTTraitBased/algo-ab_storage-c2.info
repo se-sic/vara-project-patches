@@ -1,0 +1,19 @@
+description: Changes the configuration of the SynthCTTraitBased example to use the
+  AlgorithmWithAB and OtherStorageWithC
+feature_tags:
+- AlgorithmWithAB
+- OtherStorageWithC
+- SynthCTTraitBased
+include_revisions:
+  revision_range:
+    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+path: algo-ab_storage-c2.patch
+project_name: SynthCTTraitBased
+shortname: algo-ab_storage-c2
+tags:
+- configuration
+- compile-time
+- AlgorithmWithAB
+- OtherStorageWithC
+- SynthCTTraitBased
+- synthetic
