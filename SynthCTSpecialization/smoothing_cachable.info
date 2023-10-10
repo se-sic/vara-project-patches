@@ -1,0 +1,19 @@
+description: Changes the configuration of the SynthCTSpecialization  example to use
+  the SmoothingAlgorithm and CachableStorage
+feature_tags:
+- SmoothingAlgorithm
+- CachableStorage
+- SynthCTSpecialization
+include_revisions:
+  revision_range:
+    start: 76e60ac36cc5aee7129406de9803000f63db2c47
+path: smoothing_cachable.patch
+project_name: SynthCTSpecialization
+shortname: smoothing_cachable
+tags:
+- configuration
+- compile-time
+- SmoothingAlgorithm
+- CachableStorage
+- SynthCTSpecialization
+- synthetic
