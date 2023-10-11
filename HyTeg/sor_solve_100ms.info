@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 100ms into the solve function
+  of the SORSmoother of HyTeg.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: sor_solve_100ms.patch
+project_name: HyTeg
+shortname: sor_solve_100ms
+tags:
+- compile-time
+- regression
+- template
+- 100ms
+- synthetic
+- SORSmoother
+- HyTeg

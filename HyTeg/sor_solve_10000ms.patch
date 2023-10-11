@@ -1,0 +1,40 @@
+diff --git a/src/hyteg/solvers/SORSmoother.hpp b/src/hyteg/solvers/SORSmoother.hpp
+index b7f592fab..966649dd5 100644
+--- a/src/hyteg/solvers/SORSmoother.hpp
++++ b/src/hyteg/solvers/SORSmoother.hpp
+@@ -40,6 +40,7 @@ class SORSmoother : public Solver< OperatorType >
+                const typename OperatorType::dstType& b,
+                const walberla::uint_t                level ) override
+    {
++      fp_util::busy_sleep_for_millisecs( 10000 );
+       if ( const auto* A_sor = dynamic_cast< const SORSmoothable< typename OperatorType::srcType >* >( &A ) )
+       {
+          A_sor->smooth_sor( x, b, relax_, level, flag_ );
+diff --git a/src/hyteg/solvers/Solver.hpp b/src/hyteg/solvers/Solver.hpp
+index 6d9ebb542..a9354816d 100644
+--- a/src/hyteg/solvers/Solver.hpp
++++ b/src/hyteg/solvers/Solver.hpp
+@@ -21,6 +21,23 @@
+ 
+ #include "core/DataTypes.h"
+ 
++namespace fp_util {
++   inline void busy_sleep_for_millisecs(unsigned Millisecs) {
++      auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++          std::chrono::high_resolution_clock::now().time_since_epoch());
++      auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++      auto current_us = start_us;
++
++      while (current_us < end_us) {
++         for (long counter = 0; counter < 100'000; ++counter) {
++            asm volatile("" : "+g"(counter) : :); // prevent optimization
++         }
++         current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++             std::chrono::high_resolution_clock::now().time_since_epoch());
++      }
++   }
++}
++
+ namespace hyteg {
+ template < class OperatorType >
+ class Solver

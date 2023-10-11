@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 10000ms into the solve function
+  of the MinResSolver of HyTeg.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: minres_solve_10000ms.patch
+project_name: HyTeg
+shortname: minres_solve_10000ms
+tags:
+- compile-time
+- regression
+- template
+- 10000ms
+- synthetic
+- MinResSolver
+- HyTeg
