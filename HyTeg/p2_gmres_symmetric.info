@@ -1,0 +1,18 @@
+description: Changes the configuration of the HyTeg profiling app to use the GMRESSolver
+  with the SymmetricSORSmoother.
+feature_tags:
+- SymmetricSORSmoother
+- GMRESSolver
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: p2_gmres_symmetric.patch
+project_name: HyTeg
+shortname: p2_gmres_symmetric
+tags:
+- HyTeg
+- configuration
+- compile-time
+- synthetic
+- SymmetricSORSmoother
+- GMRESSolver

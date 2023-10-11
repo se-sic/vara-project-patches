@@ -1,0 +1,18 @@
+description: Changes the configuration of the HyTeg profiling app to use the CGSolver
+  with the SymmetricSORSmoother.
+feature_tags:
+- SymmetricSORSmoother
+- CGSolver
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: p2_cg_symmetric.patch
+project_name: HyTeg
+shortname: p2_cg_symmetric
+tags:
+- HyTeg
+- configuration
+- compile-time
+- synthetic
+- SymmetricSORSmoother
+- CGSolver

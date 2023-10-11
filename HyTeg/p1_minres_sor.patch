@@ -1,0 +1,18 @@
+diff --git a/apps/profiling/ProfilingApp.cpp b/apps/profiling/ProfilingApp.cpp
+index 540f9d6da..8263da85a 100644
+--- a/apps/profiling/ProfilingApp.cpp
++++ b/apps/profiling/ProfilingApp.cpp
+@@ -148,11 +148,8 @@ int main( int argc, char* argv[] )
+    //   SORSmoother or SymmetricSORSmoother
+    //   the symmetric variant alternates the direction of the smoothing for each iteration
+ 
+-   hyteg::solvePoisson< hyteg::P1conf< hyteg::CGSolver< P1op >, hyteg::SORSmoother< P1op > > >( minLevel, maxLevel, 1, 1.0 );
+-   hyteg::solvePoisson< hyteg::P1conf< hyteg::MinResSolver< P1op >, hyteg::SymmetricSORSmoother< P1op > > >(
++   hyteg::solvePoisson< hyteg::P1conf< hyteg::MinResSolver< P1op >, hyteg::SORSmoother< P1op > > >(
+        minLevel, maxLevel, 2, 0.3 );
+ 
+-   hyteg::solvePoisson< hyteg::P2conf< hyteg::CGSolver< P2op >, hyteg::SORSmoother< P2op > > >( minLevel, maxLevel, 1, 0.5 );
+-   hyteg::solvePoisson< hyteg::P2conf< hyteg::GMRESSolver< P2op >, hyteg::SORSmoother< P2op > > >( minLevel, maxLevel, 1, 0.3 );
+    return 0;
+ }
+\ No newline at end of file
