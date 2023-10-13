@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Storage.h b/projects/SynthCTCRTP/Storage.h
+index 5b58bd7..2b01b79 100644
+--- a/projects/SynthCTCRTP/Storage.h
++++ b/projects/SynthCTCRTP/Storage.h
+@@ -31,7 +31,7 @@ struct DefaultStorage : Storage<DefaultStorage> {
+ 
+   void getElement(size_t n) { busy_sleep_for_millisecs(1000); }
+ 
+-  void setElement(size_t n, double d) { busy_sleep_for_millisecs(1000); }
++  void setElement(size_t n, double d) { busy_sleep_for_millisecs(1000 + 1000 ); }
+ 
+   void teardown() { busy_sleep_for_millisecs(1000); }
+ };

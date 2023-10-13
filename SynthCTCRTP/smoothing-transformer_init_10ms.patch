@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Transformer.h b/projects/SynthCTCRTP/Transformer.h
+index 167ce94..3999179 100644
+--- a/projects/SynthCTCRTP/Transformer.h
++++ b/projects/SynthCTCRTP/Transformer.h
+@@ -57,7 +57,7 @@ struct DefaultTransformer : Transformer<DefaultTransformer> {
+ 
+ struct SmoothingTransformer : Transformer<SmoothingTransformer> {
+   void init() {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 10 );
+     initSmoother();
+   }
+ 

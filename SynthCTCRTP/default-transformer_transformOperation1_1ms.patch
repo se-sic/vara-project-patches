@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Transformer.h b/projects/SynthCTCRTP/Transformer.h
+index 167ce94..5e4f3fc 100644
+--- a/projects/SynthCTCRTP/Transformer.h
++++ b/projects/SynthCTCRTP/Transformer.h
+@@ -39,7 +39,7 @@ struct DefaultTransformer : Transformer<DefaultTransformer> {
+   void init() { busy_sleep_for_millisecs(1000); }
+ 
+   template <typename STy> void transformOperation1(Storage<STy> &S) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 1 );
+   }
+ 
+   template <typename STy> void transformOperation2(Storage<STy> &S) {

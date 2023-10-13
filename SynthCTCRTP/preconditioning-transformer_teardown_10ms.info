@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 10ms into the teardown function
+  of the PreconditioningTransformer of SynthCTCRTP.
+include_revisions:
+  revision_range:
+    start: 65f1dbb24c1e301288fe5f935c4ef5186e36fba3
+path: preconditioning-transformer_teardown_10ms.patch
+project_name: SynthCTCRTP
+shortname: preconditioning-transformer_teardown_10ms
+tags:
+- compile-time
+- regression
+- template
+- 10ms
+- synthetic
+- PreconditioningTransformer
+- SynthCTCRTP

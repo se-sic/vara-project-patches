@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 1000ms into the init function
+  of the SmoothingTransformer of SynthCTCRTP.
+include_revisions:
+  revision_range:
+    start: 65f1dbb24c1e301288fe5f935c4ef5186e36fba3
+path: smoothing-transformer_init_1000ms.patch
+project_name: SynthCTCRTP
+shortname: smoothing-transformer_init_1000ms
+tags:
+- compile-time
+- regression
+- template
+- 1000ms
+- synthetic
+- SmoothingTransformer
+- SynthCTCRTP
