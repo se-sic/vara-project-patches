@@ -1,0 +1,18 @@
+description: Changes the configuration of the HyTeg profiling app to use the MinResSolver
+  with the SymmetricSORSmoother.
+feature_tags:
+- SymmetricSORSmoother
+- MinResSolver
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: p2_minres_symmetric.patch
+project_name: HyTeg
+shortname: p2_minres_symmetric
+tags:
+- HyTeg
+- configuration
+- compile-time
+- synthetic
+- SymmetricSORSmoother
+- MinResSolver

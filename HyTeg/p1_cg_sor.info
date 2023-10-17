@@ -1,0 +1,18 @@
+description: Changes the configuration of the HyTeg profiling app to use the CGSolver
+  with the SORSmoother.
+feature_tags:
+- SORSmoother
+- CGSolver
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: p1_cg_sor.patch
+project_name: HyTeg
+shortname: p1_cg_sor
+tags:
+- HyTeg
+- configuration
+- compile-time
+- synthetic
+- SORSmoother
+- CGSolver
