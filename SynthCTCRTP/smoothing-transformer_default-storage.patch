@@ -1,0 +1,15 @@
+diff --git a/projects/SynthCTCRTP/main.cpp b/projects/SynthCTCRTP/main.cpp
+index 2ae6df0..3585880 100644
+--- a/projects/SynthCTCRTP/main.cpp
++++ b/projects/SynthCTCRTP/main.cpp
+@@ -16,8 +16,8 @@ void runAlgorithm(Storage<STy> &S, Transformer<TTy> &T) {
+ }
+ 
+ int main(/* int argc, char *argv[] */) {
+-  using StorageTy = DefaultStorage;
+-  using TransformerTy = DefaultTransformer;
++  using StorageTy = DefaultStorage;
++  using TransformerTy = SmoothingTransformer;
+ 
+   StorageTy S{};
+   TransformerTy T{};

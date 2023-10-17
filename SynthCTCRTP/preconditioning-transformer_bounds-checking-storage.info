@@ -1,0 +1,19 @@
+description: Changes the configuration of the SynthCTCRTP example to use the PreconditioningTransformer
+  and BoundsCheckingStorage
+feature_tags:
+- PreconditioningTransformer
+- BoundsCheckingStorage
+- SynthCTCRTP
+include_revisions:
+  revision_range:
+    start: 65f1dbb24c1e301288fe5f935c4ef5186e36fba3
+path: preconditioning-transformer_bounds-checking-storage.patch
+project_name: SynthCTCRTP
+shortname: preconditioning-transformer_bounds-checking-storage
+tags:
+- configuration
+- compile-time
+- PreconditioningTransformer
+- BoundsCheckingStorage
+- SynthCTCRTP
+- synthetic

@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Storage.h b/projects/SynthCTCRTP/Storage.h
+index 5b58bd7..b896566 100644
+--- a/projects/SynthCTCRTP/Storage.h
++++ b/projects/SynthCTCRTP/Storage.h
+@@ -72,7 +72,7 @@ private:
+   }
+ 
+   __attribute__((feature_variable("Cache"))) void destroyCache() {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 1000 );
+   }
+ };
+ 

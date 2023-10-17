@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Transformer.h b/projects/SynthCTCRTP/Transformer.h
+index 167ce94..d9afd9a 100644
+--- a/projects/SynthCTCRTP/Transformer.h
++++ b/projects/SynthCTCRTP/Transformer.h
+@@ -81,7 +81,7 @@ private:
+   template <class STy>
+   __attribute__((feature_variable("Smoother"))) void
+   smoothData(Storage<STy> &S) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 10000 );
+     S.setElement(1, 42.0);
+     // Smooth operator... smooooth operator
+     busy_sleep_for_millisecs(1000);

@@ -1,0 +1,13 @@
+diff --git a/projects/SynthCTCRTP/Storage.h b/projects/SynthCTCRTP/Storage.h
+index 5b58bd7..3f560c3 100644
+--- a/projects/SynthCTCRTP/Storage.h
++++ b/projects/SynthCTCRTP/Storage.h
+@@ -49,7 +49,7 @@ struct CachingStorage : Storage<CachingStorage> {
+   }
+ 
+   void setElement(size_t n, double d) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 10 );
+     invalidateCache(n);
+   }
+ 
