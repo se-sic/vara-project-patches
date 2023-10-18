@@ -1,19 +1,19 @@
-description: Changes the configuration of the SynthCTSpecialization  example to use
+description: Changes the configuration of the SynthCTTemplateSpecialization  example to use
   the DefaultAlgorithm and CachableStorage
 feature_tags:
 - DefaultAlgorithm
 - CachableStorage
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization
 include_revisions:
   revision_range:
     start: 76e60ac36cc5aee7129406de9803000f63db2c47
 path: default_cachable.patch
-project_name: SynthCTSpecialization
+project_name: SynthCTTemplateSpecialization
 shortname: default_cachable
 tags:
 - configuration
 - compile-time
 - DefaultAlgorithm
 - CachableStorage
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization
 - synthetic

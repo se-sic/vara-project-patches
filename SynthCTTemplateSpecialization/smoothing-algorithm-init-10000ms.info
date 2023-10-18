@@ -1,10 +1,10 @@
 description: Introduces an artificial regression of 10000ms into the init function
-  of the SmoothingAlgorithm of SynthCTSpecialization.
+  of the SmoothingAlgorithm of SynthCTTemplateSpecialization.
 include_revisions:
   revision_range:
     start: c04c8f975270f73bb64e5295757bf30ef498c20a
 path: smoothing-algorithm-init-10000ms.patch
-project_name: SynthCTSpecialization
+project_name: SynthCTTemplateSpecialization
 shortname: smoothing-algorithm-init-10000ms
 tags:
 - compile-time
@@ -13,4 +13,4 @@ tags:
 - 10000ms
 - synthetic
 - SmoothingAlgorithm
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization

@@ -1,10 +1,10 @@
 description: Introduces an artificial regression of 1000ms into the solve function
-  of the DefaultAlgorithm of SynthCTSpecialization.
+  of the DefaultAlgorithm of SynthCTTemplateSpecialization.
 include_revisions:
   revision_range:
     start: c04c8f975270f73bb64e5295757bf30ef498c20a
 path: default-algorithm-solve-1000ms.patch
-project_name: SynthCTSpecialization
+project_name: SynthCTTemplateSpecialization
 shortname: default-algorithm-solve-1000ms
 tags:
 - compile-time
@@ -13,4 +13,4 @@ tags:
 - 1000ms
 - synthetic
 - DefaultAlgorithm
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization

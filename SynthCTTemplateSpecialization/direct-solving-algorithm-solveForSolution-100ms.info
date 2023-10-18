@@ -1,10 +1,10 @@
 description: Introduces an artificial regression of 100ms into the solveForSolution
-  function of the DirectSolvingAlgorithm of SynthCTSpecialization.
+  function of the DirectSolvingAlgorithm of SynthCTTemplateSpecialization.
 include_revisions:
   revision_range:
     start: c04c8f975270f73bb64e5295757bf30ef498c20a
 path: direct-solving-algorithm-solveForSolution-100ms.patch
-project_name: SynthCTSpecialization
+project_name: SynthCTTemplateSpecialization
 shortname: direct-solving-algorithm-solveForSolution-100ms
 tags:
 - compile-time
@@ -13,4 +13,4 @@ tags:
 - 100ms
 - synthetic
 - DirectSolvingAlgorithm
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization

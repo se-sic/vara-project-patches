@@ -1,10 +1,10 @@
 description: Introduces an artificial regression of 1ms into the init function of
-  the BoundCheckingStorage of SynthCTSpecialization.
+  the BoundCheckingStorage of SynthCTTemplateSpecialization.
 include_revisions:
   revision_range:
     start: c04c8f975270f73bb64e5295757bf30ef498c20a
 path: bound-checking-storage-init-1ms.patch
-project_name: SynthCTSpecialization
+project_name: SynthCTTemplateSpecialization
 shortname: bound-checking-storage-init-1ms
 tags:
 - compile-time
@@ -13,4 +13,4 @@ tags:
 - 1ms
 - synthetic
 - BoundCheckingStorage
-- SynthCTSpecialization
+- SynthCTTemplateSpecialization
