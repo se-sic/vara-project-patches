@@ -2,7 +2,7 @@ description: Introduces an artificial regression of 1ms into the get function of
   OtherStorageWithC of SynthCTTraitBased.
 include_revisions:
   revision_range:
-    start: 65f1dbb24c1e301288fe5f935c4ef5186e36fba3
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: storage-c2-get-1ms.patch
 project_name: SynthCTTraitBased
 shortname: storage-c2-get-1ms
