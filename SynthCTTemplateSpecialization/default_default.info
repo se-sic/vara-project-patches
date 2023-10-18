@@ -6,7 +6,7 @@ feature_tags:
 - SynthCTTemplateSpecialization
 include_revisions:
   revision_range:
-    start: 76e60ac36cc5aee7129406de9803000f63db2c47
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: default_default.patch
 project_name: SynthCTTemplateSpecialization
 shortname: default_default

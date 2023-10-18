@@ -6,7 +6,7 @@ feature_tags:
 - SynthCTTraitBased
 include_revisions:
   revision_range:
-    start: 3be8a475b72dbba2b4af7e21c6bb60729256f489
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: algo-a-2_storage-c2.patch
 project_name: SynthCTTraitBased
 shortname: algo-a-2_storage-c2
