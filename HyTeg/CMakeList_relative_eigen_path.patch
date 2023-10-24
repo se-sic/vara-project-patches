@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6969977de..5cf79a4d7 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -26,7 +26,7 @@ set(WALBERLA_BUILD_TUTORIALS        OFF )
+ set(WALBERLA_BUILD_SHOWCASES        OFF )
+ set(WALBERLA_DIR ${hyteg_SOURCE_DIR}/walberla CACHE  PATH  "waLBerla path")
+ 
+-set(EIGEN_DIR ${hyteg_SOURCE_DIR}/eigen CACHE  PATH  "eigen path")
++set(EIGEN_DIR eigen CACHE  PATH  "eigen path")
+ include_directories(SYSTEM ${EIGEN_DIR})
+ link_directories(${EIGEN_DIR})
+ 
