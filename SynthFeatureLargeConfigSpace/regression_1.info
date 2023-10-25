@@ -1,0 +1,10 @@
+description: "Inserts regression into the sleep time computation"
+include_revisions:
+  revision_range:
+    start: a0b2c1d6fa1de2c50fda93b6ca508b605a5f6f95
+    end:   master
+path: regression_1.patch
+project_name: FeaturePerfCSCollection
+shortname: reg_long_sleep
+tags:
+- regression

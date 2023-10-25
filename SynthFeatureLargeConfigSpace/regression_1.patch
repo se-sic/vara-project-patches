@@ -1,0 +1,13 @@
+diff --git a/projects/SynthFeatureLargeConfigSpace/main.cpp b/projects/SynthFeatureLargeConfigSpace/main.cpp
+index fbf505d..766484f 100644
+--- a/projects/SynthFeatureLargeConfigSpace/main.cpp
++++ b/projects/SynthFeatureLargeConfigSpace/main.cpp
+@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
+ 
+   if (F5) {
+     if (F7 && !F3) {
+-      sleepTime *= 3;
++      sleepTime *= 4;
+     }
+     fp_util::sleep_for_millisecs(70);
+   }
