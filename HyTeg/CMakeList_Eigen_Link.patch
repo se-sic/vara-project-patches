@@ -1,0 +1,21 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index 6969977de..56224da1a 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -28,7 +28,7 @@ set(WALBERLA_DIR ${hyteg_SOURCE_DIR}/walberla CACHE  PATH  "waLBerla path")
+ 
+ set(EIGEN_DIR ${hyteg_SOURCE_DIR}/eigen CACHE  PATH  "eigen path")
+ include_directories(SYSTEM ${EIGEN_DIR})
+-link_directories(${EIGEN_DIR})
++#link_directories(${EIGEN_DIR})
+ 
+ include_directories(src)
+ 
+@@ -36,6 +36,7 @@ include_directories(src)
+ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${hyteg_SOURCE_DIR}/cmake/modules)
+ 
+ find_package(waLBerla)
++find_package(Eigen3)
+ 
+ if (NOT WALBERLA_DOUBLE_ACCURACY)
+    set(HYTEG_USE_GENERATED_KERNELS OFF)

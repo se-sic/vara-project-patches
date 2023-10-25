@@ -1,0 +1,16 @@
+description: Changes the CMakelist of the HyTeg to find the linking directory for Eigen in a different way. This is required to correctly work with configurations in VaRA-TS/Benchbuild
+feature_tags:
+- SORSmoother
+- CGSolver
+- MinResSolver
+- SymmetricSORSmoother
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: CMakeList_Eigen_link.patch
+project_name: HyTeg
+shortname: CMakeList_Eigen_link
+tags:
+- HyTeg
+- configuration
+- cmake
