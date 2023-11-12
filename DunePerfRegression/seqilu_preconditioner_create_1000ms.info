@@ -13,4 +13,5 @@ tags:
 - template
 - preconditioner
 - 1000ms
+- perf_prec
 - SeqILU
