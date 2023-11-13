@@ -14,3 +14,4 @@ tags:
 - synthetic
 - SymmetricSORSmoother
 - HyTeg
+- perf_prec

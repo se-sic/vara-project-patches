@@ -2,7 +2,7 @@ description: Introduces an artificial regression of 100ms into the initC functio
   of the StorageWithC of SynthCTTraitBased.
 include_revisions:
   revision_range:
-    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+    start: 608cb500effb909f8a6d574bfceb3164e5140978
 path: storage-c-initC-100ms.patch
 project_name: SynthCTTraitBased
 shortname: storage-c-initC-100ms

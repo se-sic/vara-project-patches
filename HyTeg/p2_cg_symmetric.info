@@ -3,6 +3,7 @@ description: Changes the configuration of the HyTeg profiling app to use the CGS
 feature_tags:
 - SymmetricSORSmoother
 - CGSolver
+- P2
 include_revisions:
   revision_range:
     start: f4711dadc3f61386e6ccdc704baa783253332db2
@@ -16,3 +17,4 @@ tags:
 - synthetic
 - SymmetricSORSmoother
 - CGSolver
+- P2
