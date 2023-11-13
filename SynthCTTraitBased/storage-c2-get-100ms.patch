@@ -1,20 +1,13 @@
-diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
-index b72ba04..c0894ed 160000
---- a/external/FeaturePerfUtilities
-+++ b/external/FeaturePerfUtilities
-@@ -1 +1 @@
--Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
-+Subproject commit c0894ed2495d62f1adc4ad4f72c32fd38bb31213
 diff --git a/projects/SynthCTTraitBased/Storage.h b/projects/SynthCTTraitBased/Storage.h
-index 5bd62cb..1f26cc6 100644
+index 9d429b2..b28525f 100644
 --- a/projects/SynthCTTraitBased/Storage.h
 +++ b/projects/SynthCTTraitBased/Storage.h
-@@ -24,7 +24,7 @@ struct StorageWithC : public NullStorage {
- };
+@@ -29,7 +29,7 @@ struct StorageWithC : public NullStorage {
  
- struct OtherStorageWithC {
--  void get() { busy_sleep_for_millisecs(1000); };
-+  void get() { busy_sleep_for_millisecs(1000 + 100 ); };
+ struct OtherStorageWithC : public NullStorage {
+   __attribute__((feature_variable("C"))) void get() {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000 + 100 );
+   };
  
-   void initC() { busy_sleep_for_millisecs(2000); }
- 
+   __attribute__((feature_variable("C"))) void initC() {

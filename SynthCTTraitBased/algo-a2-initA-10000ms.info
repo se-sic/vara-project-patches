@@ -2,7 +2,7 @@ description: Introduces an artificial regression of 10000ms into the initA funct
   of the OtherAlgorithmWithA of SynthCTTraitBased.
 include_revisions:
   revision_range:
-    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+    start: 608cb500effb909f8a6d574bfceb3164e5140978
 path: algo-a2-initA-10000ms.patch
 project_name: SynthCTTraitBased
 shortname: algo-a2-initA-10000ms
