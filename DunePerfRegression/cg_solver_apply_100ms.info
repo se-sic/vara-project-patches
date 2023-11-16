@@ -13,5 +13,4 @@ tags:
 - template
 - solver
 - 100ms
-- perf_prec
 - CGSolver
