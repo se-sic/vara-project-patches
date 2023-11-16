@@ -14,3 +14,4 @@ tags:
 - synthetic
 - DefaultStorage
 - SynthCTCRTP
+- perf_prec

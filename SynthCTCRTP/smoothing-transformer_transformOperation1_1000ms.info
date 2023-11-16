@@ -14,3 +14,4 @@ tags:
 - synthetic
 - SmoothingTransformer
 - SynthCTCRTP
+- perf_prec

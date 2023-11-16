@@ -14,3 +14,4 @@ tags:
 - synthetic
 - DefaultTransformer
 - SynthCTCRTP
+- perf_prec

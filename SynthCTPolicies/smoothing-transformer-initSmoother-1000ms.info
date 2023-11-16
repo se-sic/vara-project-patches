@@ -14,3 +14,4 @@ tags:
 - synthetic
 - SmoothingTransformerPolicy
 - SynthCTPolicies
+- perf_prec

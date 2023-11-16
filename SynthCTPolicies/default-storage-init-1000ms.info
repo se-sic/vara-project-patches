@@ -14,3 +14,4 @@ tags:
 - synthetic
 - DefaultStoragePolicy
 - SynthCTPolicies
+- perf_prec
