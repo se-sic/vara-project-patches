@@ -5,6 +5,7 @@ include_revisions:
     start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: caching-storage_invalidateCache_10ms.patch
 project_name: SynthCTCRTP
+regression_severity: 10
 shortname: caching-storage_invalidateCache_10ms
 tags:
 - compile-time

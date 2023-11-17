@@ -5,6 +5,7 @@ include_revisions:
     start: 608cb500effb909f8a6d574bfceb3164e5140978
 path: storage-cd-processD-10000ms.patch
 project_name: SynthCTTraitBased
+regression_severity: 10000
 shortname: storage-cd-processD-10000ms
 tags:
 - compile-time

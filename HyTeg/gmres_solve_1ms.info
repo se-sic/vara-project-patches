@@ -5,6 +5,7 @@ include_revisions:
     start: f4711dadc3f61386e6ccdc704baa783253332db2
 path: gmres_solve_1ms.patch
 project_name: HyTeg
+regression_severity: 1
 shortname: gmres_solve_1ms
 tags:
 - compile-time

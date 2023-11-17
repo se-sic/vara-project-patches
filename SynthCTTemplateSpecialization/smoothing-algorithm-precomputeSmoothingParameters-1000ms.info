@@ -5,6 +5,7 @@ include_revisions:
     start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: smoothing-algorithm-precomputeSmoothingParameters-1000ms.patch
 project_name: SynthCTTemplateSpecialization
+regression_severity: 1000
 shortname: smoothing-algorithm-precomputeSmoothingParameters-1000ms
 tags:
 - compile-time
