@@ -6,10 +6,12 @@ index 6d9ebb542..c1dbc2ddc 100644
  
  #include "core/DataTypes.h"
  
-+__attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
-+   long counter = 0;
-+   asm volatile("" : "+g"(counter) : :);
-+   counter++;
++namespace fp_util {
++  __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++     long counter = 0;
++     asm volatile("" : "+g"(counter) : :);
++     counter++;
++  }
 +}
 +
  namespace hyteg {
