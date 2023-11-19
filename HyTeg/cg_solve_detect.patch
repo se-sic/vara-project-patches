@@ -1,0 +1,29 @@
+diff --git a/src/hyteg/solvers/CGSolver.hpp b/src/hyteg/solvers/CGSolver.hpp
+index 4696554c9..9c5dd00a0 100644
+--- a/src/hyteg/solvers/CGSolver.hpp
++++ b/src/hyteg/solvers/CGSolver.hpp
+@@ -66,6 +66,7 @@ class CGSolver : public Solver< OperatorType >
+ 
+    void solve( const OperatorType& A, const FunctionType& x, const FunctionType& b, const uint_t level ) override
+    {
++      fp_util::detect();
+       if ( maxIter_ == 0 )
+          return;
+ 
+diff --git a/src/hyteg/solvers/Solver.hpp b/src/hyteg/solvers/Solver.hpp
+index 6d9ebb542..c1dbc2ddc 100644
+--- a/src/hyteg/solvers/Solver.hpp
++++ b/src/hyteg/solvers/Solver.hpp
+@@ -21,6 +21,12 @@
+ 
+ #include "core/DataTypes.h"
+ 
++__attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++   long counter = 0;
++   asm volatile("" : "+g"(counter) : :);
++   counter++;
++}
++
+ namespace hyteg {
+ template < class OperatorType >
+ class Solver

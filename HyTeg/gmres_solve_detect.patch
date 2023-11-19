@@ -1,0 +1,29 @@
+diff --git a/src/hyteg/solvers/GMRESSolver.hpp b/src/hyteg/solvers/GMRESSolver.hpp
+index 3bb7cad99..8ea37ac08 100644
+--- a/src/hyteg/solvers/GMRESSolver.hpp
++++ b/src/hyteg/solvers/GMRESSolver.hpp
+@@ -76,6 +76,7 @@ class GMRESSolver : public Solver< OperatorType >
+ 
+    void solve( const OperatorType& A, const FunctionType& x, const FunctionType& b, const uint_t level ) override
+    {
++      fp_util::detect();
+       timingTree_->start( "GMRES Solver" );
+ 
+       real_t approxERR        = approxTOL_ + 1;
+diff --git a/src/hyteg/solvers/Solver.hpp b/src/hyteg/solvers/Solver.hpp
+index 6d9ebb542..c1dbc2ddc 100644
+--- a/src/hyteg/solvers/Solver.hpp
++++ b/src/hyteg/solvers/Solver.hpp
+@@ -21,6 +21,12 @@
+ 
+ #include "core/DataTypes.h"
+ 
++__attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++   long counter = 0;
++   asm volatile("" : "+g"(counter) : :);
++   counter++;
++}
++
+ namespace hyteg {
+ template < class OperatorType >
+ class Solver

@@ -1,0 +1,14 @@
+description: Region detection patch for the solve function of
+  the GMRESSolver of HyTeg.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: gmres_solve_detect.patch
+project_name: HyTeg
+shortname: gmres_solve_detect
+tags:
+- template
+- synthetic
+- GMRESSolver
+- HyTeg
+- region_identifier

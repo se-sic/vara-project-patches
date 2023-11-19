@@ -1,0 +1,14 @@
+description: Region detection patch for the solve function of
+  the MinResSolver of HyTeg.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: minres_solve_detect.patch
+project_name: HyTeg
+shortname: minres_solve_detect
+tags:
+- template
+- synthetic
+- MinResSolver
+- HyTeg
+- region_identifier

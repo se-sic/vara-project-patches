@@ -1,0 +1,29 @@
+diff --git a/src/hyteg/solvers/MinresSolver.hpp b/src/hyteg/solvers/MinresSolver.hpp
+index ce1dd9f8f..773e64293 100644
+--- a/src/hyteg/solvers/MinresSolver.hpp
++++ b/src/hyteg/solvers/MinresSolver.hpp
+@@ -50,6 +50,7 @@ namespace hyteg {
+                   r_("minres_r", storage, minLevel, maxLevel), timingTree_(storage->getTimingTree()) {}
+ 
+         void solve(const OperatorType &A, const FunctionType &x, const FunctionType &b, const uint_t level) override {
++            fp_util::detect();
+             timingTree_->start("MinRes Solver");
+ 
+             p_vm.copyBoundaryConditionFromFunction(x);
+diff --git a/src/hyteg/solvers/Solver.hpp b/src/hyteg/solvers/Solver.hpp
+index 6d9ebb542..c1dbc2ddc 100644
+--- a/src/hyteg/solvers/Solver.hpp
++++ b/src/hyteg/solvers/Solver.hpp
+@@ -21,6 +21,12 @@
+ 
+ #include "core/DataTypes.h"
+ 
++__attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++   long counter = 0;
++   asm volatile("" : "+g"(counter) : :);
++   counter++;
++}
++
+ namespace hyteg {
+ template < class OperatorType >
+ class Solver
