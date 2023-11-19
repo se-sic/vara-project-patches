@@ -1,0 +1,22 @@
+diff --git a/projects/SynthCTPolicies/Logging.h b/projects/SynthCTPolicies/Logging.h
+index d17c502..b29ed68 100644
+--- a/projects/SynthCTPolicies/Logging.h
++++ b/projects/SynthCTPolicies/Logging.h
+@@ -6,7 +6,7 @@
+ #define FEATUREPERFORMANCECASESTUDIE_LOGGING_H
+ #include "fp_util/sleep.h"
+ #include <string>
+-
++#include "fp_util/feature_detect.h"
+ using fp_util::busy_sleep_for_millisecs;
+ using fp_util::busy_sleep_for_secs;
+ 
+@@ -25,7 +25,7 @@ struct ExpensiveLogger {
+ struct DataBaseLogger {
+   __attribute__((feature_variable("Logging"))) static void
+   log(const std::string &s) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000); fp_util::detect();
+     logToDB(s);
+     busy_sleep_for_millisecs(1000);
+   }

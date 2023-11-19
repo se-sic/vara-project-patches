@@ -1,0 +1,33 @@
+Submodule dune-istl contains modified content
+diff --git a/dune-istl/dune/istl/solver.hh b/dune-istl/dune/istl/solver.hh
+index e25e9e08..857234d5 100644
+--- a/dune-istl/dune/istl/solver.hh
++++ b/dune-istl/dune/istl/solver.hh
+@@ -23,6 +23,14 @@
+ #include "operators.hh"
+ #include "scalarproducts.hh"
+ 
++namespace fp_util {
++  __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++     long counter = 0;
++     asm volatile("" : "+g"(counter) : :);
++     counter++;
++  }
++}
++
+ namespace Dune
+ {
+ /**
+diff --git a/dune-istl/dune/istl/solvers.hh b/dune-istl/dune/istl/solvers.hh
+index 5a7e901e..e57b4dd0 100644
+--- a/dune-istl/dune/istl/solvers.hh
++++ b/dune-istl/dune/istl/solvers.hh
+@@ -141,6 +141,8 @@ namespace Dune {
+      */
+     virtual void apply (X& x, X& b, InverseOperatorResult& res)
+     {
++      fp_utils::detect();
++
+       Iteration iteration(*this, res);
+       _prec->pre(x,b);             // prepare preconditioner
+ 

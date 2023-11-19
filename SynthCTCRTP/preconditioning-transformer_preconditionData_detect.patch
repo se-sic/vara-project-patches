@@ -1,0 +1,22 @@
+diff --git a/projects/SynthCTCRTP/Transformer.h b/projects/SynthCTCRTP/Transformer.h
+index 167ce94..caebc45 100644
+--- a/projects/SynthCTCRTP/Transformer.h
++++ b/projects/SynthCTCRTP/Transformer.h
+@@ -6,7 +6,7 @@
+ #define FEATUREPERFORMANCECASESTUDIE_TRANSFORMER_H
+ #include "CRTP.h"
+ #include "Storage.h"
+-
++#include "fp_util/feature_detect.h"
+ template <typename T> struct Transformer : CRTP<T> {
+   __attribute__((feature_variable("Transformer"))) void init() {
+     this->underlying().init();
+@@ -119,7 +119,7 @@ private:
+   __attribute__((feature_variable("Preconditioner"))) void
+   preconditionData(Storage<STy> &S) {
+     S.getElement(0);
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000); fp_util::detect();
+   }
+ 
+   __attribute__((feature_variable("Preconditioner"))) void

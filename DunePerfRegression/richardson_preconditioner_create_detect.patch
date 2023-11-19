@@ -1,0 +1,27 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+index b7c7d74..af9bdf6 100644
+--- a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
++++ b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+@@ -26,6 +26,14 @@
+ 
+ #include "gridmakers.hh"
+ 
++namespace fp_util {
++  __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++     long counter = 0;
++     asm volatile("" : "+g"(counter) : :);
++     counter++;
++  }
++}
++
+ class YaspUnitSquare : public Dune::YaspGrid<2>
+ {
+ public:
+@@ -151,6 +166,7 @@ struct PreconditionerMaker<PreconditionMarker::Richardson> {
+               typename DomainContainerTy,
+               typename RangeContainerTy>
+     static auto create(MatrixTy m) {
++        fp_utils::detect();
+         return Dune::Richardson<DomainContainerTy,
+         RangeContainerTy>(1.0);
+     };

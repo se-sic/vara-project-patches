@@ -1,16 +1,16 @@
 diff --git a/projects/SynthCTPolicies/Storage.h b/projects/SynthCTPolicies/Storage.h
-index 9c4d7bc..6acb839 100644
+index 9c4d7bc..6ff2138 100644
 --- a/projects/SynthCTPolicies/Storage.h
 +++ b/projects/SynthCTPolicies/Storage.h
-@@ -6,7 +6,7 @@
- #define FEATUREPERFORMANCECASESTUDIE_STORAGE_H
- #include <cstdlib>
+@@ -8,7 +8,7 @@
  #include <vector>
+ 
+ #include "Logging.h"
 -
 +#include "fp_util/feature_detect.h"
- #include "Logging.h"
- 
  using namespace std;
+ 
+ template <typename StoragePolicy, typename LoggingPolicy = DevNullPolicy>
 @@ -56,7 +56,7 @@ private:
    }
  

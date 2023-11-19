@@ -1,0 +1,13 @@
+description: Region detection patch
+include_revisions:
+  revision_range:
+    start: 3a346d714d928d9433715b7e4750548a2c3eb977
+path: database-logger-logToDB-detect.patch
+project_name: SynthCTPolicies
+shortname: database-logger-logToDB-detect
+tags:
+- compile-time
+- template
+- synthetic
+- DataBaseLogger
+- region_identifier
