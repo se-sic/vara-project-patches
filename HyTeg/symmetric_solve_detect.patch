@@ -2,7 +2,7 @@ diff --git a/src/hyteg/solvers/Solver.hpp b/src/hyteg/solvers/Solver.hpp
 index 6d9ebb542..c1dbc2ddc 100644
 --- a/src/hyteg/solvers/Solver.hpp
 +++ b/src/hyteg/solvers/Solver.hpp
-@@ -21,6 +21,12 @@
+@@ -21,6 +21,14 @@
  
  #include "core/DataTypes.h"
  
