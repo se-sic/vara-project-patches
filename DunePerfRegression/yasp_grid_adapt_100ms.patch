@@ -1,25 +1,40 @@
 Submodule dune-grid contains modified content
+diff --git a/dune-grid/dune/grid/common/grid.hh b/dune-grid/dune/grid/common/grid.hh
+index 7e3899876..f070a144e 100644
+--- a/dune-grid/dune/grid/common/grid.hh
++++ b/dune-grid/dune/grid/common/grid.hh
+@@ -1120,4 +1120,22 @@ namespace Dune {
+ #include "entityiterator.hh"
+ #include "indexidset.hh"
+ 
++namespace fp_util
++{
++  inline void busy_sleep_for_millisecs(unsigned Millisecs) {
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++        std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++      for (long counter = 0; counter < 100'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++          std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
++  }
++}
++
+ #endif // #ifndef DUNE_GRID_COMMON_GRID_HH
 diff --git a/dune-grid/dune/grid/yaspgrid.hh b/dune-grid/dune/grid/yaspgrid.hh
-index 078d70424..646de411f 100644
+index 078d70424..b3992daee 100644
 --- a/dune-grid/dune/grid/yaspgrid.hh
 +++ b/dune-grid/dune/grid/yaspgrid.hh
-@@ -1312,6 +1312,19 @@ namespace Dune {
+@@ -1312,6 +1312,7 @@ namespace Dune {
      //! map adapt to global refine
      bool adapt ()
      {
-+        // Artificial regression with busy waiting
-+        auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+                std::chrono::high_resolution_clock::now().time_since_epoch());
-+        auto end_us = start_us + std::chrono::milliseconds(100);
-+        auto current_us = start_us;
-+
-+        while (current_us < end_us) {
-+            for (long counter = 0; counter < 100'000; ++counter) {
-+                asm volatile("" : "+g"(counter) : :); // prevent optimization
-+            }
-+            current_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+                    std::chrono::high_resolution_clock::now().time_since_epoch());
-+        }
++      fp_util::busy_sleep_for_millisecs(100);
        globalRefine(adaptRefCount);
        return (adaptRefCount > 0);
      }
