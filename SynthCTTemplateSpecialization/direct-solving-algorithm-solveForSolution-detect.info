@@ -1,0 +1,13 @@
+description: Region detection patch
+include_revisions:
+  revision_range:
+    start: 3a346d714d928d9433715b7e4750548a2c3eb977
+path: direct-solving-algorithm-solveForSolution-detect.patch
+project_name: SynthCTTemplateSpecialization
+shortname: direct-solving-algorithm-solveForSolution-detect
+tags:
+- compile-time
+- template
+- synthetic
+- DirectSolvingAlgorithm
+- region_identifier

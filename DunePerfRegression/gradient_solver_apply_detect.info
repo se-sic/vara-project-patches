@@ -1,0 +1,13 @@
+description: Region detection patch
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: gradient_solver_apply_detect.patch
+project_name: DunePerfRegression
+shortname: gradient_solver_apply_detect
+tags:
+- compile-time
+- template
+- solver
+- GradientSolver
+- region_identifier

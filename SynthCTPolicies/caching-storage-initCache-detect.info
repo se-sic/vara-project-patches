@@ -1,0 +1,14 @@
+description: Region detection patch for the initCache function of the CachingStoragePolicy
+  of SynthCTPolicies.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: caching-storage-initCache-detect.patch
+project_name: SynthCTPolicies
+shortname: caching-storage-getCached-detect
+tags:
+- template
+- synthetic
+- CachingStoragePolicy
+- SynthCTPolicies
+- region_identifier

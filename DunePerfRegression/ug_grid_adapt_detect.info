@@ -1,0 +1,13 @@
+description: Region detection patch
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: ug_grid_adapt_detect.patch
+project_name: DunePerfRegression
+shortname: ug_grid_adapt_detect
+tags:
+- compile-time
+- template
+- grid
+- UGGrid
+- region_identifier

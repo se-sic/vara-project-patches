@@ -1,0 +1,29 @@
+Submodule dune-alugrid contains modified content
+diff --git a/dune-alugrid/dune/alugrid/3d/grid_inline.hh b/dune-alugrid/dune/alugrid/3d/grid_inline.hh
+index f7e1b5d1..124dd058 100644
+--- a/dune-alugrid/dune/alugrid/3d/grid_inline.hh
++++ b/dune-alugrid/dune/alugrid/3d/grid_inline.hh
+@@ -13,6 +13,14 @@
+ 
+ #define alu_inline_tmp inline
+ 
++namespace fp_util {
++  __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++     long counter = 0;
++     asm volatile("" : "+g"(counter) : :);
++     counter++;
++  }
++}
++
+ namespace Dune
+ {
+ 
+@@ -515,6 +530,8 @@ namespace Dune
+   alu_inline_tmp
+   bool ALU3dGrid< dim, dimworld, elType, Comm >::adapt ()
+   {
++    fp_utils::detect();
++
+     bool ref = false;
+ 
+     if( lockPostAdapt_ == true )

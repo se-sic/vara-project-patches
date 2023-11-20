@@ -1,0 +1,15 @@
+description: Region detection patch for the get function of the DefaultStoragePolicy
+  of SynthCTPolicies.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: default-storage-get-detect.patch
+project_name: SynthCTPolicies
+shortname: default-storage-get-detect
+tags:
+- compile-time
+- template
+- synthetic
+- DefaultStoragePolicy
+- SynthCTPolicies
+- region_identifier

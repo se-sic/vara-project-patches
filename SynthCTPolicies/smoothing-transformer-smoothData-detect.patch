@@ -1,0 +1,22 @@
+diff --git a/projects/SynthCTPolicies/Transformer.h b/projects/SynthCTPolicies/Transformer.h
+index e553e12..e560210 100644
+--- a/projects/SynthCTPolicies/Transformer.h
++++ b/projects/SynthCTPolicies/Transformer.h
+@@ -5,7 +5,7 @@
+ #ifndef FEATUREPERFORMANCECASESTUDIE_TRANSFORMER_H
+ #define FEATUREPERFORMANCECASESTUDIE_TRANSFORMER_H
+ #include "Logging.h"
+-
++#include "fp_util/feature_detect.h"
+ template <typename TransformerPolicy, typename LoggingPolicy = DevNullPolicy>
+ struct Transformer {
+   __attribute__((feature_variable("Transformer"))) void init() {
+@@ -87,7 +87,7 @@ struct SmoothingTransformerPolicy {
+ private:
+   template <class StorageTy>
+   __attribute__((feature_variable("Smoother"))) void smoothData(StorageTy &S) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000); fp_util::detect();
+     S.get(0);
+     // Smooth operator... smooooth operator
+     busy_sleep_for_millisecs(1000);

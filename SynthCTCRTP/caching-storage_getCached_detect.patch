@@ -1,0 +1,22 @@
+diff --git a/projects/SynthCTCRTP/Storage.h b/projects/SynthCTCRTP/Storage.h
+index 5b58bd7..0e365c9 100644
+--- a/projects/SynthCTCRTP/Storage.h
++++ b/projects/SynthCTCRTP/Storage.h
+@@ -6,7 +6,7 @@
+ #define FEATUREPERFORMANCECASESTUDIE_STORAGE_H
+ 
+ #include "CRTP.h"
+-
++#include "fp_util/feature_detect.h"
+ template <typename T> struct Storage : CRTP<T> {
+   __attribute__((feature_variable("Storage"))) void init() {
+     this->underlying().init();
+@@ -64,7 +64,7 @@ private:
+   }
+ 
+   __attribute__((feature_variable("Cache"))) void getCached(size_t n) {
+-    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs(1000); fp_util::detect();
+   }
+ 
+   __attribute__((feature_variable("Cache"))) void invalidateCache(size_t n) {
