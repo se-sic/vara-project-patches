@@ -22,7 +22,7 @@ index f7e1b5d1..124dd058 100644
    alu_inline_tmp
    bool ALU3dGrid< dim, dimworld, elType, Comm >::adapt ()
    {
-+    fp_utils::detect();
++    fp_util::detect();
 +
      bool ref = false;
  

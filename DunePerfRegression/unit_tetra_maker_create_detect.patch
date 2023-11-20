@@ -25,7 +25,7 @@ index e088ff8..11a3701 100644
          Dune::GridFactory<Grid> gf;
          Dune::FieldVector<typename Grid::ctype, 3> pos;
 -
-+        fp_utils::detect();
++        fp_util::detect();
          pos[0] = 0; pos[1] = 0; pos[2] = 0; gf.insertVertex(pos);
          pos[0] = 1; pos[1] = 0; pos[2] = 0; gf.insertVertex(pos);
          pos[0] = 0; pos[1] = 1; pos[2] = 0; gf.insertVertex(pos);

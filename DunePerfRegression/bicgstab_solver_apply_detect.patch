@@ -26,7 +26,7 @@ index 5a7e901e..a8a37b31 100644
       */
      virtual void apply (X& x, X& b, InverseOperatorResult& res)
      {
-+      fp_utils::detect();
++      fp_util::detect();
 +
        using std::abs;
        const Simd::Scalar<real_type> EPSILON=1e-80;

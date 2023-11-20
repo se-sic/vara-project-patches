@@ -26,7 +26,7 @@ index 5a7e901e..2b29e5f1 100644
      //! \copydoc InverseOperator::apply(X&,Y&,InverseOperatorResult&)
      virtual void apply (X& x, X& b, InverseOperatorResult& res)
      {
-+      fp_utils::detect();
++      fp_util::detect();
 +
        Iteration iteration(*this, res);
        _prec->pre(x,b);

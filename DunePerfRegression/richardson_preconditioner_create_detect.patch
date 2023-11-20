@@ -21,7 +21,7 @@ index b7c7d74..af9bdf6 100644
                typename DomainContainerTy,
                typename RangeContainerTy>
      static auto create(MatrixTy m) {
-+        fp_utils::detect();
++        fp_util::detect();
          return Dune::Richardson<DomainContainerTy,
          RangeContainerTy>(1.0);
      };

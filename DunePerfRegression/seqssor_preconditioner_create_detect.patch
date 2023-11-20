@@ -21,7 +21,7 @@ index 5c17d2b..c244a02 100644
                typename RangeContainerTy>
      static auto create(MatrixTy m) {
          using Dune::PDELab::Backend::native;
-+        fp_utils::detect();
++        fp_util::detect();
          return Dune::SeqSSOR<typename MatrixTy::Container,
                               DomainContainerTy,
                               RangeContainerTy>(native(m),1,1.0);

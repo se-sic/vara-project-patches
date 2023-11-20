@@ -26,7 +26,7 @@ index 5a7e901e..e57b4dd0 100644
       */
      virtual void apply (X& x, X& b, InverseOperatorResult& res)
      {
-+      fp_utils::detect();
++      fp_util::detect();
 +
        Iteration iteration(*this, res);
        _prec->pre(x,b);             // prepare preconditioner

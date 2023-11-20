@@ -25,7 +25,7 @@ index e088ff8..077bf3f 100644
      static std::unique_ptr<Grid> create() {
          Dune::GridFactory<Grid> gf;
 -
-+        fp_utils::detect();
++        fp_util::detect();
          int fake_argc = 0;
          char **fake_argv = NULL;
  
