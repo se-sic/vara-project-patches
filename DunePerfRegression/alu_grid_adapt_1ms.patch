@@ -7,7 +7,7 @@ index f7e1b5d1..124dd058 100644
    alu_inline_tmp
    bool ALU3dGrid< dim, dimworld, elType, Comm >::adapt ()
    {
-+    busy_sleep_for_millisecs(1);
++   fp_util::busy_sleep_for_millisecs(1);
 +
      bool ref = false;
  

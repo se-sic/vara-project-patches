@@ -7,7 +7,7 @@ index 5a7e901e..b4528c22 100644
       */
      virtual void apply (X& x, X& b, InverseOperatorResult& res)
      {
-+      busy_sleep_for_millisecs(10);
++     fp_util::busy_sleep_for_millisecs(10);
 +
        Iteration iteration(*this,res);
        _prec->pre(x,b);             // prepare preconditioner
