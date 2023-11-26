@@ -2,28 +2,6 @@ diff --git a/dune-performance-regressions/dune/performance-regressions/poisson-p
 index b7c7d74..cc3ef15 100644
 --- a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
 +++ b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
-@@ -26,6 +26,21 @@
- 
- #include "gridmakers.hh"
- 
-+inline void busy_sleep_for_millisecs(unsigned Millisecs) {
-+    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+            std::chrono::high_resolution_clock::now().time_since_epoch());
-+    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
-+    auto current_us = start_us;
-+
-+    while (current_us < end_us) {
-+        for (long counter = 0; counter < 100'000; ++counter) {
-+            asm volatile("" : "+g"(counter) : :); // prevent optimization
-+        }
-+        current_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+                std::chrono::high_resolution_clock::now().time_since_epoch());
-+    }
-+}
-+
- class YaspUnitSquare : public Dune::YaspGrid<2>
- {
- public:
 @@ -151,6 +166,7 @@ struct PreconditionerMaker<PreconditionMarker::Richardson> {
                typename DomainContainerTy,
                typename RangeContainerTy>
