@@ -1,0 +1,27 @@
+description: Adds a busy_sleep utility function to Dune (Required for all patches with "regression" tag)
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: add_busy_sleep.patch
+project_name: DunePerfRegression
+shortname: alu_grid_adapt_1ms
+tags:
+- dune
+- compile-time
+- template
+- ALUGrid
+- UGGrid
+- YaspGrid
+- BiCGSTABSolver
+- CGSolver
+- GradientSolver
+- LoopSolver
+- MINRESSolver
+- KuhnUnitCubeMaker
+- TriangulatedUnitCubeMaker
+- TriangulatedUnitSquareMaker
+- UnitTetrahedronMaker
+- UnitTriangleMaker
+- Richardson
+- SeqILU
+- SeqSSOR

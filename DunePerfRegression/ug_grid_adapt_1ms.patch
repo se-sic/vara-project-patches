@@ -1,32 +1,4 @@
 Submodule dune-grid contains modified content
-diff --git a/dune-grid/dune/grid/uggrid.hh b/dune-grid/dune/grid/uggrid.hh
-index b97686180..10b6d14e2 100644
---- a/dune-grid/dune/grid/uggrid.hh
-+++ b/dune-grid/dune/grid/uggrid.hh
-@@ -813,5 +813,23 @@ namespace Dune {
- 
- } // namespace Dune
- 
-+namespace fp_util
-+{
-+  inline void busy_sleep_for_millisecs(unsigned Millisecs) {
-+    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+        std::chrono::high_resolution_clock::now().time_since_epoch());
-+    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
-+    auto current_us = start_us;
-+
-+    while (current_us < end_us) {
-+      for (long counter = 0; counter < 100'000; ++counter) {
-+        asm volatile("" : "+g"(counter) : :); // prevent optimization
-+      }
-+      current_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+          std::chrono::high_resolution_clock::now().time_since_epoch());
-+    }
-+  }
-+}
-+
- #endif   // HAVE_DUNE_UGGRID || DOXYGEN
- #endif   // DUNE_UGGRID_HH
 diff --git a/dune-grid/dune/grid/uggrid/uggrid.cc b/dune-grid/dune/grid/uggrid/uggrid.cc
 index 9a49416eb..9a8fe1a54 100644
 --- a/dune-grid/dune/grid/uggrid/uggrid.cc

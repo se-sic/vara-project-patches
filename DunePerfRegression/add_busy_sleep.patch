@@ -1,0 +1,30 @@
+Submodule dune-common contains modified content
+diff --git a/dune-common/dune/common/typetraits.hh b/dune-common/dune/common/typetraits.hh
+index 2c77c3d12..a9da5d8b9 100644
+--- a/dune-common/dune/common/typetraits.hh
++++ b/dune-common/dune/common/typetraits.hh
+@@ -9,6 +9,24 @@
+ #include <type_traits>
+ #include <utility>
+ #include <vector>
++#include <chrono>
++
++namespace fp_util {
++  inline void busy_sleep_for_millisecs(unsigned Millisecs) {
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++            std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++      for (long counter = 0; counter < 100'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++              std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
++  }
++}
+ 
+ namespace Dune
+ {

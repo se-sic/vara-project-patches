@@ -1,28 +1,3 @@
-Submodule dune-alugrid contains modified content
-diff --git a/dune-alugrid/dune/alugrid/grid.hh b/dune-alugrid/dune/alugrid/grid.hh
-index b8fea0a9..4f877c5c 100644
---- a/dune-alugrid/dune/alugrid/grid.hh
-+++ b/dune-alugrid/dune/alugrid/grid.hh
-@@ -23,4 +23,19 @@
- 
- #endif // else if HAVE_ALUGRID
- 
-+inline void busy_sleep_for_millisecs(unsigned Millisecs) {
-+    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+            std::chrono::high_resolution_clock::now().time_since_epoch());
-+    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
-+    auto current_us = start_us;
-+
-+    while (current_us < end_us) {
-+        for (long counter = 0; counter < 100'000; ++counter) {
-+            asm volatile("" : "+g"(counter) : :); // prevent optimization
-+        }
-+        current_us = std::chrono::duration_cast<std::chrono::microseconds>(
-+                std::chrono::high_resolution_clock::now().time_since_epoch());
-+    }
-+}
-+
- #endif // #ifndef DUNE_ALUGRID_HH
 diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
 index e088ff8..e8be103 100644
 --- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
@@ -32,7 +7,7 @@ index e088ff8..e8be103 100644
          Dune::GridFactory<Grid> gf;
          Dune::FieldVector<typename Grid::ctype, 2> pos;
 -
-+        busy_sleep_for_millisecs(10000);
++       fp_util::busy_sleep_for_millisecs(10000);
          pos[0] = 0; pos[1] = 0; gf.insertVertex(pos);
          pos[0] = 1; pos[1] = 0; gf.insertVertex(pos);
          pos[0] = 0; pos[1] = 1; gf.insertVertex(pos);
@@ -40,7 +15,7 @@ index e088ff8..e8be103 100644
    typedef Dune::ALUGrid<2,2,Dune::simplex,Dune::nonconforming> Grid;
  public:
    static std::unique_ptr<Grid> create() {
-+    busy_sleep_for_millisecs(10000);
++   fp_util::busy_sleep_for_millisecs(10000);
      return std::unique_ptr<Grid>(new Grid(GRIDSDIR "/2dsimplex.alu"));
    }
  };

@@ -1,0 +1,18 @@
+description: Introduce the busy_sleep function to the HyTeg Codebase
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: add_busy_sleep.patch
+project_name: HyTeg
+shortname: add_busy_sleep
+tags:
+- compile-time
+- synthetic
+- CGSolver
+- GMRESSolver
+- MinResSolver
+- SORSmoother
+- SymmetricSORSmoother
+- HyTeg
+- P1
+- P2
