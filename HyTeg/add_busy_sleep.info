@@ -8,6 +8,7 @@ shortname: add_busy_sleep
 tags:
 - compile-time
 - synthetic
+feature_tags:
 - CGSolver
 - GMRESSolver
 - MinResSolver

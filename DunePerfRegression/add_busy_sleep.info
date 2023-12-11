@@ -9,6 +9,7 @@ tags:
 - dune
 - compile-time
 - template
+feature_tags:
 - ALUGrid
 - UGGrid
 - YaspGrid
