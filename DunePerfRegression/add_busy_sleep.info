@@ -4,7 +4,7 @@ include_revisions:
     start: 559e763958113c8e6c31a3569127781cadb5a535
 path: add_busy_sleep.patch
 project_name: DunePerfRegression
-shortname: alu_grid_adapt_1ms
+shortname: add_busy_sleep
 tags:
 - dune
 - compile-time
@@ -26,3 +26,4 @@ feature_tags:
 - Richardson
 - SeqILU
 - SeqSSOR
+- no-gridmaker
