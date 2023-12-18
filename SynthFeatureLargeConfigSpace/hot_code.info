@@ -1,0 +1,10 @@
+description: "Marks the sleep at the end as hot code."
+include_revisions:
+  revision_range:
+    start: 6863c78c242a8e67b09d2947bd83ef09ceff4be4
+    end:   master
+path: hot_code.patch
+project_name: FeaturePerfCSCollection
+shortname: hot_code
+tags:
+- perf_region
