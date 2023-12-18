@@ -1,0 +1,20 @@
+diff --git a/projects/SynthIPRuntime/main.cpp b/projects/SynthIPRuntime/main.cpp
+index ede9ff9..ea0b804 100644
+--- a/projects/SynthIPRuntime/main.cpp
++++ b/projects/SynthIPRuntime/main.cpp
+@@ -48,6 +48,7 @@ inline size_t substr_run(const unsigned char *ai, const unsigned char *ae,
+ 
+   size_t n = 0;
+ 
++  ___REGION_START __RT_High "substr_run_loop"
+   while (1) {
+ 
+     if (*ai != *bi)
+@@ -60,6 +61,7 @@ inline size_t substr_run(const unsigned char *ai, const unsigned char *ae,
+     if (ai == ae || bi == be)
+       break;
+   }
++  ___REGION_END __RT_High "substr_run_loop"
+ 
+   return n;
+ }
