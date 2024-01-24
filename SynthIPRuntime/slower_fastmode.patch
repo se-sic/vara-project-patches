@@ -1,0 +1,13 @@
+diff --git a/projects/SynthIPRuntime/main.cpp b/projects/SynthIPRuntime/main.cpp
+index ede9ff9..170bd8b 100644
+--- a/projects/SynthIPRuntime/main.cpp
++++ b/projects/SynthIPRuntime/main.cpp
+@@ -582,7 +582,7 @@ int getBufsize(bool smallmode, bool decompress) {
+ 
+ int getSearchlen(bool fastmode) {
+   if (fastmode) {
+-    return 1;
++    return 4;
+   }
+   return DEFAULT_SEARCHLEN;
+ }
