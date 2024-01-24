@@ -8,6 +8,6 @@ index 2a2187d..daf681b 100644
  
 +  ___REGION_START __RT_High "performance-relevant code"
    fp_util::sleep_for_millisecs(sleepTime);
-+  ___REGION_START __RT_High "performance-relevant code"
++  ___REGION_END __RT_High "performance-relevant code"
    return 0;
  }
