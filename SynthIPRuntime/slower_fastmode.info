@@ -2,7 +2,7 @@ description: "Increase searchlength to slow down fastmode."
 include_revisions:
   revision_range:
     start: 38234c9d69e6f45d612321e7cb16caeff2d6230a
-    end:   master
+    end:   HEAD
 path: slower_fastmode.patch
 project_name: FeaturePerfCSCollection
 shortname: slower_fastmode
