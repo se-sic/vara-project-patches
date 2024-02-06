@@ -13,3 +13,4 @@ tags:
 - synthetic
 - extended_trace
 - picosat
+- perf_prec

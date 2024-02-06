@@ -13,3 +13,4 @@ tags:
 - synthetic
 - compact_trace
 - picosat
+- perf_prec
