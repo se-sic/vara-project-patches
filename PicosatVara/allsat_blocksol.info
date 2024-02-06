@@ -3,7 +3,7 @@ include_revisions:
   revision_range:
     start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
 path: allsat_blocksol.patch
-project_name: picosat-vara
+project_name: PicosatLT
 regression_severity: 1000
 shortname: allsat_blocksol
 tags:
