@@ -1,0 +1,15 @@
+description: Introduces an artificial regression of 1000ms into picosat that is related to the Global Default Phase feature. Only occurs if "Random" is used.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: global_default_phase_rnd.patch
+project_name: picosat-vara
+regression_severity: 1000
+shortname: global_default_phase_rnd
+tags:
+- load-time
+- regression
+- 1000ms
+- synthetic
+- GlobalDefaultPhase
+- picosat

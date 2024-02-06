@@ -1,0 +1,15 @@
+description: Introduces an artificial regression of 1000ms into picosat that is related to the plain feature.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: plain_faillits.patch
+project_name: picosat-vara
+regression_severity: 1000
+shortname: plain_faillits
+tags:
+- load-time
+- regression
+- 1000ms
+- synthetic
+- Plain
+- picosat
