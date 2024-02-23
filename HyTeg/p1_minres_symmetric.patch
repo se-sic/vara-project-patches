@@ -1,7 +1,16 @@
 diff --git a/apps/profiling/ProfilingApp.cpp b/apps/profiling/ProfilingApp.cpp
-index 540f9d6da..11edf6c49 100644
+index 540f9d6da..dc65f5be2 100644
 --- a/apps/profiling/ProfilingApp.cpp
 +++ b/apps/profiling/ProfilingApp.cpp
+@@ -137,7 +137,7 @@ int main( int argc, char* argv[] )
+    walberla::logging::Logging::instance()->setLogLevel( walberla::logging::Logging::PROGRESS );
+    walberla::MPIManager::instance()->useWorldComm();
+    const uint_t        minLevel = 2;
+-   const uint_t        maxLevel = 4;
++   const uint_t        maxLevel = 8;
+    using P1op                   = hyteg::P1ConstantLaplaceOperator;
+    using P2op                   = hyteg::P2ConstantLaplaceOperator;
+ 
 @@ -148,11 +148,8 @@ int main( int argc, char* argv[] )
     //   SORSmoother or SymmetricSORSmoother
     //   the symmetric variant alternates the direction of the smoothing for each iteration
@@ -15,13 +24,3 @@ index 540f9d6da..11edf6c49 100644
     return 0;
  }
 \ No newline at end of file
-diff --git a/src/hyteg/p1functionspace/P1Function.hpp b/src/hyteg/p1functionspace/P1Function.hpp
-index 51935b981..397a44aa5 100644
---- a/src/hyteg/p1functionspace/P1Function.hpp
-+++ b/src/hyteg/p1functionspace/P1Function.hpp
-@@ -1,4 +1,4 @@
--/*
-+/*t's hard to recommend brands now bc it seems like they'll vary by store or randomly go to shit as the brand cheaps out.
-  * Copyright (c) 2017-2019 Boerge Struempfel, Daniel Drzisga, Dominik Thoennes, Nils Kohl.
-  *
-  * This file is part of HyTeG
