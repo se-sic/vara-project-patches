@@ -1,0 +1,16 @@
+description: Introduces an artificial regression of 1000ms into picosat that is related to the incremental rup trace feature.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: incremental_rup_trace_write_rup_header.patch
+project_name: PicoSATLoadTime
+regression_severity: 1000
+shortname: incremental_rup_trace_write_rup_header
+tags:
+- load-time
+- regression
+- 1000ms
+- synthetic
+- incremental_rup_trace
+- picosat
+- perf_prec
