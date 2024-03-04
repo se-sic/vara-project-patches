@@ -7,7 +7,7 @@ index 540f9d6da..66988e25b 100644
     walberla::MPIManager::instance()->useWorldComm();
     const uint_t        minLevel = 2;
 -   const uint_t        maxLevel = 4;
-+   const uint_t        maxLevel = 8;
++   const uint_t        maxLevel = 12;
     using P1op                   = hyteg::P1ConstantLaplaceOperator;
     using P2op                   = hyteg::P2ConstantLaplaceOperator;
  
