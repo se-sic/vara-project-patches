@@ -1,5 +1,5 @@
 diff --git a/app.c b/app.c
-index 5f66ef8..f2e7e19 100644
+index 5f66ef8..1954260 100644
 --- a/app.c
 +++ b/app.c
 @@ -12,6 +12,33 @@
@@ -8,14 +8,14 @@ index 5f66ef8..f2e7e19 100644
  
 +#include <time.h>
 +void busy_sleep_for_millisecs(unsigned long long Millisecs) {
-+ printf("Sleepings for %u milliseconds\n", Millisecs);
++ printf("Sleepings for %llu milliseconds\n", Millisecs);
 + struct timespec ts;
 + timespec_get(&ts, TIME_UTC);
 +
 + unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
 + unsigned long long end_ns = start_ns + (Millisecs * 1000000);
 +
-+printf("Calculated diff: %u\n", (end_ns-start_ns));
++printf("Calculated diff: %llu\n", (end_ns-start_ns));
 +
 + unsigned long long current_ns = start_ns;
 +  printf("busy_sleep start time: %llu\n",current_ns);
@@ -44,3 +44,11 @@ index 5f66ef8..f2e7e19 100644
  	  val = picosat_deref_partial (picosat, i);
  	  if (!val)
  	    continue;
+@@ -1010,6 +1038,7 @@ picosat_main (int argc, char **argv)
+ 	      "c saving original clauses for partial assignment\n");
+ 
+ 	  picosat_save_original_clauses (picosat);
++      busy_sleep_for_millisecs(1000);
+ 	}
+ 
+       if (verbose)
