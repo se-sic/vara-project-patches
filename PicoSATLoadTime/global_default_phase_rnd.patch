@@ -1,5 +1,5 @@
 diff --git a/picosat.c b/picosat.c
-index b87c1c0..d27b36f 100644
+index f97e3cb..00dc179 100644
 --- a/picosat.c
 +++ b/picosat.c
 @@ -31,6 +31,33 @@ IN THE SOFTWARE.
@@ -8,14 +8,14 @@ index b87c1c0..d27b36f 100644
  
 +#include <time.h>
 +void busy_sleep_for_millisecs(unsigned long long Millisecs) {
-+ printf("Sleepings for %u milliseconds\n", Millisecs);
++ printf("Sleepings for %llu milliseconds\n", Millisecs);
 + struct timespec ts;
 + timespec_get(&ts, TIME_UTC);
 +
 + unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
 + unsigned long long end_ns = start_ns + (Millisecs * 1000000);
 +
-+printf("Calculated diff: %u\n", (end_ns-start_ns));
++printf("Calculated diff: %llu\n", (end_ns-start_ns));
 +
 + unsigned long long current_ns = start_ns;
 +  printf("busy_sleep start time: %llu\n",current_ns);
@@ -36,11 +36,14 @@ index b87c1c0..d27b36f 100644
  /* By default code for 'all different constraints' is disabled, since 'NADC'
   * is defined.
   */
-@@ -5684,6 +5711,7 @@ decide_phase (PS * ps, Lit * lit)
- 	}
-       else if (GLOBAL_DEFAULT_PHASE == RNDPHASE)
- 	{
-+	  busy_sleep_for_millisecs(1000);
- 	  /* randomly assign default phase */
- 	  if (rrng (ps, 1, 2) != 2)
- 	    lit = not_lit;
+@@ -1269,6 +1296,10 @@ init (void * pmgr,
+   ps->state = READY;
+   ps->last_sat_call_result = 0;
+ 
++  if(GLOBAL_DEFAULT_PHASE == RNDPHASE) {
++    busy_sleep_for_millisecs(1000);
++  }
++
+   return ps;
+ }
+ 
