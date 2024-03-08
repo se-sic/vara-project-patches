@@ -1,5 +1,5 @@
 diff --git a/app.c b/app.c
-index 5f66ef8..731dd10 100644
+index 5f66ef8..cc2fae5 100644
 --- a/app.c
 +++ b/app.c
 @@ -12,6 +12,34 @@
@@ -37,46 +37,11 @@ index 5f66ef8..731dd10 100644
  FILE * popen (const char *, const char*);
  int pclose (FILE *);
  
-@@ -1079,11 +1107,13 @@ NEXT_SOLUTION:
- 				   "compact trace", 
- 				   picosat_write_compact_trace);
- 
--		  if (EXTENDED_TRACE_NAME)
-+		  if (EXTENDED_TRACE_NAME) {
-+			busy_sleep_for_millisecs(1000);
- 		    write_to_file (picosat,
- 		                   EXTENDED_TRACE_NAME,
- 				   "extended trace", 
- 				   picosat_write_extended_trace);
-+		  }
- 
- 		  if (!INCREMENTAL_RUP_FILE && RUP_TRACE_NAME)
- 		    write_to_file (picosat,
-@@ -1132,6 +1162,13 @@ NEXT_SOLUTION:
- 		      blocksol (picosat);
- 		      goto NEXT_SOLUTION;
- 		    }
-+	      	if (EXTENDED_TRACE_NAME) {
-+	      		busy_sleep_for_millisecs(1000);
-+	      		write_to_file (picosat,
-+								 EXTENDED_TRACE_NAME,
-+						 "extended trace",
-+						 picosat_write_extended_trace);
-+	      	}
- 		}
- 	      else
- 		{
-@@ -1142,6 +1179,13 @@ NEXT_SOLUTION:
- 			     "c\nc limit reached after %lld solutions\n",
- 			     sols);
- 		  fflush (output);
-+	      	if (EXTENDED_TRACE_NAME) {
-+	      		busy_sleep_for_millisecs(1000);
-+	      		write_to_file (picosat,
-+								 EXTENDED_TRACE_NAME,
-+						 "extended trace",
-+						 picosat_write_extended_trace);
-+	      	}
- 		}
+@@ -762,6 +790,7 @@ picosat_main (int argc, char **argv)
  	    }
- 	}
+ 	  else
+ 	    {
++	  	  busy_sleep_for_millisecs(1000);
+ 	      EXTENDED_TRACE_NAME = argv[i];
+ 	      trace = 1;
+ 	    }
