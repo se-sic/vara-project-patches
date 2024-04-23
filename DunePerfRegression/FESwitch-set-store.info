@@ -1,0 +1,15 @@
+description: Introduces a regression into the dune-pdelab submodule due to use of shared_pointer. See https://gitlab.dune-project.org/pdelab/dune-pdelab/-/merge_requests/583 for details.
+include_revisions:
+  revision_range:
+    start: 8f3dc56bda3ca663170f62903eb4b4d66e427a43
+path: FESwitch-set-store.patch
+project_name: DunePerfRegression
+shortname: FESwitch-set-store
+tags:
+- dune
+- compile-time
+- regression
+- template
+- localfunctions
+- real_world
+- perf_prec

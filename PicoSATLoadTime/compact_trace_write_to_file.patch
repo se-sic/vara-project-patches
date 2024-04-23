@@ -1,5 +1,5 @@
 diff --git a/app.c b/app.c
-index 5f66ef8..bdc75e9 100644
+index 5f66ef8..1471146 100644
 --- a/app.c
 +++ b/app.c
 @@ -12,6 +12,34 @@
@@ -37,47 +37,11 @@ index 5f66ef8..bdc75e9 100644
  FILE * popen (const char *, const char*);
  int pclose (FILE *);
  
-@@ -1073,11 +1101,13 @@ NEXT_SOLUTION:
- 
- 		  fflush (output);
- 
--		  if (COMPACT_TRACE_NAME)
-+		  if (COMPACT_TRACE_NAME) {
-+			busy_sleep_for_millisecs(1000);
- 		    write_to_file (picosat,
- 		                   COMPACT_TRACE_NAME,
- 				   "compact trace", 
- 				   picosat_write_compact_trace);
-+		  }
- 
- 		  if (EXTENDED_TRACE_NAME)
- 		    write_to_file (picosat,
-@@ -1132,6 +1162,14 @@ NEXT_SOLUTION:
- 		      blocksol (picosat);
- 		      goto NEXT_SOLUTION;
- 		    }
-+
-+	      	if (COMPACT_TRACE_NAME) {
-+	      		busy_sleep_for_millisecs(1000);
-+	      		write_to_file (picosat,
-+								 COMPACT_TRACE_NAME,
-+						 "compact trace",
-+						 picosat_write_compact_trace);
-+	      	}
- 		}
- 	      else
- 		{
-@@ -1142,6 +1180,13 @@ NEXT_SOLUTION:
- 			     "c\nc limit reached after %lld solutions\n",
- 			     sols);
- 		  fflush (output);
-+	      	if (COMPACT_TRACE_NAME) {
-+	      		busy_sleep_for_millisecs(1000);
-+	      		write_to_file (picosat,
-+								 COMPACT_TRACE_NAME,
-+						 "compact trace",
-+						 picosat_write_compact_trace);
-+	      	}
- 		}
+@@ -741,6 +769,7 @@ picosat_main (int argc, char **argv)
  	    }
- 	}
+ 	  else
+ 	    {
++	  	  busy_sleep_for_millisecs(1000);
+ 	      COMPACT_TRACE_NAME = argv[i];
+ 	      trace = 1;
+ 	    }

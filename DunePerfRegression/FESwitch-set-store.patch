@@ -1,0 +1,160 @@
+Submodule dune-pdelab contains modified content
+diff --git a/dune-pdelab/dune/pdelab/gridfunctionspace/localfunctionspace.hh b/dune-pdelab/dune/pdelab/gridfunctionspace/localfunctionspace.hh
+index 594ee4e2..c82fdfff 100644
+--- a/dune-pdelab/dune/pdelab/gridfunctionspace/localfunctionspace.hh
++++ b/dune-pdelab/dune/pdelab/gridfunctionspace/localfunctionspace.hh
+@@ -3,8 +3,7 @@
+ #ifndef DUNE_PDELAB_GRIDFUNCTIONSPACE_LOCALFUNCTIONSPACE_HH
+ #define DUNE_PDELAB_GRIDFUNCTIONSPACE_LOCALFUNCTIONSPACE_HH
+ 
+-#include <vector>
+-#include <memory>
++#include<vector>
+ 
+ #include <dune/common/stdstreams.hh>
+ #include <dune/common/shared_ptr.hh>
+@@ -100,16 +99,18 @@ namespace Dune {
+         void leaf(Node& node, TreePath treePath)
+         {
+           node.offset = offset;
+-          node.unbindFiniteElement();
++          node.pfe = nullptr;
+           node._in_entity_set = node.pgfs->entitySet().contains(e);
+           if (not node._in_entity_set) {
+             node.n = 0;
+           } else if (fast) {
+             node.n = node.pgfs->finiteElementMap().maxLocalSize();
+-            node.bindFiniteElement(node.pgfs->finiteElementMap().find(e));
++            Node::FESwitch::setStore(node.pfe,
++                                     node.pgfs->finiteElementMap().find(e));
+           } else {
+-            node.bindFiniteElement(node.pgfs->finiteElementMap().find(e));
+-            node.n = Node::FESwitch::basis(node.finiteElement()).size();
++            Node::FESwitch::setStore(node.pfe,
++                                     node.pgfs->finiteElementMap().find(e));
++            node.n = Node::FESwitch::basis(*node.pfe).size();
+           }
+           offset += node.n;
+         }
+@@ -683,39 +684,9 @@ namespace Dune {
+         BaseT::bind(*this,e,fast_);
+       }
+ 
+-      /**
+-       * @brief Binds a finite element to the local space
+-       * If the finite element is lvalue, the caller (i.e. FEM) must guarantee
+-       * the lifetime of the object since we only keep a view on it. On the other
+-       * hand, if it is rvalue, we store it locally but we require the object to
+-       * be fully movable.
+-       * @tparam FE rvalue or lvalue type of the finite element
+-       * @param fe the finite element to be bound
+-       */
+-      template<class FE>
+-      void bindFiniteElement(FE&& fe) {
+-        static_assert(std::is_same_v<std::decay_t<FE>, typename Traits::FiniteElementType>);
+-        if constexpr (std::is_rvalue_reference_v<FE&&>) {
+-          static_assert(std::is_move_constructible_v<FE>);
+-          static_assert(std::is_move_assignable_v<FE>);
+-          if (spe)
+-            (*spe) = std::move(fe);
+-          else
+-            spe = std::make_shared<typename Traits::FiniteElementType>(std::move(fe));
+-          pfe = spe.get();
+-        } else {
+-          pfe = &fe;
+-        }
+-      }
+-
+-      //! Release view of the bound finite element
+-      void unbindFiniteElement() noexcept {
+-        pfe = nullptr;
+-      }
+-
++      //    private:
++      typename FESwitch::Store pfe;
+     private:
+-      const typename Traits::FiniteElementType * pfe;
+-      std::shared_ptr<typename Traits::FiniteElementType> spe;
+       bool _in_entity_set;
+     };
+ 
+diff --git a/dune-pdelab/dune/pdelab/ordering/directleaflocalordering.hh b/dune-pdelab/dune/pdelab/ordering/directleaflocalordering.hh
+index bcf28abf..02388ebe 100644
+--- a/dune-pdelab/dune/pdelab/ordering/directleaflocalordering.hh
++++ b/dune-pdelab/dune/pdelab/ordering/directleaflocalordering.hh
+@@ -209,9 +209,10 @@ namespace Dune {
+ 
+       void collect_used_geometry_types_from_cell(const typename Traits::GridView::template Codim<0>::Entity& cell)
+       {
+-        // notice that we keep the finite element alive on this scope (important if rvalue)
+-        const auto& fe = _fem->find(cell);
+-        const typename FESwitch::Coefficients& coeffs = FESwitch::coefficients(fe);
++        FESwitch::setStore(_fe_store,_fem->find(cell));
++
++        const typename FESwitch::Coefficients& coeffs =
++          FESwitch::coefficients(*_fe_store);
+ 
+         _max_local_size = std::max(_max_local_size,coeffs.size());
+ 
+@@ -249,9 +250,10 @@ namespace Dune {
+         if (this->_fixed_size_possible)
+           std::fill(_local_gt_dof_sizes.begin(),_local_gt_dof_sizes.end(),0);
+ 
+-        // notice that we keep the finite element alive on this scope (important if rvalue)
+-        const auto& fe = _fem->find(cell);
+-        const typename FESwitch::Coefficients& coeffs = FESwitch::coefficients(fe);
++        FESwitch::setStore(_fe_store,_fem->find(cell));
++
++        const typename FESwitch::Coefficients& coeffs =
++          FESwitch::coefficients(*_fe_store);
+ 
+         typedef typename Traits::SizeType size_type;
+ 
+@@ -322,6 +324,7 @@ namespace Dune {
+     protected:
+ 
+       std::shared_ptr<const FEM> _fem;
++      typename FESwitch::Store _fe_store;
+ 
+       ES _es;
+       bool _fixed_size;
+diff --git a/dune-pdelab/dune/pdelab/ordering/leaflocalordering.hh b/dune-pdelab/dune/pdelab/ordering/leaflocalordering.hh
+index 2cbc345f..88e57abc 100644
+--- a/dune-pdelab/dune/pdelab/ordering/leaflocalordering.hh
++++ b/dune-pdelab/dune/pdelab/ordering/leaflocalordering.hh
+@@ -99,9 +99,10 @@ namespace Dune {
+ 
+       void collect_used_geometry_types_from_cell(const typename Traits::EntitySet::Element& cell)
+       {
+-        // notice that we keep the finite element alive on this scope (important if rvalue)
+-        const auto& fe = _fem->find(cell);
+-        const typename FESwitch::Coefficients& coeffs = FESwitch::coefficients(fe);
++        FESwitch::setStore(_pfe,_fem->find(cell));
++
++        const typename FESwitch::Coefficients& coeffs =
++          FESwitch::coefficients(*_pfe);
+ 
+         this->_max_local_size = std::max(this->_max_local_size,coeffs.size());
+ 
+@@ -124,9 +125,10 @@ namespace Dune {
+         if (this->_fixed_size_possible)
+           std::fill(gt_sizes.begin(),gt_sizes.end(),0);
+ 
+-        // notice that we keep the finite element alive on this scope (important if rvalue)
+-        const auto& fe = _fem->find(cell);
+-        const typename FESwitch::Coefficients& coeffs = FESwitch::coefficients(fe);
++        FESwitch::setStore(_pfe,_fem->find(cell));
++
++        const typename FESwitch::Coefficients& coeffs =
++          FESwitch::coefficients(*_pfe);
+ 
+         this->_max_local_size = std::max(this->_max_local_size,coeffs.size());
+ 
+@@ -163,6 +165,7 @@ namespace Dune {
+ 
+       std::shared_ptr<const FEM> _fem;
+       ES _es;
++      typename FESwitch::Store _pfe;
+ 
+     };
+ 

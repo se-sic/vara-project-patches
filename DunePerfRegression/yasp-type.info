@@ -1,0 +1,16 @@
+description: Reproduces a real-world regression from the dune project related to the type overload of the yasp grid. See https://gitlab.dune-project.org/core/dune-grid/-/issues/146 for details.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: yasp-type.patch
+project_name: DunePerfRegression
+shortname: yasp-type
+tags:
+- dune
+- compile-time
+- regression
+- template
+- grid
+- YaspGrid
+- perf_prec
+- real_world

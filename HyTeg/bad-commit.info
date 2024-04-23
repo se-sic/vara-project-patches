@@ -1,0 +1,13 @@
+description: A regression to the HyTeG project that could be introduced due to a "bad" commit by an inexperienced developer.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: bad-commit.patch
+project_name: HyTeg
+shortname: bad-commit
+tags:
+- HyTeg
+- compile-time
+- regression
+- perf_prec
+- real_world
