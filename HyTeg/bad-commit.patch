@@ -1,0 +1,92 @@
+diff --git a/src/hyteg/p1functionspace/P1Operator.hpp b/src/hyteg/p1functionspace/P1Operator.hpp
+index 2e110ff2c..8b1e61cf3 100644
+--- a/src/hyteg/p1functionspace/P1Operator.hpp
++++ b/src/hyteg/p1functionspace/P1Operator.hpp
+@@ -266,25 +266,11 @@ class P1Operator : public Operator< P1Function< ValueType >, P1Function< ValueTy
+             {
+                if ( storage_->hasGlobalCells() )
+                {
+-                  if ( hyteg::globalDefines::useGeneratedKernels )
+-                  {
+-                     apply_face3D_generated( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+-                  }
+-                  else
+-                  {
+-                     apply_face3D( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+-                  }
++                  apply_face3D( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+                }
+                else
+                {
+-                  if constexpr ( hyteg::globalDefines::useGeneratedKernels )
+-                  {
+-                     apply_face_generated( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+-                  }
+-                  else
+-                  {
+-                     apply_face( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+-                  }
++                  apply_face( face, src.getFaceDataID(), dst.getFaceDataID(), level, updateType );
+                }
+             }
+          }
+@@ -306,14 +292,7 @@ class P1Operator : public Operator< P1Function< ValueType >, P1Function< ValueTy
+ 
+             if ( testFlag( cellBC, flag ) )
+             {
+-               if constexpr ( hyteg::globalDefines::useGeneratedKernels )
+-               {
+-                  apply_cell_generated( cell, src.getCellDataID(), dst.getCellDataID(), level, updateType );
+-               }
+-               else
+-               {
+-                  apply_cell( cell, src.getCellDataID(), dst.getCellDataID(), level, updateType );
+-               }
++               apply_cell( cell, src.getCellDataID(), dst.getCellDataID(), level, updateType );
+             }
+          }
+       }
+@@ -984,25 +963,11 @@ class P1Operator : public Operator< P1Function< ValueType >, P1Function< ValueTy
+          {
+             if ( storage_->hasGlobalCells() )
+             {
+-               if ( globalDefines::useGeneratedKernels )
+-               {
+-                  smooth_sor_face3D_generated( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+-               }
+-               else
+-               {
+-                  smooth_sor_face3D( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+-               }
++               smooth_sor_face3D( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+             }
+             else
+             {
+-               if ( globalDefines::useGeneratedKernels )
+-               {
+-                  smooth_sor_face_generated( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+-               }
+-               else
+-               {
+-                  smooth_sor_face( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+-               }
++               smooth_sor_face( face, dst.getFaceDataID(), rhs.getFaceDataID(), level, relax, backwards );
+             }
+          }
+       }
+@@ -1027,14 +992,7 @@ class P1Operator : public Operator< P1Function< ValueType >, P1Function< ValueTy
+ 
+          if ( testFlag( cellBC, flag ) )
+          {
+-            if ( globalDefines::useGeneratedKernels )
+-            {
+-               smooth_sor_cell_generated( cell, dst.getCellDataID(), rhs.getCellDataID(), level, relax, backwards );
+-            }
+-            else
+-            {
+-               smooth_sor_cell( cell, dst.getCellDataID(), rhs.getCellDataID(), level, relax, backwards );
+-            }
++            smooth_sor_cell( cell, dst.getCellDataID(), rhs.getCellDataID(), level, relax, backwards );
+          }
+       }
+ 
