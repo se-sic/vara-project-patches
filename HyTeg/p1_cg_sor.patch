@@ -1,7 +1,16 @@
 diff --git a/apps/profiling/ProfilingApp.cpp b/apps/profiling/ProfilingApp.cpp
-index 540f9d6da..6997b4d4a 100644
+index 540f9d6da..9fec101e0 100644
 --- a/apps/profiling/ProfilingApp.cpp
 +++ b/apps/profiling/ProfilingApp.cpp
+@@ -137,7 +137,7 @@ int main( int argc, char* argv[] )
+    walberla::logging::Logging::instance()->setLogLevel( walberla::logging::Logging::PROGRESS );
+    walberla::MPIManager::instance()->useWorldComm();
+    const uint_t        minLevel = 2;
+-   const uint_t        maxLevel = 4;
++   const uint_t        maxLevel = 7;
+    using P1op                   = hyteg::P1ConstantLaplaceOperator;
+    using P2op                   = hyteg::P2ConstantLaplaceOperator;
+ 
 @@ -148,11 +148,8 @@ int main( int argc, char* argv[] )
     //   SORSmoother or SymmetricSORSmoother
     //   the symmetric variant alternates the direction of the smoothing for each iteration
