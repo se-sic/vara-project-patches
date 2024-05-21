@@ -1,0 +1,11 @@
+description: "Insert regression."
+include_revisions:
+  revision_range:
+    start: c80d170af4c70494c5bc6a7303ef21fa3a38813d
+    end:   HEAD
+path: regression.patch
+project_name: InterImplicitFlow
+shortname: regression
+tags:
+- regression
+- perf_prec
