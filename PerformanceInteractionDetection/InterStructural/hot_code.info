@@ -1,0 +1,10 @@
+description: "Marks the function hot_function() as hot code."
+include_revisions:
+  revision_range:
+    start: c80d170af4c70494c5bc6a7303ef21fa3a38813d
+    end:   HEAD
+path: hot_code.patch
+project_name: PerformanceInteractionCaseStudy
+shortname: hot_code
+tags:
+- perf_region
