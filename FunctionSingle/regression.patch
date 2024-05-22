@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp b/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
+index 6414bfb..bd8fb0d 100644
+--- a/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
+@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
+   F2 = fp_util::isFeatureEnabled(argc, argv, "--f2");
+   F3 = fp_util::isFeatureEnabled(argc, argv, "--f3");
+ 
+-  int t = 10;
++  int t = 15;
+ 
+   if (F1) {
+     function1(t);

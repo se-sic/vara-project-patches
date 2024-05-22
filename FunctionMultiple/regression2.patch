@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp b/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
+index 70137b9..319a985 100644
+--- a/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
+@@ -33,7 +33,7 @@ int main(int argc, char *argv[]) {
+   F3 = fp_util::isFeatureEnabled(argc, argv, "--f3");
+ 
+   int s = 10;
+-  int t = 10;
++  int t = 15;
+   bool b = false;
+ 
+   if (F1) {

@@ -1,0 +1,15 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
+index 9a0e036..c2d8dd7 100644
+--- a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
+@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
+   F2 = fp_util::isFeatureEnabled(argc, argv, "--f2");
+   F3 = fp_util::isFeatureEnabled(argc, argv, "--f3");
+ 
+-  int r = 10;
+-  int s = 10;
++  int r = 15;
++  int s = 15;
+   int t = 10;
+ 
+   if (F1) {
