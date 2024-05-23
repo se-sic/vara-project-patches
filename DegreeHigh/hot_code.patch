@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/DegreeHigh/main.cpp b/projects/PerformanceInteractionDetection/DegreeHigh/main.cpp
+index ba87834..2fa3853 100644
+--- a/projects/PerformanceInteractionDetection/DegreeHigh/main.cpp
++++ b/projects/PerformanceInteractionDetection/DegreeHigh/main.cpp
+@@ -52,6 +52,8 @@ int main(int argc, char *argv[]) {
+     }
+   }
+ 
++  ___REGION_START __RT_High "hot_code"
+   fp_util::sleep_for_millisecs(100 + t);
++  ___REGION_END __RT_High "hot_code"
+   return 0;
+ }
