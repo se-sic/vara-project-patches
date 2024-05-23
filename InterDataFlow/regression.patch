@@ -1,5 +1,5 @@
 diff --git a/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp b/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
-index 6e17612..19b9419 100644
+index 415bdc0..55a3ca6 100644
 --- a/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
 +++ b/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
 @@ -16,7 +16,7 @@ int hotFunction(int t) {
@@ -10,4 +10,4 @@ index 6e17612..19b9419 100644
 +  int t = 15;
  
    if (F1) {
-     t += 1;
+     t *= 2;

@@ -1,5 +1,5 @@
 diff --git a/projects/PerformanceInteractionDetection/InterStructural/main.cpp b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
-index d6da8f5..ba714b3 100644
+index 9370f07..7d7ef3b 100644
 --- a/projects/PerformanceInteractionDetection/InterStructural/main.cpp
 +++ b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
 @@ -20,7 +20,7 @@ int hotFunction(int t) {
