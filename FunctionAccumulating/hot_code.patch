@@ -1,5 +1,5 @@
 diff --git a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
-index 9a0e036..a6aeb76 100644
+index 7f90a9a..ade0457 100644
 --- a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
 +++ b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
 @@ -9,17 +9,23 @@ bool __attribute__((feature_variable("F2"))) F2;
@@ -8,19 +8,19 @@ index 9a0e036..a6aeb76 100644
  
 +___REGION_START __RT_High "hot_code"
  void function1(int r) {
-   fp_util::sleep_for_millisecs(100 + r);
+   fp_util::sleep_for_millisecs(3000 + r * 100);
  }
 +___REGION_END __RT_High "hot_code"
  
 +___REGION_START __RT_High "hot_code"
  void function2(int s) {
-   fp_util::sleep_for_millisecs(100 + s);
+   fp_util::sleep_for_millisecs(3000 + s * 100);
  }
 +___REGION_END __RT_High "hot_code"
  
 +___REGION_START __RT_High "hot_code"
  void function3(int t) {
-   fp_util::sleep_for_millisecs(100 + t);
+   fp_util::sleep_for_millisecs(3000 + t * 100);
  }
 +___REGION_END __RT_High "hot_code"
  

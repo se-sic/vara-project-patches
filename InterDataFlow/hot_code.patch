@@ -1,5 +1,5 @@
 diff --git a/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp b/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
-index 415bdc0..198210f 100644
+index a9f8958..7efd1e2 100644
 --- a/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
 +++ b/projects/PerformanceInteractionDetection/InterDataFlow/main.cpp
 @@ -8,10 +8,12 @@
@@ -8,7 +8,7 @@ index 415bdc0..198210f 100644
  
 +___REGION_START __RT_High "hot_code"
  int hotFunction(int t) {
-   fp_util::sleep_for_millisecs(100 + t);
+   fp_util::sleep_for_millisecs(5000 + t * 100);
    return 0;
  }
 +___REGION_END __RT_High "hot_code"

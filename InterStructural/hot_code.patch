@@ -1,5 +1,5 @@
 diff --git a/projects/PerformanceInteractionDetection/InterStructural/main.cpp b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
-index 9370f07..4ae5612 100644
+index 962b38e..ef11c5a 100644
 --- a/projects/PerformanceInteractionDetection/InterStructural/main.cpp
 +++ b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
 @@ -8,6 +8,7 @@
@@ -11,7 +11,7 @@ index 9370f07..4ae5612 100644
    if (F1) {
      t *= 2;
 @@ -16,6 +17,7 @@ int hotFunction(int t) {
-   fp_util::sleep_for_millisecs(100 + t);
+   fp_util::sleep_for_millisecs(5000 + t * 100);
    return 0;
  }
 +___REGION_END __RT_High "hot_code"
