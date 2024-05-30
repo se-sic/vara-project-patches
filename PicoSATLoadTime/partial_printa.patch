@@ -1,0 +1,46 @@
+diff --git a/app.c b/app.c
+index 5f66ef8..2a7ac84 100644
+--- a/app.c
++++ b/app.c
+@@ -12,6 +12,33 @@
+ #define BUNZIP2 "bzcat %s"
+ #define GZIP "gzip -c -f > %s"
+ 
++#include <time.h>
++void busy_sleep_for_millisecs(unsigned long long Millisecs) {
++ printf("Sleepings for %llu milliseconds\n", Millisecs);
++ struct timespec ts;
++ timespec_get(&ts, TIME_UTC);
++
++ unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
++ unsigned long long end_ns = start_ns + (Millisecs * 1000000);
++
++printf("Calculated diff: %llu\n", (end_ns-start_ns));
++
++ unsigned long long current_ns = start_ns;
++  printf("busy_sleep start time: %llu\n",current_ns);
++  printf("busy_sleep end time:   %llu\n",end_ns);
++
++ while (current_ns < end_ns) {
++  for (long counter = 0; counter < 100000; ++counter) {
++   asm volatile("" : "+g"(counter) : :); // prevent optimization
++  }
++
++  timespec_get(&ts, TIME_UTC);
++  current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
++ }
++
++  printf("busy_sleep current_ns at end: %llu\n",current_ns);
++}
++
+ FILE * popen (const char *, const char*);
+ int pclose (FILE *);
+ 
+@@ -1010,6 +1037,7 @@ picosat_main (int argc, char **argv)
+ 	      "c saving original clauses for partial assignment\n");
+ 
+ 	  picosat_save_original_clauses (picosat);
++      busy_sleep_for_millisecs(1000);
+ 	}
+ 
+       if (verbose)
