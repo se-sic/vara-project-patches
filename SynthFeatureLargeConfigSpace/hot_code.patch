@@ -1,0 +1,13 @@
+diff --git a/projects/SynthFeatureLargeConfigSpace/main.cpp b/projects/SynthFeatureLargeConfigSpace/main.cpp
+index 2a2187d..daf681b 100644
+--- a/projects/SynthFeatureLargeConfigSpace/main.cpp
++++ b/projects/SynthFeatureLargeConfigSpace/main.cpp
+@@ -76,6 +76,8 @@ int main(int argc, char *argv[]) {
+     fp_util::sleep_for_millisecs(20);
+   }
+ 
++  ___REGION_START __RT_High "performance-relevant code"
+   fp_util::sleep_for_millisecs(sleepTime);
++  ___REGION_END __RT_High "performance-relevant code"
+   return 0;
+ }

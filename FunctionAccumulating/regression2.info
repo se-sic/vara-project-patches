@@ -1,0 +1,11 @@
+description: "Insert regression."
+include_revisions:
+  revision_range:
+    start: 2036239cdbc2210f19e2bcabe75f23d217c0a9d4
+    end:   HEAD
+path: regression2.patch
+project_name: FunctionAccumulating
+shortname: regression2
+tags:
+- regression
+- perf_prec

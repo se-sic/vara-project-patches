@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/InterImplicitFlow/main.cpp b/projects/PerformanceInteractionDetection/InterImplicitFlow/main.cpp
+index c24462b..0b2b076 100644
+--- a/projects/PerformanceInteractionDetection/InterImplicitFlow/main.cpp
++++ b/projects/PerformanceInteractionDetection/InterImplicitFlow/main.cpp
+@@ -16,7 +16,7 @@ int hotFunction(int t) {
+ int main(int argc, char *argv[]) {
+   F1 = fp_util::isFeatureEnabled(argc, argv, "--f1");
+ 
+-  int t = 10;
++  int t = 15;
+   bool flag = false;
+ 
+   if (F1) {

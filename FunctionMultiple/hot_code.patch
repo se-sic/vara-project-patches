@@ -1,0 +1,20 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp b/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
+index 3eaddca..b6941b3 100644
+--- a/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionMultiple/main.cpp
+@@ -16,6 +16,7 @@ bool function1(int s) {
+   return false;
+ }
+ 
++___REGION_START __RT_High "hot_code"
+ void function2(bool b, int t) {
+   if (b) {
+     fp_util::sleep_for_millisecs(t * 100);
+@@ -23,6 +24,7 @@ void function2(bool b, int t) {
+     fp_util::sleep_for_millisecs(1000);
+   }
+ }
++___REGION_END __RT_High "hot_code"
+ 
+ void function3() {
+   fp_util::sleep_for_millisecs(1000);

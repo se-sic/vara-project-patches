@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/DegreeLow/main.cpp b/projects/PerformanceInteractionDetection/DegreeLow/main.cpp
+index abde64c..d7063bd 100644
+--- a/projects/PerformanceInteractionDetection/DegreeLow/main.cpp
++++ b/projects/PerformanceInteractionDetection/DegreeLow/main.cpp
+@@ -28,7 +28,7 @@ int main(int argc, char *argv[]) {
+   F9 = fp_util::isFeatureEnabled(argc, argv, "--f9");
+   F10 = fp_util::isFeatureEnabled(argc, argv, "--f10");
+ 
+-  int t = 10;
++  int t = 15;
+ 
+   if (F1) {
+     t *= 2;

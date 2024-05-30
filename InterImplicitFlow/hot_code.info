@@ -1,0 +1,10 @@
+description: "Marks the function hot_function() as hot code."
+include_revisions:
+  revision_range:
+    start: e3c3ab43f27bec96f015b4bce591156bbe557a0a
+    end:   HEAD
+path: hot_code.patch
+project_name: InterImplicitFlow
+shortname: hot_code
+tags:
+- perf_region

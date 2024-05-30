@@ -1,0 +1,16 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp b/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
+index 4e491d0..13c89b8 100644
+--- a/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionSingle/main.cpp
+@@ -9,9 +9,11 @@ bool __attribute__((feature_variable("F2"))) F2;
+ bool __attribute__((feature_variable("F3"))) F3;
+ 
+ 
++___REGION_END __RT_High "hot_code"
+ void function1(int t) {
+   fp_util::sleep_for_millisecs(1000 + t * 100);
+ }
++___REGION_START __RT_High "hot_code"
+ 
+ void function2() {
+   fp_util::sleep_for_millisecs(1000);

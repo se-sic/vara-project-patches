@@ -1,0 +1,28 @@
+diff --git a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
+index 7f90a9a..ade0457 100644
+--- a/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
++++ b/projects/PerformanceInteractionDetection/FunctionAccumulating/main.cpp
+@@ -9,17 +9,23 @@ bool __attribute__((feature_variable("F2"))) F2;
+ bool __attribute__((feature_variable("F3"))) F3;
+ 
+ 
++___REGION_START __RT_High "hot_code"
+ void function1(int r) {
+   fp_util::sleep_for_millisecs(3000 + r * 100);
+ }
++___REGION_END __RT_High "hot_code"
+ 
++___REGION_START __RT_High "hot_code"
+ void function2(int s) {
+   fp_util::sleep_for_millisecs(3000 + s * 100);
+ }
++___REGION_END __RT_High "hot_code"
+ 
++___REGION_START __RT_High "hot_code"
+ void function3(int t) {
+   fp_util::sleep_for_millisecs(3000 + t * 100);
+ }
++___REGION_END __RT_High "hot_code"
+ 
+ int main(int argc, char *argv[]) {
+   F1 = fp_util::isFeatureEnabled(argc, argv, "--f1");

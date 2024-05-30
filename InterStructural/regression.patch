@@ -1,0 +1,13 @@
+diff --git a/projects/PerformanceInteractionDetection/InterStructural/main.cpp b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
+index 9370f07..7d7ef3b 100644
+--- a/projects/PerformanceInteractionDetection/InterStructural/main.cpp
++++ b/projects/PerformanceInteractionDetection/InterStructural/main.cpp
+@@ -20,7 +20,7 @@ int hotFunction(int t) {
+ int main(int argc, char *argv[]) {
+   F1 = fp_util::isFeatureEnabled(argc, argv, "--f1");
+ 
+-  int t = 10;
++  int t = 15;
+ 
+   hotFunction(t);
+ 
