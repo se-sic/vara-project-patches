@@ -1,0 +1,47 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..ba83fc1 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -31,6 +31,25 @@ IN THE SOFTWARE.
+ 
+ #include "picosat.h"
+ 
++#include <time.h>
++void busy_sleep_for_millisecs(unsigned long long Millisecs) {
++  struct timespec ts;
++  timespec_get(&ts, TIME_UTC);
++
++  unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
++  unsigned long long end_ns = start_ns + (Millisecs * 1000000);
++  unsigned long long current_ns = start_ns;
++
++  while (current_ns < end_ns) {
++    for (long counter = 0; counter < 100000; ++counter) {
++      asm volatile("" : "+g"(counter) : :); // prevent optimization
++    }
++
++    timespec_get(&ts, TIME_UTC);
++    current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;
++  }
++}
++
+ /* By default code for 'all different constraints' is disabled, since 'NADC'
+  * is defined.
+  */
+@@ -3873,6 +3892,7 @@ fanalyze (PS * ps)
+ inline static void
+ prop2 (PS * ps, Lit * this)
+ {
++  busy_sleep_for_millisecs(1); // Performance regression
+ #ifdef NO_BINARY_CLAUSES
+   Lit ** l, ** start;
+   Ltk * lstk;
+@@ -6603,7 +6623,7 @@ picosat_copyright (void)
+ PicoSAT *
+ picosat_init (void)
+ {
+-  return init (0, 0, 0, 0);
++  return init (0, 0, 0, 0); // Change
+ }
+ 
+ PicoSAT * 
