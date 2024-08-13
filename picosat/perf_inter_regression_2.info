@@ -1,0 +1,11 @@
+description: "Insert regression."
+include_revisions:
+  revision_range:
+    start: 63a74c25dfadc447b7eea07773ef40f589ca1ed5
+    end:   HEAD
+path: perf_inter_regression_2.patch
+project_name: picosat
+shortname: regression2
+tags:
+- regression
+- perf_prec

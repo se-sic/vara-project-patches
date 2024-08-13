@@ -1,0 +1,54 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..86a0ebc 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -2931,7 +2931,7 @@ enlarge (PS * ps, unsigned new_size_vars)
+ 
+ static void
+ unassign (PS * ps, Lit * lit)
+-{
++{ busy_sleep_for_nanosecs(10); // Performance regression
+   Cls *reason;
+   Var *v;
+   Rnk *r;
+@@ -7114,7 +7114,7 @@ picosat_sat (PS * ps, int l)
+   int res;
+   char ch;
+ 
+-  enter (ps);
++  enter (ps); // Change
+ 
+   ps->calls++;
+   LOG ( fprintf (ps->out, "%sSTART call %u\n", ps->prefix, ps->calls));
+diff --git a/picosat.h b/picosat.h
+index 3f38e4a..8789b6d 100644
+--- a/picosat.h
++++ b/picosat.h
+@@ -29,6 +29,27 @@ IN THE SOFTWARE.
+ #include <stdio.h>
+ #include <stddef.h>
+ 
++
++#include <time.h>
++#define busy_sleep_for_nanosecs(nanosecs)                                      \
++  {                                                                            \
++    struct timespec ts;                                                        \
++    timespec_get(&ts, TIME_UTC);                                               \
++                                                                               \
++    unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;         \
++    unsigned long long end_ns = start_ns + nanosecs;                           \
++    unsigned long long current_ns = start_ns;                                  \
++                                                                               \
++    while (current_ns < end_ns) {                                              \
++      for (long counter = 0; counter < end_ns - current_ns; ++counter) {       \
++        asm volatile("" : "+g"(counter) : :); /* prevent optimization */       \
++      }                                                                        \
++                                                                               \
++      timespec_get(&ts, TIME_UTC);                                             \
++      current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;                        \
++    }                                                                          \
++  }
++
+ /*------------------------------------------------------------------------*/
+ /* The following macros allows for users to distiguish between different
+  * versions of the API.  The first 'PICOSAT_REENTRANT_API' is defined for
