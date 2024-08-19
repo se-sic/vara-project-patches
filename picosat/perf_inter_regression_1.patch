@@ -1,5 +1,5 @@
 diff --git a/picosat.c b/picosat.c
-index f97e3cb..bcc56d9 100644
+index f97e3cb..13a631f 100644
 --- a/picosat.c
 +++ b/picosat.c
 @@ -3872,7 +3872,7 @@ fanalyze (PS * ps)
@@ -7,28 +7,18 @@ index f97e3cb..bcc56d9 100644
  inline static void
  prop2 (PS * ps, Lit * this)
 -{
-+{  busy_sleep_for_nanosecs(10); // Performance regression
++{ busy_sleep_for_nanosecs(10); // Performance regression
  #ifdef NO_BINARY_CLAUSES
    Lit ** l, ** start;
    Ltk * lstk;
-@@ -6603,7 +6603,7 @@ picosat_copyright (void)
- PicoSAT *
- picosat_init (void)
- {
--  return init (0, 0, 0, 0);
-+  return init (0, 0, 0, 0); // Change
- }
- 
- PicoSAT * 
 diff --git a/picosat.h b/picosat.h
-index 3f38e4a..8789b6d 100644
+index 3f38e4a..a2db7f3 100644
 --- a/picosat.h
 +++ b/picosat.h
-@@ -29,6 +29,27 @@ IN THE SOFTWARE.
+@@ -29,6 +29,26 @@ IN THE SOFTWARE.
  #include <stdio.h>
  #include <stddef.h>
  
-+
 +#include <time.h>
 +#define busy_sleep_for_nanosecs(nanosecs)                                      \
 +  {                                                                            \

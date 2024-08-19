@@ -1,0 +1,13 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..911b11f 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -7116,7 +7116,7 @@ picosat_sat (PS * ps, int l)
+ 
+   enter (ps);
+ 
+-  ps->calls++;
++  ps->calls++; // Change
+   LOG ( fprintf (ps->out, "%sSTART call %u\n", ps->prefix, ps->calls));
+ 
+   if (ps->added < ps->ahead)

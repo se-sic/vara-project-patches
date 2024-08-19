@@ -1,0 +1,13 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..996e1d0 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -5044,7 +5044,7 @@ faillits (PS * ps)
+   sflush (ps);
+   started = ps->seconds;
+ 
+-  ps->flcalls++;
++  ps->flcalls++; // Change
+ #ifdef STATSA
+   ps->flrounds++;
+ #endif
