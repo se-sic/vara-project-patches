@@ -8,4 +8,4 @@ project_name: DegreeHigh
 shortname: regression
 tags:
 - regression
-- perf_prec
+- perf_inter

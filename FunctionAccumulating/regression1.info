@@ -8,4 +8,4 @@ project_name: FunctionAccumulating
 shortname: regression1
 tags:
 - regression
-- perf_prec
+- perf_inter

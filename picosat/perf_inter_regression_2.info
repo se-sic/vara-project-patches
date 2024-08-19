@@ -8,4 +8,4 @@ project_name: picosat
 shortname: regression2
 tags:
 - regression
-- perf_prec
+- perf_inter

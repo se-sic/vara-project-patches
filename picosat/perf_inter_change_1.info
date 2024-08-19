@@ -8,4 +8,4 @@ project_name: picosat
 shortname: change1
 tags:
 - change
-- perf_prec
+- perf_inter
