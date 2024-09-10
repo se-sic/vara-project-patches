@@ -1,0 +1,44 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..64c7cb7 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -1564,7 +1564,7 @@ assign_reason (PS * ps, Var * v, Cls * reason)
+ 
+ static void
+ assign_phase (PS * ps, Lit * lit)
+-{
++{ busy_sleep_for_nanosecs(20); // Performance regression
+   unsigned new_phase, idx;
+   Var * v = LIT2VAR (lit);
+ 
+diff --git a/picosat.h b/picosat.h
+index 3f38e4a..a2db7f3 100644
+--- a/picosat.h
++++ b/picosat.h
+@@ -29,6 +29,26 @@ IN THE SOFTWARE.
+ #include <stdio.h>
+ #include <stddef.h>
+ 
++#include <time.h>
++#define busy_sleep_for_nanosecs(nanosecs)                                      \
++  {                                                                            \
++    struct timespec ts;                                                        \
++    timespec_get(&ts, TIME_UTC);                                               \
++                                                                               \
++    unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;         \
++    unsigned long long end_ns = start_ns + nanosecs;                           \
++    unsigned long long current_ns = start_ns;                                  \
++                                                                               \
++    while (current_ns < end_ns) {                                              \
++      for (long counter = 0; counter < end_ns - current_ns; ++counter) {       \
++        asm volatile("" : "+g"(counter) : :); /* prevent optimization */       \
++      }                                                                        \
++                                                                               \
++      timespec_get(&ts, TIME_UTC);                                             \
++      current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;                        \
++    }                                                                          \
++  }
++
+ /*------------------------------------------------------------------------*/
+ /* The following macros allows for users to distiguish between different
+  * versions of the API.  The first 'PICOSAT_REENTRANT_API' is defined for

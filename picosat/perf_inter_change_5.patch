@@ -1,0 +1,13 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..9abd699 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -1582,7 +1582,7 @@ assign_phase (PS * ps, Lit * lit)
+ 	{
+ 	  ps->sdflips -= ps->sdflips/FFLIPPED;
+ 
+-	  if (new_phase != v->phase)
++	  if (new_phase != v->phase) // Change
+ 	    {
+ 	      assert (FFLIPPEDPREC >= FFLIPPED);
+ 	      ps->sdflips += FFLIPPEDPREC / FFLIPPED;
