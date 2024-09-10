@@ -1,0 +1,13 @@
+diff --git a/picosat.c b/picosat.c
+index f97e3cb..6fb6a62 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -4550,7 +4550,7 @@ backtrack (PS * ps)
+   unsigned new_level;
+   Cls * c;
+ 
+-  ps->conflicts++;
++  ps->conflicts++; // Change
+   LOG ( fprintf (ps->out, "%sconflict ", ps->prefix); dumpclsnl (ps, ps->conflict));
+ 
+   analyze (ps);
