@@ -7,5 +7,5 @@ path: regression2.patch
 project_name: FunctionAccumulating
 shortname: regression2
 tags:
-- regression
+- change
 - perf_inter

@@ -7,5 +7,5 @@ path: regression1.patch
 project_name: FunctionMultiple
 shortname: regression1
 tags:
-- regression
+- change
 - perf_inter
