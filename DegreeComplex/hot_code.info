@@ -1,0 +1,10 @@
+description: "Marks hot code."
+include_revisions:
+  revision_range:
+    start: c9bb7aee598fcecea5502e2056cc60d467333e6b
+    end:   HEAD
+path: hot_code.patch
+project_name: DegreeComplex
+shortname: hot_code
+tags:
+- perf_region
