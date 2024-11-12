@@ -1,0 +1,13 @@
+diff --git a/src/xz/coder.c b/src/xz/coder.c
+index d694c8e0..28c5b0d6 100644
+--- a/src/xz/coder.c
++++ b/src/xz/coder.c
+@@ -1000,7 +1000,7 @@ coder_init(file_pair *pair)
+ 
+ 		case FORMAT_XZ:
+ #	ifdef MYTHREAD_ENABLED
+-			mt_options.flags = flags;
++			mt_options.flags = flags;  // Change
+ 
+ 			mt_options.threads = hardware_threads_get();
+ 			mt_options.memlimit_stop

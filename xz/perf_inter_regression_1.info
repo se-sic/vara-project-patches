@@ -1,0 +1,11 @@
+description: "Insert regression."
+include_revisions:
+  revision_range:
+    start: fd1b975b7851e081ed6e5cf63df946cd5cbdbb94
+    end:   HEAD
+path: perf_inter_regression_1.patch
+project_name: xz
+shortname: regression1
+tags:
+- regression
+- perf_inter
