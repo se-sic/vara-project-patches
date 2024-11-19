@@ -1,0 +1,41 @@
+diff --git a/decompress.c b/decompress.c
+index 3b2da0d..c5d5cdc 100644
+--- a/decompress.c
++++ b/decompress.c
+@@ -22,6 +22,27 @@
+ #include "bzlib_private.h"
+ 
+ 
++#include <time.h>
++#define busy_sleep_for_nanosecs(nanosecs)                                      \
++  {                                                                            \
++    struct timespec ts;                                                        \
++    timespec_get(&ts, TIME_UTC);                                               \
++                                                                               \
++    unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;         \
++    unsigned long long end_ns = start_ns + nanosecs;                           \
++    unsigned long long current_ns = start_ns;                                  \
++                                                                               \
++    while (current_ns < end_ns) {                                              \
++      for (long counter = 0; counter < end_ns - current_ns; ++counter) {       \
++        asm volatile("" : "+g"(counter) : :); /* prevent optimization */       \
++      }                                                                        \
++                                                                               \
++      timespec_get(&ts, TIME_UTC);                                             \
++      current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;                        \
++    }                                                                          \
++  }
++
++
+ /*---------------------------------------------------*/
+ static
+ void makeMaps_d ( DState* s )
+@@ -568,6 +589,8 @@ Int32 BZ2_decompress ( DState* s )
+             s->tt[s->cftab[uc]] |= (i << 8);
+             s->cftab[uc]++;
+          }
++         // busy_sleep_for_nanosecs(10000000); // Performance regression
++         // busy_sleep_for_nanosecs(1000000000); // Performance regression
+ 
+          s->tPos = s->tt[s->origPtr] >> 8;
+          s->nblock_used = 0;

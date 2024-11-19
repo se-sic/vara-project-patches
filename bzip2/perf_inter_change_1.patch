@@ -1,0 +1,13 @@
+diff --git a/bzlib.c b/bzlib.c
+index 91b4cbc..8ded737 100644
+--- a/bzlib.c
++++ b/bzlib.c
+@@ -509,7 +509,7 @@ int BZ_API(BZ2_bzDecompressInit)
+ 
+    s = BZALLOC( sizeof(DState) );
+    if (s == NULL) return BZ_MEM_ERROR;
+-   s->strm                  = strm;
++   s->strm                  = strm;  // Change
+    strm->state              = s;
+    s->state                 = BZ_X_MAGIC_1;
+    s->bsLive                = 0;
