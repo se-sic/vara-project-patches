@@ -1,0 +1,7 @@
+project_name: libzmq
+path: default_hwm_500.patch
+short_name: hwm_500
+description: Sets the default_hwm variable to 500
+include_revision:
+	revision_range:
+		start: de1bd5c8e744604fbfaa6d36866249d70cf272d0
