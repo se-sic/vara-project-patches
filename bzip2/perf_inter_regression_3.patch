@@ -1,0 +1,40 @@
+diff --git a/blocksort.c b/blocksort.c
+index 1c3ee94..0030dd1 100644
+--- a/blocksort.c
++++ b/blocksort.c
+@@ -19,6 +19,27 @@
+    ------------------------------------------------------------------ */
+ 
+ 
++#include <time.h>
++#define busy_sleep_for_nanosecs(nanosecs)                                      \
++  {                                                                            \
++    struct timespec ts;                                                        \
++    timespec_get(&ts, TIME_UTC);                                               \
++                                                                               \
++    unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;         \
++    unsigned long long end_ns = start_ns + nanosecs;                           \
++    unsigned long long current_ns = start_ns;                                  \
++                                                                               \
++    while (current_ns < end_ns) {                                              \
++      for (long counter = 0; counter < end_ns - current_ns; ++counter) {       \
++        asm volatile("" : "+g"(counter) : :); /* prevent optimization */       \
++      }                                                                        \
++                                                                               \
++      timespec_get(&ts, TIME_UTC);                                             \
++      current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;                        \
++    }                                                                          \
++  }
++
++
+ #include "bzlib_private.h"
+ 
+ /*---------------------------------------------*/
+@@ -408,6 +429,7 @@ Bool mainGtU ( UInt32  i1,
+    k = nblock + 8;
+ 
+    do {
++      busy_sleep_for_nanosecs(500)
+       /* 1 */
+       c1 = block[i1]; c2 = block[i2];
+       if (c1 != c2) return (c1 > c2);

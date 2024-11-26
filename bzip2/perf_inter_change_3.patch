@@ -1,0 +1,13 @@
+diff --git a/blocksort.c b/blocksort.c
+index 1c3ee94..50c0f22 100644
+--- a/blocksort.c
++++ b/blocksort.c
+@@ -1033,7 +1033,7 @@ void BZ2_blockSort ( EState* s )
+    UInt32* ptr    = s->ptr;
+    UChar*  block  = s->block;
+    UInt32* ftab   = s->ftab;
+-   Int32   nblock = s->nblock;
++   Int32   nblock = s->nblock;  // Change
+    Int32   verb   = s->verbosity;
+    Int32   wfact  = s->workFactor;
+    UInt16* quadrant;
