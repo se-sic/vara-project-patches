@@ -1,0 +1,22 @@
+diff --git a/bzlib.c b/bzlib.c
+index 91b4cbc..78bc7f4 100644
+--- a/bzlib.c
++++ b/bzlib.c
+@@ -202,7 +202,7 @@ int BZ_API(BZ2_bzCompressInit)
+    s->zbits             = NULL;
+    s->ptr               = (UInt32*)s->arr1;
+ 
+-   strm->state          = s;
++   strm->state          = s;  // Change
+    strm->total_in_lo32  = 0;
+    strm->total_in_hi32  = 0;
+    strm->total_out_lo32 = 0;
+@@ -1109,7 +1109,7 @@ BZFILE* BZ_API(BZ2_bzReadOpen)
+    if (ferror(f))
+       { BZ_SETERR(BZ_IO_ERROR); return NULL; };
+ 
+-   bzf = malloc ( sizeof(bzFile) );
++   bzf = malloc ( sizeof(bzFile) );  // Change
+    if (bzf == NULL)
+       { BZ_SETERR(BZ_MEM_ERROR); return NULL; };
+ 

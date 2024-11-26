@@ -1,0 +1,11 @@
+description: "Insert regression."
+include_revisions:
+  revision_range:
+    start: 7b443720990befbdc4c71865b6355841163f064e
+    end:   HEAD
+path: perf_inter_regression_2.patch
+project_name: bzip2
+shortname: regression2
+tags:
+- regression
+- perf_inter
