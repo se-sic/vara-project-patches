@@ -1,13 +1,13 @@
 diff --git a/bzlib.c b/bzlib.c
-index 91b4cbc..8ded737 100644
+index 91b4cbc..308acc0 100644
 --- a/bzlib.c
 +++ b/bzlib.c
-@@ -509,7 +509,7 @@ int BZ_API(BZ2_bzDecompressInit)
+@@ -1109,7 +1109,7 @@ BZFILE* BZ_API(BZ2_bzReadOpen)
+    if (ferror(f))
+       { BZ_SETERR(BZ_IO_ERROR); return NULL; };
  
-    s = BZALLOC( sizeof(DState) );
-    if (s == NULL) return BZ_MEM_ERROR;
--   s->strm                  = strm;
-+   s->strm                  = strm;  // Change
-    strm->state              = s;
-    s->state                 = BZ_X_MAGIC_1;
-    s->bsLive                = 0;
+-   bzf = malloc ( sizeof(bzFile) );
++   bzf = malloc ( sizeof(bzFile) );  // Change
+    if (bzf == NULL)
+       { BZ_SETERR(BZ_MEM_ERROR); return NULL; };
+ 
