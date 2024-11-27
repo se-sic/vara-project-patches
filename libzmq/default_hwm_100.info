@@ -1,6 +1,6 @@
 project_name: libzmq
 path: default_hwm_100.info
-short_name: hwm_100
+shortname: hwm_100
 description: Changes the default_hwm value to 100
 include_revisions:
   revision_range:

@@ -1,6 +1,6 @@
 project_name: libzmq
 path: default_hwm_50.patch
-short_name: hwm_50
+shortname: hwm_50
 description: Sets the default_hwm variable to 50
 include_revision:
   revision_range:
