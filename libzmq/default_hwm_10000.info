@@ -1,5 +1,5 @@
 project_name: libzmq
-path: default_hwm_10000.info
+path: default_hwm_10000.patch
 shortname: hwm_10000
 description: Changes the default_hwm value to 10000
 include_revisions:
