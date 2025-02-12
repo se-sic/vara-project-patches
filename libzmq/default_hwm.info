@@ -1,0 +1,11 @@
+project_name: libzmq
+path: default_hwm.patch
+shortname: hwm_template
+description: Changes the default_hwm value to a value defined by the argument `hwm`
+include_revisions:
+  revision_range:
+    start: de1bd5c8e744604fbfaa6d36866249d70cf272d0
+arguments:
+  - hwm
+tags:
+  - template
