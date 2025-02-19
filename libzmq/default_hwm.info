@@ -9,3 +9,4 @@ arguments:
   - hwm
 tags:
   - template
+  - hidden-config
