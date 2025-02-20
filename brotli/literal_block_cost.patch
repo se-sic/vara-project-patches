@@ -1,0 +1,13 @@
+diff --git a/c/enc/block_splitter.c b/c/enc/block_splitter.c
+index eba1b69..2c0623b 100644
+--- a/c/enc/block_splitter.c
++++ b/c/enc/block_splitter.c
+@@ -25,7 +25,7 @@ extern "C" {
+ 
+ static const size_t kMaxLiteralHistograms = 100;
+ static const size_t kMaxCommandHistograms = 50;
+-static const double kLiteralBlockSwitchCost = 28.1;
++static const double kLiteralBlockSwitchCost = {{ literal_block_cost }};
+ static const double kCommandBlockSwitchCost = 13.5;
+ static const double kDistanceBlockSwitchCost = 14.6;
+ static const size_t kLiteralStrideLength = 70;

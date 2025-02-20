@@ -1,0 +1,13 @@
+diff --git a/c/enc/encode.c b/c/enc/encode.c
+index fb2c0ce..f596485 100644
+--- a/c/enc/encode.c
++++ b/c/enc/encode.c
+@@ -438,7 +438,7 @@ static BROTLI_BOOL ShouldCompress(
+       uint32_t literal_histo[256] = { 0 };
+       static const uint32_t kSampleRate = 13;
+       static const double kInvSampleRate = 1.0 / 13.0;
+-      static const double kMinEntropy = 7.92;
++      static const double kMinEntropy = {{ min_entropy }};
+       const double bit_cost_threshold =
+           (double)bytes * kMinEntropy * kInvSampleRate;
+       size_t t = (bytes + kSampleRate - 1) / kSampleRate;

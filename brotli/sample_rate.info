@@ -1,0 +1,9 @@
+description: Template patch to change the sample rate heuristic value in brotli
+path: sample_rate.patch
+project_name: brotli
+shortname: sample_rate
+tags:
+  - template
+  - hidden-config
+arguments:
+  - sample_rate

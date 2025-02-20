@@ -1,0 +1,14 @@
+Submodule dune-alugrid contains modified content
+diff --git a/dune-alugrid/dune/alugrid/impl/serial/gitter_geo.cc b/dune-alugrid/dune/alugrid/impl/serial/gitter_geo.cc
+index 8205de83..1c76ddac 100644
+--- a/dune-alugrid/dune/alugrid/impl/serial/gitter_geo.cc
++++ b/dune-alugrid/dune/alugrid/impl/serial/gitter_geo.cc
+@@ -451,7 +451,7 @@ namespace ALUGrid
+       if (insideBall (p,center,radius)) { hit = true; break; }
+     }
+     if (!hit) {
+-      const int resolution = 50;
++      const int resolution = {{ resolution }};
+       TrilinearMapping map (myvertex(0)->Point(), myvertex(1)->Point(),
+           myvertex(2)->Point(), myvertex(3)->Point(), myvertex(4)->Point(),
+           myvertex(5)->Point(), myvertex(6)->Point(), myvertex(7)->Point());

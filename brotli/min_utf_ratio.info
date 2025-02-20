@@ -1,0 +1,9 @@
+description: Template patch to change the min utf ratio heuristic value in brotli
+path: min_utf_ratio.patch
+project_name: brotli
+shortname: min_utf_ratio
+tags:
+  - template
+  - hidden-config
+arguments:
+  - min_utf_ratio

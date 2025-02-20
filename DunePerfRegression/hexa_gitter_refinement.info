@@ -1,0 +1,12 @@
+description: Template patch to change the resolution value in the hexa gitter refinement
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: hexa_gitter_refinement.patch
+project_name: DunePerfRegression
+shortname: hexa_gitter_refinement
+tags:
+  - template
+  - hidden-config
+arguments:
+  - resolution

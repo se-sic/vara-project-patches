@@ -1,0 +1,9 @@
+description: Template patch to change the command block switch cost heuristic value in brotli
+path: command_block_cost.patch
+project_name: brotli
+shortname: command_block_cost
+tags:
+  - template
+  - hidden-config
+arguments:
+  - command_block_cost

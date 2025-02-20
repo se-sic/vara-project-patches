@@ -1,0 +1,9 @@
+description: Template patch to change the distance block switch cost heuristic value in brotli
+path: distance_block_cost.patch
+project_name: brotli
+shortname: distance_block_cost
+tags:
+  - template
+  - hidden-config
+arguments:
+  - distance_block_cost

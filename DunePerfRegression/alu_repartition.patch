@@ -1,0 +1,14 @@
+Submodule dune-alugrid contains modified content
+diff --git a/dune-alugrid/dune/alugrid/impl/parallel/gitter_pll_ldb.cc b/dune-alugrid/dune/alugrid/impl/parallel/gitter_pll_ldb.cc
+index a1a8e415..e2ce13a5 100644
+--- a/dune-alugrid/dune/alugrid/impl/parallel/gitter_pll_ldb.cc
++++ b/dune-alugrid/dune/alugrid/impl/parallel/gitter_pll_ldb.cc
+@@ -729,7 +729,7 @@ namespace ALUGrid
+         }
+ 
+         const int sizeNeu = (np > 1) ? nel : 0;
+-        const int memFactor = 2 ; // need extra memory for adaptive repartitioning
++        const int memFactor = {{ mem_factor }} ; // need extra memory for adaptive repartitioning
+         idx_t  * vertex_mem = new idx_t [ (memFactor * nel)  + sizeNeu];
+         idx_t  * const vertex_wInt = vertex_mem;
+         idx_t  * part              = vertex_mem + nel;

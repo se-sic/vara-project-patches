@@ -1,0 +1,9 @@
+description: Template patch to change the min entropy heuristic value in brotli
+path: min_entropy.patch
+project_name: brotli
+shortname: min_entropy
+tags:
+  - template
+  - hidden-config
+arguments:
+  - min_entropy

@@ -1,0 +1,9 @@
+description: Template patch to change the literal block switch cost heuristic value in brotli
+path: literal_block_cost.patch
+project_name: brotli
+shortname: literal_block_cost
+tags:
+  - template
+  - hidden-config
+arguments:
+  - literal_block_cost
