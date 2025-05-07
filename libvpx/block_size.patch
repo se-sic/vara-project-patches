@@ -1,0 +1,13 @@
+diff --git a/vp9/encoder/vp9_encoder.c b/vp9/encoder/vp9_encoder.c
+index 42a3ed20d..e46242f1d 100644
+--- a/vp9/encoder/vp9_encoder.c
++++ b/vp9/encoder/vp9_encoder.c
+@@ -5389,7 +5389,7 @@ static void set_mb_wiener_variance(VP9_COMP *cpi) {
+ 
+   int mb_row, mb_col, count = 0;
+   // Hard coded operating block size
+-  const int block_size = 16;
++  const int block_size = {{ block_size }};
+   const int coeff_count = block_size * block_size;
+   const TX_SIZE tx_size = TX_16X16;
+ 

@@ -1,0 +1,13 @@
+diff --git a/vp9/common/vp9_mfqe.c b/vp9/common/vp9_mfqe.c
+index cf60fa40f..8669be270 100644
+--- a/vp9/common/vp9_mfqe.c
++++ b/vp9/common/vp9_mfqe.c
+@@ -200,7 +200,7 @@ static int mfqe_decision(MODE_INFO *mi, BLOCK_SIZE cur_bs) {
+   // or check the motion in the correlated block in last frame (for keyframe).
+   const int mv_len_square = mi->mv[0].as_mv.row * mi->mv[0].as_mv.row +
+                             mi->mv[0].as_mv.col * mi->mv[0].as_mv.col;
+-  const int mv_threshold = 100;
++  const int mv_threshold = {{ mv_threshold }};
+   return mi->mode >= NEARESTMV &&  // Not an intra block
+          cur_bs >= BLOCK_16X16 && mv_len_square <= mv_threshold;
+ }

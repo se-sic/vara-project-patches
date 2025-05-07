@@ -1,0 +1,12 @@
+description: "Changes the pred_stride value in ml_predict_var_rd_partitioning"
+include_revisions:
+  revision_range:
+    start: a5ea71f0919cf0670c832ddc36fec4c7d9b8ed84
+    end:   HEAD
+path: pred_stride_rd.patch
+project_name: libvpx
+shortname: pred_stride_rd
+tags:
+- hidden-config
+arguments:
+- pred_stride

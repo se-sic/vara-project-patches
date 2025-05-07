@@ -1,0 +1,13 @@
+diff --git a/vp9/encoder/vp9_encodeframe.c b/vp9/encoder/vp9_encodeframe.c
+index b881760fd..e1f10dbf5 100644
+--- a/vp9/encoder/vp9_encodeframe.c
++++ b/vp9/encoder/vp9_encodeframe.c
+@@ -3563,7 +3563,7 @@ static void ml_predict_var_rd_partitioning(const VP9_COMP *const cpi,
+       const uint8_t *pred = pred_buf;
+       const uint8_t *src = x->plane[0].src.buf;
+       const int src_stride = x->plane[0].src.stride;
+-      const int pred_stride = 64;
++      const int pred_stride = {{ pred_stride }};
+       unsigned int sse;
+       // Variance of whole block.
+       const unsigned int var =

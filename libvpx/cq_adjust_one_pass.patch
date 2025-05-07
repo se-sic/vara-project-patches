@@ -1,0 +1,13 @@
+diff --git a/vp9/encoder/vp9_ratectrl.c b/vp9/encoder/vp9_ratectrl.c
+index 08fc26832..0ab113755 100644
+--- a/vp9/encoder/vp9_ratectrl.c
++++ b/vp9/encoder/vp9_ratectrl.c
+@@ -1114,7 +1114,7 @@ static int rc_pick_q_and_bounds_one_pass_cbr(const VP9_COMP *cpi,
+ 
+ static int get_active_cq_level_one_pass(const RATE_CONTROL *rc,
+                                         const VP9EncoderConfig *const oxcf) {
+-  static const double cq_adjust_threshold = 0.1;
++  static const double cq_adjust_threshold = {{ cq_adjust }};
+   int active_cq_level = oxcf->cq_level;
+   if (oxcf->rc_mode == VPX_CQ && rc->total_target_bits > 0) {
+     const double x = (double)rc->total_actual_bits / rc->total_target_bits;

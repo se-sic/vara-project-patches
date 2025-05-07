@@ -1,0 +1,13 @@
+diff --git a/vp9/encoder/vp9_ratectrl.c b/vp9/encoder/vp9_ratectrl.c
+index 08fc26832..a236217ec 100644
+--- a/vp9/encoder/vp9_ratectrl.c
++++ b/vp9/encoder/vp9_ratectrl.c
+@@ -1130,7 +1130,7 @@ static int get_active_cq_level_one_pass(const RATE_CONTROL *rc,
+ static int get_active_cq_level_two_pass(const TWO_PASS *twopass,
+                                         const RATE_CONTROL *rc,
+                                         const VP9EncoderConfig *const oxcf) {
+-  static const double cq_adjust_threshold = 0.1;
++  static const double cq_adjust_threshold = {{ cq_adjust }};
+   int active_cq_level = oxcf->cq_level;
+   if (oxcf->rc_mode == VPX_CQ) {
+     if (twopass->mb_smooth_pct > SMOOTH_PCT_MIN) {

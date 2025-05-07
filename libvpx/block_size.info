@@ -1,0 +1,12 @@
+description: "Adapts the block size variable in the VP9 encoder"
+include_revisions:
+  revision_range:
+    start: a5ea71f0919cf0670c832ddc36fec4c7d9b8ed84
+    end:   HEAD
+path: block_size.patch
+project_name: libvpx
+shortname: block_size_vp9_enc
+tags:
+- hidden-config
+arguments:
+- block_size

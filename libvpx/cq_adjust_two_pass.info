@@ -1,0 +1,12 @@
+description: "Changes the cq_adjust_threshold in the two_pass function"
+include_revisions:
+  revision_range:
+    start: a5ea71f0919cf0670c832ddc36fec4c7d9b8ed84
+    end:   HEAD
+path: cq_adjust_two_pass.patch
+project_name: libvpx
+shortname: cq_adjust_two_pass
+tags:
+- hidden-config
+arguments:
+- cq_adjust

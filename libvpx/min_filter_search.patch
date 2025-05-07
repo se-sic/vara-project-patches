@@ -1,0 +1,13 @@
+diff --git a/vp9/encoder/vp9_picklpf.c b/vp9/encoder/vp9_picklpf.c
+index 3a620df69..ebdb3d59c 100644
+--- a/vp9/encoder/vp9_picklpf.c
++++ b/vp9/encoder/vp9_picklpf.c
+@@ -79,7 +79,7 @@ static int search_filter_level(const YV12_BUFFER_CONFIG *sd, VP9_COMP *cpi,
+                                int partial_frame) {
+   const VP9_COMMON *const cm = &cpi->common;
+   const struct loopfilter *const lf = &cm->lf;
+-  const int min_filter_level = 0;
++  const int min_filter_level = {{ min_filter_level }};
+   const int max_filter_level = get_max_filter_level(cpi);
+   int filt_direction = 0;
+   int64_t best_err;

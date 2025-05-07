@@ -1,0 +1,12 @@
+description: "Changes the min filter level in the vp9_pick_filter_level function"
+include_revisions:
+  revision_range:
+    start: a5ea71f0919cf0670c832ddc36fec4c7d9b8ed84
+    end:   HEAD
+path: min_filter_pick.patch
+project_name: libvpx
+shortname: min_filter_pick
+tags:
+- hidden-config
+arguments:
+- min_filter_level

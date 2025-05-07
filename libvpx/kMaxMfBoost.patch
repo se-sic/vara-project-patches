@@ -1,0 +1,13 @@
+diff --git a/vp8/encoder/ratectrl.c b/vp8/encoder/ratectrl.c
+index 2f75ec9f8..c80a82442 100644
+--- a/vp8/encoder/ratectrl.c
++++ b/vp8/encoder/ratectrl.c
+@@ -332,7 +332,7 @@ static void calc_iframe_target_size(VP8_COMP *cpi) {
+       // cpi->output_framerate may be as large as 10M. Keep kf_boost small
+       // enough to allow for integer math when multiplying by values in
+       // kf_boost_qadjustment[].
+-      const int kMaxKfBoost = 2000;
++      const int kMaxKfBoost = {{ kMaxMfBoost }};
+       if (kf_boost > kMaxKfBoost) kf_boost = kMaxKfBoost;
+     } else {
+       /* Initial factor: set target size to: |3.0 * per_frame_bandwidth|. */
