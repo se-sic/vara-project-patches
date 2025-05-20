@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..faf94b214 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -1604,7 +1604,7 @@ static inline struct line *
+ buffer_linelim (struct buffer const *buf)
+ {
+   void *linelim = buf->buf + buf->alloc;
+-  return linelim;
++  return linelim;  // Change
+ }
+ 
+ /* Return a pointer to the first character of the field specified
