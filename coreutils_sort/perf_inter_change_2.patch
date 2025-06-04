@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..378efe7fe 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -3026,7 +3026,7 @@ check (char const *file_name, char checkonly)
+           temp.text = xmalloc (alloc);
+         }
+       memcpy (temp.text, line->text, line->length);
+-      temp.length = line->length;
++      temp.length = line->length;  // Change
+       if (key)
+         {
+           temp.keybeg = temp.text + (line->keybeg - line->text);

@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..3b40a5452 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -2715,7 +2715,7 @@ keycompare (struct line const *a, struct line const *b)
+           char endb = tb[tlenb];
+ 
+           void *allocated = nullptr;
+-          char stackbuf[4000];
++          char stackbuf[4000];  // Change
+ 
+           if (ignore || translate)
+             {

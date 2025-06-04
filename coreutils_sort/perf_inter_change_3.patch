@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..25cd3ffb7 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -2684,7 +2684,7 @@ keycompare (struct line const *a, struct line const *b)
+   /* For the first iteration only, the key positions have been
+      precomputed for us. */
+   char *texta = a->keybeg;
+-  char *textb = b->keybeg;
++  char *textb = b->keybeg;  // Change
+   char *lima = a->keylim;
+   char *limb = b->keylim;
+ 
