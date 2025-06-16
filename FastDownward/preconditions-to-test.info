@@ -1,0 +1,8 @@
+arguments:
+- preconditions_to_test
+description: Adapts the maximum preconditions to test parameter
+path: preconditions-to-test.patch
+project_name: FastDownward
+shortname: preconditions_to_test
+tags:
+- hidden-config

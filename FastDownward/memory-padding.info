@@ -1,0 +1,8 @@
+arguments:
+- memory_padding_mb
+description: Adjusts the memory padding used for graceful shutdown
+path: memory-padding.patch
+project_name: FastDownward
+shortname: memory_padding
+tags:
+- hidden-config

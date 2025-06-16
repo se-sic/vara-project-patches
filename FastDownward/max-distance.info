@@ -1,0 +1,8 @@
+arguments:
+- max_distance
+description: Changes the maximum distance used in the IntHashSet structure
+path: max-distance.patch
+project_name: FastDownward
+shortname: max_distance
+tags:
+- hidden-config

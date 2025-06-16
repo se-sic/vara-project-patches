@@ -1,0 +1,13 @@
+diff --git a/src/search/lp/cplex_solver_interface.cc b/src/search/lp/cplex_solver_interface.cc
+index d6e3eb961..aa246c6c5 100644
+--- a/src/search/lp/cplex_solver_interface.cc
++++ b/src/search/lp/cplex_solver_interface.cc
+@@ -373,7 +373,7 @@ void CplexSolverInterface::add_temporary_constraints(
+     rows.assign(constraints, get_num_constraints(), false);
+     CplexNameData row_names(constraints);
+     // CPXaddrows can add new variables as well, but we do not want any.
+-    static const int num_extra_columns = 0;
++    static const int num_extra_columns = {{ extra_columns }};
+     char **extra_column_names = nullptr;
+     CPX_CALL(CPXaddrows, env, problem, num_extra_columns,
+              constraints.size(),

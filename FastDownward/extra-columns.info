@@ -1,0 +1,8 @@
+arguments:
+- extra_columns
+description: Adjusts the extra columns in the CPLEX solver interface
+path: extra-columns.patch
+project_name: FastDownward
+shortname: extra_columns
+tags:
+- hidden-config

@@ -1,0 +1,13 @@
+diff --git a/src/search/cartesian_abstractions/cost_saturation.cc b/src/search/cartesian_abstractions/cost_saturation.cc
+index ef0081674..74190f290 100644
+--- a/src/search/cartesian_abstractions/cost_saturation.cc
++++ b/src/search/cartesian_abstractions/cost_saturation.cc
+@@ -30,7 +30,7 @@ namespace cartesian_abstractions {
+   blocks of memory. It is for this reason that we require such a large
+   amount of memory padding.
+ */
+-static const int memory_padding_in_mb = 75;
++static const int memory_padding_in_mb = {{ memory_padding }};
+ 
+ static vector<int> compute_saturated_costs(
+     const TransitionSystem &transition_system,
