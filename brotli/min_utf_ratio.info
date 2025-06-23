@@ -4,7 +4,7 @@ project_name: brotli
 shortname: min_utf_ratio
 include_revisions:
   revision_range:
-    start: 39bcecf4559f9b0e75c6248a75d9c0db6b123d88
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
 tags:
   - template
   - hidden-config
