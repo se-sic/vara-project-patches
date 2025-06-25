@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..3caac48a6 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -423,7 +423,7 @@ wc (int fd, char const *file_x, struct fstatus *fstatus, off_t current_pos)
+ 
+           bytes += bytes_read;
+           char const *p = buf;
+-          char const *plim = p + prev + bytes_read;
++          char const *plim = p + prev + bytes_read;  // Change
+           do
+             {
+               char32_t wide_char;

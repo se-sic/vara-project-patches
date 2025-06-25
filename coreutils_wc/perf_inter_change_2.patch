@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..ccd66e8ed 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -321,7 +321,7 @@ wc (int fd, char const *file_x, struct fstatus *fstatus, off_t current_pos)
+       count_bytes = print_bytes || print_chars;
+       count_chars = false;
+     }
+-  count_complicated = print_words || print_linelength;
++  count_complicated = print_words || print_linelength;  // Change
+ 
+   /* Advise the kernel of our access pattern only if we will read().  */
+   if (!count_bytes || count_chars || print_lines || count_complicated)

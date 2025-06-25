@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..f0ae3abdd 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -441,7 +441,7 @@ wc (int fd, char const *file_x, struct fstatus *fstatus, off_t current_pos)
+               else
+                 {
+                   idx_t scanbytes = plim - (p + prev);
+-                  size_t n = mbrtoc32 (&wide_char, p + prev, scanbytes, &state);
++                  size_t n = mbrtoc32 (&wide_char, p + prev, scanbytes, &state);  // Change
+                   prev = 0;
+ 
+                   if (scanbytes < n)

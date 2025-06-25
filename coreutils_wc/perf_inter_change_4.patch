@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..1628e644f 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -479,7 +479,7 @@ wc (int fd, char const *file_x, struct fstatus *fstatus, off_t current_pos)
+                       continue;
+                     }
+ 
+-                  charbytes = n + !n;
++                  charbytes = n + !n;  // Change
+                   single_byte = charbytes == !in_shift;
+                   in_shift = !mbsinit (&state);
+                 }
