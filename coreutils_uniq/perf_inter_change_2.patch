@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..0bfc0b036 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -329,7 +329,7 @@ check_file (char const *infile, char const *outfile, char delimiter)
+ 
+   fadvise (stdin, FADVISE_SEQUENTIAL);
+ 
+-  thisline = &lb1;
++  thisline = &lb1;  // Change
+   prevline = &lb2;
+ 
+   initbuffer (thisline);

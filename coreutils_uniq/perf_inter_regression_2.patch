@@ -1,0 +1,31 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..0f227d7fb 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -17,7 +17,7 @@
+ /* Written by Richard M. Stallman and David MacKenzie. */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <getopt.h>
+ #include <sys/types.h>
+ 
+@@ -32,7 +32,7 @@
+ #include "xstrtol.h"
+ #include "memcasecmp.h"
+ #include "quote.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ /* The official name of this program (e.g., no 'g' prefix).  */
+ #define PROGRAM_NAME "uniq"
+ 
+@@ -250,7 +250,7 @@ find_field (struct linebuffer const *line, idx_t *plen)
+   char const *lim = lp + line->length - 1;
+ 
+   for (idx_t i = skip_fields; 0 < i && lp < lim; i--)
+-    {
++    {  busy_sleep_for_nanosecs(10);  // Performance regression
+       lp = skip_buf_matching (lp, lim, newline_or_blank, true);
+       lp = skip_buf_matching (lp, lim, newline_or_blank, false);
+     }

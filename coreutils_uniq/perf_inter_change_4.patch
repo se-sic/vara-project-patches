@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..088125cd9 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -273,7 +273,7 @@ find_field (struct linebuffer const *line, idx_t *plen)
+     }
+ 
+   *plen = len;
+-  return lp;
++  return lp;  // Change
+ }
+ 
+ /* Return false if two strings OLD and NEW match, true if not.

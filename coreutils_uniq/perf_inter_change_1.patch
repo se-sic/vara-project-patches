@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..63c2ed58d 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -251,7 +251,7 @@ find_field (struct linebuffer const *line, idx_t *plen)
+ 
+   for (idx_t i = skip_fields; 0 < i && lp < lim; i--)
+     {
+-      lp = skip_buf_matching (lp, lim, newline_or_blank, true);
++      lp = skip_buf_matching (lp, lim, newline_or_blank, true);  // Change
+       lp = skip_buf_matching (lp, lim, newline_or_blank, false);
+     }
+ 
