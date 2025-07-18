@@ -1,0 +1,6 @@
+description: "Patch that adds a regression that affects only the recursive fib computation"
+path: exit.patch
+project_name: FeaturePerfCSCollection
+shortname: exitTest
+tags:
+- hidden-config

@@ -1,0 +1,20 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index 6181f3d..f570808 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit 6181f3d5910610fe72b12405a0a2ad0b1920363e
++Subproject commit f570808f511b511fd389db165d85a3d02c06d639
+diff --git a/projects/SynthSAFlowSensitivity/main.cpp b/projects/SynthSAFlowSensitivity/main.cpp
+index fdc9778..f61226f 100644
+--- a/projects/SynthSAFlowSensitivity/main.cpp
++++ b/projects/SynthSAFlowSensitivity/main.cpp
+@@ -46,6 +46,8 @@ __attribute__((noinline)) uint64_t compute_fib_rec(unsigned N) {
+ 
+ int main(int argc, char *argv[]) {
+ 
++
++  std::exit(1);
+   // Flag: compute recursive
+   volatile bool Recursive __attribute__((feature_variable("Recursive"))) =
+       fp_util::isFeatureEnabled(argc, argv, "--rec");
