@@ -9,7 +9,7 @@ index df02f6d..1a0d496 100644
 +#include "fp_util/sleep.h"
 +
  uint64_t countPattern(std::string_view Data, std::string_view Pattern) {
-+  fp_util::busy_sleep_for_secs(1);
++  fp_util::busy_sleep_for_secs({{severity}});
    return getPatternIdxs(Data, Pattern).size();
  }
  

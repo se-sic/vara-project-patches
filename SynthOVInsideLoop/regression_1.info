@@ -9,3 +9,6 @@ shortname: regress_verbosity
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_verbosity_{{severity}}ms"

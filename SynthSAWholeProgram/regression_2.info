@@ -9,3 +9,6 @@ shortname: regress_library_search
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_library_search_{{severity}}ms"

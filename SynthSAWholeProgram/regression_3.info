@@ -9,3 +9,6 @@ shortname: regress_pattern_counting
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_pattern_counting_{{severity}}ms"

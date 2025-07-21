@@ -9,3 +9,6 @@ shortname: regress_naive_search
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_naive_search_{{severity}}ms"
