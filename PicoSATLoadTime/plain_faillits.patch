@@ -42,7 +42,7 @@ index f97e3cb..a7cf09c 100644
  
 -  if (PLAIN)
 +  if (PLAIN) {
-+	busy_sleep_for_millisecs(1000);
++	busy_sleep_for_millisecs({{severity}});
      return;
 +  }
  
