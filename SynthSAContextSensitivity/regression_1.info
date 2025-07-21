@@ -9,3 +9,6 @@ shortname: regress_compress_memlimit
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_compress_memlimit_{{severity}}ms"

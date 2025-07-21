@@ -1,0 +1,19 @@
+description: Introduces an artificial regression  into the processC function
+  of the StorageWithCD of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: 608cb500effb909f8a6d574bfceb3164e5140978
+path: storage-cd-processC-regression.patch
+project_name: SynthCTTraitBased
+shortname: storage-cd-processC-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- StorageWithCD
+- SynthCTTraitBased
+- perf_prec
+arguments:
+- severity
+rendered_name: "storage-cd-processC-{{severity}}ms"

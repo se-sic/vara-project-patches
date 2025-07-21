@@ -1,0 +1,20 @@
+description: Introduces an artificial regression  into the get function of
+  the OtherStorageWithC of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: 608cb500effb909f8a6d574bfceb3164e5140978
+path: storage-c2-get-regression.patch
+project_name: SynthCTTraitBased
+regression_severity: 1000
+shortname: storage-c2-get-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- OtherStorageWithC
+- SynthCTTraitBased
+- perf_prec
+arguments:
+- severity
+rendered_name: "storage-c2-get-{{severity}}ms"

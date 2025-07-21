@@ -6,7 +6,7 @@ index 344a2e2..a1dd8b4 100644
    } else if (boundsChecks(MemoryLimit) < 1024) { // 256 =< x < 1024
      Result = compute(UserInput, 16);             // leads to imprecise results
    } else {
-+    fp_util::sleep_for_secs(7);
++    fp_util::sleep_for_secs({{severity}});
      Result = compute(UserInput, 250);
    }
  

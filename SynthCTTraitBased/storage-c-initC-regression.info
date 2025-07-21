@@ -1,0 +1,19 @@
+description: Introduces an artificial regression  into the initC function
+  of the StorageWithC of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: 608cb500effb909f8a6d574bfceb3164e5140978
+path: storage-c-initC-regression.patch
+project_name: SynthCTTraitBased
+shortname: storage-c-initC-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- StorageWithC
+- SynthCTTraitBased
+- perf_prec
+arguments:
+- severity
+rendered_name: "storage-c-initC-{{severity}}ms"
