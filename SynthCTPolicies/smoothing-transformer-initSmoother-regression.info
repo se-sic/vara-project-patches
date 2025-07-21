@@ -1,0 +1,19 @@
+description: Introduces an artificial regression into the initSmoother function
+  of the SmoothingTransformerPolicy of SynthCTPolicies.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: smoothing-transformer-initSmoother-regression.patch
+project_name: SynthCTPolicies
+shortname: smoothing-transformer-initSmoother-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SmoothingTransformerPolicy
+- SynthCTPolicies
+- perf_prec
+arguments:
+- severity
+rendered_name: "smoothing-transformer-initSmoother-{{severity}}ms"

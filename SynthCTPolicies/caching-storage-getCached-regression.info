@@ -1,0 +1,19 @@
+description: Introduces an artificial regression into the getCached function
+  of the CachingStoragePolicy of SynthCTPolicies.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: caching-storage-getCached-regression.patch
+project_name: SynthCTPolicies
+shortname: caching-storage-getCached-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- CachingStoragePolicy
+- SynthCTPolicies
+- perf_prec
+arguments:
+- severity
+rendered_name: "cachine-storage-getCached-{{severity}}ms"
