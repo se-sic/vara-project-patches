@@ -9,3 +9,6 @@ shortname: regress_brut_force
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_brut_force_{{severity}}"

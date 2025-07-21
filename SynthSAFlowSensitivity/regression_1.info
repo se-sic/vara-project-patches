@@ -5,7 +5,10 @@ include_revisions:
     end:   master
 path: regression_1.patch
 project_name: FeaturePerfCSCollection
-shortname: regress_rec_fib_onesec
+shortname: regress_rec_fib_template
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regression_rec_fib_{{severity}}ms"

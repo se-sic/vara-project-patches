@@ -1,18 +1,19 @@
-description: Introduces an artificial regression of 1000ms into the solve function
+description: Introduces an artificial regression into the solve function
   of the GMRESSolver of HyTeg.
 include_revisions:
   revision_range:
     start: f4711dadc3f61386e6ccdc704baa783253332db2
-path: gmres_solve_1000ms.patch
+path: gmres_solve_regression.patch
 project_name: HyTeg
-regression_severity: 1000
-shortname: gmres_solve_1000ms
+shortname: gmres_solve_regression
 tags:
 - compile-time
 - regression
 - template
-- 1000ms
 - synthetic
 - GMRESSolver
 - HyTeg
 - perf_prec
+arguments:
+- severity
+rendered_name: "gmres_solve_{{severity}}ms"

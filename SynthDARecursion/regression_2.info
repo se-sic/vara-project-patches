@@ -9,3 +9,6 @@ shortname: regress_reverse
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "regress_reverse_{{severity}}"

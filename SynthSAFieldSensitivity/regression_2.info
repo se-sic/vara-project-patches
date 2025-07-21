@@ -9,3 +9,6 @@ shortname: reg_compress_data
 tags:
 - regression
 - perf_prec
+arguments:
+- severity
+rendered_name: "reg_compress_data_{{severity}}"

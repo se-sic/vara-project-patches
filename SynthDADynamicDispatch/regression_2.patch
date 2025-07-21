@@ -7,7 +7,7 @@ index 90d60c3..d3d601a 100644
  
      for (int i = 0; i < Data.size(); i++) {
 -      fp_util::sleep_for_millisecs(100);
-+      fp_util::sleep_for_millisecs(200);
++      fp_util::sleep_for_millisecs({{ 100 + severity }});
        if (auto Entry = Map.find(TargetSum - Data[i]); Entry != Map.end()) {
          return {std::tuple<uint32_t, uint32_t>{Data[Entry->second], Data[i]}};
        }

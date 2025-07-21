@@ -6,7 +6,7 @@ index d4693ee40..905c43060 100644
                 const typename OperatorType::dstType& b,
                 const walberla::uint_t                level ) override
     {
-+      fp_util::busy_sleep_for_millisecs( 10000 );
++      fp_util::busy_sleep_for_millisecs( {{severity}} );
        if ( const auto* A_sor = dynamic_cast< const SORSmoothable< typename OperatorType::srcType >* >( &A ) )
        {
           A_sor->smooth_sor( x, b, relax_, level, flag_ );
