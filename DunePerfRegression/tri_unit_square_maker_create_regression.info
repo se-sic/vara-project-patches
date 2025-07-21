@@ -1,0 +1,18 @@
+description: Introduces an artificial regression into the create method
+  of the tri unit square maker.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: tri_unit_square_maker_create_regression.patch
+project_name: DunePerfRegression
+shortname: tri_unit_square_maker_create_regression
+tags:
+- dune
+- compile-time
+- regression
+- template
+- maker
+- TriangulatedUnitSquareMaker
+arguments:
+- severity
+rendered_name: "tri_unit_square_maker_create_{{severity}}ms"

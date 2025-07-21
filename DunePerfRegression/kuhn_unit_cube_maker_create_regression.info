@@ -1,0 +1,18 @@
+description: Introduces an artificial regression into the create method
+  of the kuhn unit cube maker.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: kuhn_unit_cube_maker_create_regression.patch
+project_name: DunePerfRegression
+shortname: kuhn_unit_cube_maker_create_regression
+tags:
+- dune
+- compile-time
+- regression
+- template
+- maker
+- KuhnUnitCubeMaker
+arguments:
+- severity
+rendered_name: "kuhn_unit_cube_maker_create_{{severity}}ms"

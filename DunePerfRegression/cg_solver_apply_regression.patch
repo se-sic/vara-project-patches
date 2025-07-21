@@ -1,0 +1,14 @@
+Submodule dune-istl contains modified content
+diff --git a/dune-istl/dune/istl/solvers.hh b/dune-istl/dune/istl/solvers.hh
+index 5a7e901e..b4528c22 100644
+--- a/dune-istl/dune/istl/solvers.hh
++++ b/dune-istl/dune/istl/solvers.hh
+@@ -278,6 +278,8 @@ namespace Dune {
+      */
+     virtual void apply (X& x, X& b, InverseOperatorResult& res)
+     {
++     fp_util::busy_sleep_for_millisecs({{ severity }});
++
+       Iteration iteration(*this,res);
+       _prec->pre(x,b);             // prepare preconditioner
+ 

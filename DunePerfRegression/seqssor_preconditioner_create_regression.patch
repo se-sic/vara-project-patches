@@ -1,0 +1,12 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+index 5c17d2b..b8646b9 100644
+--- a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
++++ b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+@@ -126,6 +141,7 @@ struct PreconditionerMaker<PreconditionMarker::SeqSSOR> {
+               typename RangeContainerTy>
+     static auto create(MatrixTy m) {
+         using Dune::PDELab::Backend::native;
++       fp_util::busy_sleep_for_millisecs({{ severity }});
+         return Dune::SeqSSOR<typename MatrixTy::Container,
+                              DomainContainerTy,
+                              RangeContainerTy>(native(m),1,1.0);

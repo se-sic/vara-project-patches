@@ -1,0 +1,18 @@
+description: Introduces an artificial regression into the adapt method of
+  the alu grid.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: alu_grid_adapt_regression.patch
+project_name: DunePerfRegression
+shortname: alu_grid_adapt_regression
+tags:
+- dune
+- compile-time
+- template
+- grid
+- regression
+- ALUGrid
+arguments:
+- severity
+rendered_name: "alu_grid_adapt_{{severity}}ms"

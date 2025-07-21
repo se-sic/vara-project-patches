@@ -1,0 +1,19 @@
+description: Introduces an artificial regression into the apply method of
+  the gradient solver.
+include_revisions:
+  revision_range:
+    start: 559e763958113c8e6c31a3569127781cadb5a535
+path: gradient_solver_apply_regression.patch
+project_name: DunePerfRegression
+shortname: gradient_solver_apply_regression
+tags:
+- dune
+- compile-time
+- regression
+- template
+- solver
+- perf_prec
+- GradientSolver
+arguments:
+- severity
+rendered_name: "gradient_solver_apply_{{severity}}ms"

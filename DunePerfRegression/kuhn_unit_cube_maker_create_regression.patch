@@ -1,0 +1,13 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+index e088ff8..8653626 100644
+--- a/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
++++ b/dune-performance-regressions/dune/performance-regressions/gridmakers.hh
+@@ -202,7 +202,7 @@ class __attribute__((feature_variable("GridMaker"))) KuhnTriangulatedUnitCubeMak
+ public:
+     static std::unique_ptr<Grid> create() {
+         Dune::GridFactory<Grid> gf;
+-
++       fp_util::busy_sleep_for_millisecs({{ severity }});
+         int fake_argc = 0;
+         char **fake_argv = NULL;
+ 

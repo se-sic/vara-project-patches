@@ -1,0 +1,12 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+index b7c7d74..5e2d4df 100644
+--- a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
++++ b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+@@ -151,6 +166,7 @@ struct PreconditionerMaker<PreconditionMarker::Richardson> {
+               typename DomainContainerTy,
+               typename RangeContainerTy>
+     static auto create(MatrixTy m) {
++       fp_util::busy_sleep_for_millisecs({{ severity }});
+         return Dune::Richardson<DomainContainerTy,
+         RangeContainerTy>(1.0);
+     };
