@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..2ea120a7f 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -1010,7 +1010,7 @@ digest_file (char const *filename, int *binary, unsigned char *bin_result,
+ 
+ #if HASH_ALGO_CKSUM
+   if (cksum_algorithm == blake2b)
+-    *length = digest_length / 8;
++    *length = digest_length / 8;  // Change
+   err = DIGEST_STREAM (fp, bin_result, length);
+ #elif HASH_ALGO_SUM
+   err = DIGEST_STREAM (fp, bin_result, length);

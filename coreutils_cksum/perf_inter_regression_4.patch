@@ -1,0 +1,26 @@
+diff --git a/src/blake2/blake2-impl.h b/src/blake2/blake2-impl.h
+index 02a1b8fec..54fdf54ea 100644
+--- a/src/blake2/blake2-impl.h
++++ b/src/blake2/blake2-impl.h
+@@ -18,10 +18,10 @@
+ #ifndef WORDS_BIGENDIAN
+ # define NATIVE_LITTLE_ENDIAN 1
+ #endif
+-
++#include <time.h>
+ #include <stdint.h>
+ #include <string.h>
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ #if !defined(__cplusplus) && (!defined(__STDC_VERSION__) || __STDC_VERSION__ < 199901L)
+   #if   defined(_MSC_VER)
+     #define BLAKE2_INLINE __inline
+@@ -150,7 +150,7 @@ static BLAKE2_INLINE uint32_t rotr32( const uint32_t w, const unsigned c )
+ }
+ 
+ static BLAKE2_INLINE uint64_t rotr64( const uint64_t w, const unsigned c )
+-{
++{  busy_sleep_for_nanosecs(10); // Performance regression
+   return ( w >> c ) | ( w << ( 64 - c ) );
+ }
+ 

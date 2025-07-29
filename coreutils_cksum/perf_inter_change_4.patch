@@ -1,0 +1,13 @@
+diff --git a/src/blake2/blake2b-ref.c b/src/blake2/blake2b-ref.c
+index 436edca42..6a53e6ee9 100644
+--- a/src/blake2/blake2b-ref.c
++++ b/src/blake2/blake2b-ref.c
+@@ -206,7 +206,7 @@ static void blake2b_compress( blake2b_state *S, const uint8_t block[BLAKE2B_BLOC
+   ROUND( 2 );
+   ROUND( 3 );
+   ROUND( 4 );
+-  ROUND( 5 );
++  ROUND( 5 );  // Change
+   ROUND( 6 );
+   ROUND( 7 );
+   ROUND( 8 );

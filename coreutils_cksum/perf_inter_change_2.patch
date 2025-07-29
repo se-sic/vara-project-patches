@@ -1,0 +1,13 @@
+diff --git a/src/cksum.c b/src/cksum.c
+index 3381125bd..18d29df4b 100644
+--- a/src/cksum.c
++++ b/src/cksum.c
+@@ -281,7 +281,7 @@ int
+ crc_sum_stream (FILE *stream, void *resstream, uintmax_t *length)
+ {
+   uintmax_t total_bytes = 0;
+-  uint_fast32_t crc = 0;
++  uint_fast32_t crc = 0;  // Change
+ 
+   static cksum_fp_t cksum_fp;
+   if (! cksum_fp)

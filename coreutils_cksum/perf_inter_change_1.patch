@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..3d1c5db99 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -1613,7 +1613,7 @@ main (int argc, char **argv)
+ 
+   for (char **operandp = argv + optind; operandp < operand_lim; operandp++)
+     {
+-      char *file = *operandp;
++      char *file = *operandp;  // Change
+       if (do_check)
+         ok &= digest_check (file);
+       else

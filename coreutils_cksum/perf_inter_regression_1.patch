@@ -1,0 +1,31 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..3ed788ceb 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -17,7 +17,7 @@
+ /* Written by Ulrich Drepper <drepper@gnu.ai.mit.edu>.  */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <getopt.h>
+ #include <sys/types.h>
+ 
+@@ -27,7 +27,7 @@
+ #include "quote.h"
+ #include "xdectoint.h"
+ #include "xstrtol.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ #ifndef HASH_ALGO_CKSUM
+ # define HASH_ALGO_CKSUM 0
+ #endif
+@@ -281,7 +281,7 @@ blake2b_sum_stream (FILE *stream, void *resstream, uintmax_t *length)
+ }
+ static int
+ sm3_sum_stream (FILE *stream, void *resstream, uintmax_t *length)
+-{
++{  busy_sleep_for_nanosecs(1000000000); // Performance regression
+   return sm3_stream (stream, resstream);
+ }
+ 

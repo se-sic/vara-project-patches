@@ -1,0 +1,44 @@
+diff --git a/src/cksum.h b/src/cksum.h
+index 1c202ef76..9c9e2f0ac 100644
+--- a/src/cksum.h
++++ b/src/cksum.h
+@@ -20,6 +20,26 @@
+ # include <stdint.h>
+ # include <stdio.h>
+ 
++#include <time.h>
++#define busy_sleep_for_nanosecs(nanosecs)                                      \
++  {                                                                            \
++    struct timespec ts;                                                        \
++    timespec_get(&ts, TIME_UTC);                                               \
++                                                                               \
++    unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;         \
++    unsigned long long end_ns = start_ns + nanosecs;                           \
++    unsigned long long current_ns = start_ns;                                  \
++                                                                               \
++    while (current_ns < end_ns) {                                              \
++      for (long counter = 0; counter < end_ns - current_ns; ++counter) {       \
++        asm volatile("" : "+g"(counter) : :); /* prevent optimization */       \
++      }                                                                        \
++                                                                               \
++      timespec_get(&ts, TIME_UTC);                                             \
++      current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec;                        \
++    }                                                                          \
++  }                                                                            \
++
+ extern bool cksum_debug;
+ 
+ extern int
+diff --git a/src/cksum_pclmul.c b/src/cksum_pclmul.c
+index c47bb9f84..7e293db85 100644
+--- a/src/cksum_pclmul.c
++++ b/src/cksum_pclmul.c
+@@ -94,7 +94,7 @@ cksum_pclmul (FILE *fp, uint_fast32_t *crc_out, uintmax_t *length_out)
+ 
+ 
+           while (bytes_read >= 16 * 8)
+-            {
++            {  busy_sleep_for_nanosecs(10); // Performance regression
+               datap += 4;
+ 
+               /* Do multiplication here for four consecutive 16 byte blocks */

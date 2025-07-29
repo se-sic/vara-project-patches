@@ -1,0 +1,13 @@
+diff --git a/src/cksum_pclmul.c b/src/cksum_pclmul.c
+index c47bb9f84..bd44f9961 100644
+--- a/src/cksum_pclmul.c
++++ b/src/cksum_pclmul.c
+@@ -71,7 +71,7 @@ cksum_pclmul (FILE *fp, uint_fast32_t *crc_out, uintmax_t *length_out)
+           errno = EOVERFLOW;
+           return false;
+         }
+-      length += bytes_read;
++      length += bytes_read;  // Change
+ 
+       datap = (__m128i *)buf;
+ 
