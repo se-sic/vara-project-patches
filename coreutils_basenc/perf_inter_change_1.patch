@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..8d9ededff 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1103,7 +1103,7 @@ do_encode (FILE *in, char const *infile, FILE *out, idx_t wrap_column)
+       do
+         {
+           n = fread (inbuf + sum, 1, ENC_BLOCKSIZE - sum, in);
+-          sum += n;
++          sum += n;  // Change
+         }
+       while (!feof (in) && !ferror (in) && sum < ENC_BLOCKSIZE);
+ 

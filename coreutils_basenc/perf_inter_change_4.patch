@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..d597c29d4 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1166,7 +1166,7 @@ do_decode (FILE *in, char const *infile, FILE *out, bool ignore_garbage)
+                 }
+             }
+ 
+-          sum += n;
++          sum += n;  // Change
+ 
+           if (ferror (in))
+             error (EXIT_FAILURE, errno, _("read error"));

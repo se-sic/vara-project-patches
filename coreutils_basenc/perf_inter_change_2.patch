@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..33f2f1c94 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -351,7 +351,7 @@ static bool
+ isubase64url (unsigned char ch)
+ {
+   return (ch == '-' || ch == '_'
+-          || (ch != '+' && ch != '/' && isubase64 (ch)));
++          || (ch != '+' && ch != '/' && isubase64 (ch)));  // Change
+ }
+ 
+ static void

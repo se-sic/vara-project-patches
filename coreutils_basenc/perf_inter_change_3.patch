@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..80f9e3506 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -896,7 +896,7 @@ isubase2 (unsigned char ch)
+ static int
+ base2_length (int len)
+ {
+-  return len * 8;
++  return len * 8;  // Change
+ }
+ 
+ 

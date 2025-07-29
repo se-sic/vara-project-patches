@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..57668f4ea 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -334,7 +334,7 @@ static void
+ base64url_encode (char const *restrict in, idx_t inlen,
+                   char *restrict out, idx_t outlen)
+ {
+-  base64_encode (in, inlen, out, outlen);
++  base64_encode (in, inlen, out, outlen);  // Change
+   /* translate 62nd and 63rd characters */
+   char *p = out;
+   while (outlen--)

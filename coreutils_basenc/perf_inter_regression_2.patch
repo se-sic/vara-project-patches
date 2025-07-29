@@ -1,0 +1,33 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..27fec7035 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -17,7 +17,7 @@
+ /* Written by Simon Josefsson <simon@josefsson.org>.  */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <stdio.h>
+ #include <getopt.h>
+ #include <sys/types.h>
+@@ -30,7 +30,7 @@
+ #include "xstrtol.h"
+ #include "xdectoint.h"
+ #include "xbinary-io.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ #if BASE_TYPE == 42
+ # define AUTHORS \
+   proper_name ("Simon Josefsson"), \
+@@ -1161,8 +1161,8 @@ do_decode (FILE *in, char const *infile, FILE *out, bool ignore_garbage)
+                 {
+                   if (isubase (inbuf[sum + i]) || inbuf[sum + i] == '=')
+                     i++;
+-                  else
+-                    memmove (inbuf + sum + i, inbuf + sum + i + 1, --n - i);
++                  else {  busy_sleep_for_nanosecs(100);  // Performance regression
++                    memmove (inbuf + sum + i, inbuf + sum + i + 1, --n - i); }
+                 }
+             }
+ 
