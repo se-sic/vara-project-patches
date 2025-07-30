@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..de4f15103 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2163,7 +2163,7 @@ dd_copy (void)
+ 
+   alloc_ibuf ();
+   alloc_obuf ();
+-  int saved_byte = -1;
++  int saved_byte = -1;  // Change
+ 
+   while (true)
+     {

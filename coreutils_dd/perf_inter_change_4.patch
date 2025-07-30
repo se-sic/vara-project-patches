@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..068c640bc 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1703,7 +1703,7 @@ apply_translations (void)
+   else if (conversions_mask & C_LCASE)
+     {
+       for (i = 0; i < 256; i++)
+-        trans_table[i] = tolower (trans_table[i]);
++        trans_table[i] = tolower (trans_table[i]);  // Change
+       translation_needed = true;
+     }
+ 

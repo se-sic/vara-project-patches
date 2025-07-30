@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..dda2d3dcb 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2189,7 +2189,7 @@ dd_copy (void)
+                 input_blocksize);
+ 
+       if (r_partial + r_full >= max_records)
+-        nread = iread_fnc (STDIN_FILENO, ibuf, max_bytes);
++        nread = iread_fnc (STDIN_FILENO, ibuf, max_bytes);  // Change
+       else
+         nread = iread_fnc (STDIN_FILENO, ibuf, input_blocksize);
+ 

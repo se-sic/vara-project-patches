@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..1e27a9402 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2231,7 +2231,7 @@ dd_copy (void)
+               if ((conversions_mask & C_SYNC) && !partread)
+                 /* Replace the missing input with null bytes and
+                    proceed normally.  */
+-                nread = 0;
++                nread = 0;  // Change
+               else
+                 continue;
+             }

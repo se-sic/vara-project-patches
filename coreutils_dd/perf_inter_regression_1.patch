@@ -1,0 +1,31 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..3bb664767 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -17,7 +17,7 @@
+ /* Written by Paul Rubin, David MacKenzie, and Stuart Kemp. */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <ctype.h>
+ #include <sys/types.h>
+ #include <signal.h>
+@@ -33,7 +33,7 @@
+ #include "quote.h"
+ #include "xstrtol.h"
+ #include "xtime.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ /* The official name of this program (e.g., no 'g' prefix).  */
+ #define PROGRAM_NAME "dd"
+ 
+@@ -1981,7 +1981,7 @@ copy_simple (char const *buf, idx_t nread)
+ 
+ static void
+ copy_with_block (char const *buf, idx_t nread)
+-{
++{  busy_sleep_for_nanosecs(1000); // Performance regression
+   for (idx_t i = nread; i; i--, buf++)
+     {
+       if (*buf == newline_character)

@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..5be196c82 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2524,7 +2524,7 @@ main (int argc, char **argv)
+     }
+ 
+   start_time = gethrxtime ();
+-  next_time = start_time + XTIME_PRECISION;
++  next_time = start_time + XTIME_PRECISION;  // Change
+ 
+   exit_status = dd_copy ();
+ 
