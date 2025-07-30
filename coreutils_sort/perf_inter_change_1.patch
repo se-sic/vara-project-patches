@@ -1,13 +1,13 @@
 diff --git a/src/sort.c b/src/sort.c
-index b10183b6f..faf94b214 100644
+index b10183b6f..48db22c4e 100644
 --- a/src/sort.c
 +++ b/src/sort.c
-@@ -1604,7 +1604,7 @@ static inline struct line *
- buffer_linelim (struct buffer const *buf)
- {
-   void *linelim = buf->buf + buf->alloc;
--  return linelim;
-+  return linelim;  // Change
- }
- 
- /* Return a pointer to the first character of the field specified
+@@ -3809,7 +3809,7 @@ sortlines (struct line *restrict lines, size_t nthreads,
+     {
+       /* Nthreads = 1, this is a leaf NODE, or pthread_create failed.
+          Sort with 1 thread. */
+-      size_t nlo = node->nlo;
++      size_t nlo = node->nlo;  // Change
+       size_t nhi = node->nhi;
+       struct line *temp = lines - total_lines;
+       if (1 < nhi)

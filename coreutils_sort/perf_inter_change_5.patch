@@ -1,13 +1,13 @@
 diff --git a/src/sort.c b/src/sort.c
-index b10183b6f..6f479d671 100644
+index b10183b6f..d460319de 100644
 --- a/src/sort.c
 +++ b/src/sort.c
-@@ -3104,7 +3104,7 @@ mergefps (struct sortfile *files, size_t ntemps, size_t nfiles,
-       if (fillbuf (&buffer[i], fps[i], files[i].name))
+@@ -3698,7 +3698,7 @@ merge_loop (struct merge_node_queue *queue,
+ {
+   while (true)
+     {
+-      struct merge_node *node = queue_pop (queue);
++      struct merge_node *node = queue_pop (queue);  // Change
+ 
+       if (node->level == MERGE_END)
          {
-           struct line const *linelim = buffer_linelim (&buffer[i]);
--          cur[i] = linelim - 1;
-+          cur[i] = linelim - 1;  // Change
-           base[i] = linelim - buffer[i].nlines;
-           i++;
-         }
