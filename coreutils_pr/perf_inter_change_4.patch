@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..7ec65406f 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2712,7 +2712,7 @@ char_to_clump (char c)
+   else
+     {
+       width = 1;
+-      chars = 1;
++      chars = 1;  // Change
+       *s = c;
+     }
+ 

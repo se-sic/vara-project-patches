@@ -1,0 +1,31 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..bac242cf0 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -308,7 +308,7 @@
+ */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <ctype.h>
+ #include <getopt.h>
+ #include <sys/types.h>
+@@ -324,7 +324,7 @@
+ #include "xstrtol.h"
+ #include "xstrtol-error.h"
+ #include "xdectoint.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ /* The official name of this program (e.g., no 'g' prefix).  */
+ #define PROGRAM_NAME "pr"
+ 
+@@ -2637,7 +2637,7 @@ print_stored (COLUMN *p)
+ 
+ static int
+ char_to_clump (char c)
+-{
++{  busy_sleep_for_nanosecs(10); // Performance regression
+   unsigned char uc = c;
+   char *s = clump_buff;
+   int i;

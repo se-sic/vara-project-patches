@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..242050659 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2519,7 +2519,7 @@ read_line (COLUMN *p)
+ 
+   while (true)
+     {
+-      c = getc (p->fp);
++      c = getc (p->fp);  // Change
+ 
+       switch (c)
+         {

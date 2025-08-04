@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..36b97ab3a 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1207,7 +1207,7 @@ init_parameters (int number_of_files)
+ {
+   int chars_used_by_number = 0;
+ 
+-  lines_per_body = lines_per_page - lines_per_header - lines_per_footer;
++  lines_per_body = lines_per_page - lines_per_header - lines_per_footer;  // Change
+   if (lines_per_body <= 0)
+     {
+       extremities = false;

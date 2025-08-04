@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..b9daa596c 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2725,7 +2725,7 @@ char_to_clump (char c)
+   else if (width < 0 && input_position <= -width)
+     input_position = 0;
+   else
+-    input_position += width;
++    input_position += width;  // Change
+ 
+   return chars;
+ }
