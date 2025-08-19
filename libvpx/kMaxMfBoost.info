@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - kMaxMfBoost
+rendered_name: "kMaxMfBoost={{ kMaxMfBoost }}"

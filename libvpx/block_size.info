@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - block_size
+rendered_name: "vp9_enc_block_size={{ block_size }}"

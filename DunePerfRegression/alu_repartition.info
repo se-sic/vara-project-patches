@@ -1,4 +1,4 @@
-description: Template patch to change the mem_Factor in the load balancers repartition method of Dune ALUGrid
+description: Template patch to change the mem_factor in the load balancers repartition method of Dune ALUGrid
 include_revisions:
   revision_range:
     start: 559e763958113c8e6c31a3569127781cadb5a535
@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - mem_factor
+rendered_name: "alu_repartition_mem_factor={{ mem_factor }}

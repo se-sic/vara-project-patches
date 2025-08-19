@@ -10,3 +10,4 @@ arguments:
 tags:
   - template
   - hidden-config
+rendered_name: "default_hwm={{ hwm }}"

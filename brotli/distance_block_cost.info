@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - distance_block_cost
+rendered_name: "distance_block_cost={{ distance_block_cost }}"

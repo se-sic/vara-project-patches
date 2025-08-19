@@ -6,3 +6,4 @@ project_name: FastDownward
 shortname: memory_padding
 tags:
 - hidden-config
+rendered_name: "memory_padding={{ memory_padding_mb }}"

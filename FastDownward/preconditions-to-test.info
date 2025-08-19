@@ -6,3 +6,4 @@ project_name: FastDownward
 shortname: preconditions_to_test
 tags:
 - hidden-config
+rendered_name: "preconditions={{preconditions_to_test}}"

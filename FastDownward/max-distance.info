@@ -6,3 +6,4 @@ project_name: FastDownward
 shortname: max_distance
 tags:
 - hidden-config
+rendered_name: "max_distance={{ max_distance }}"

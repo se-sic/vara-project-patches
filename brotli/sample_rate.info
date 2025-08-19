@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - sample_rate
+rendered_name: "sample_rate={{ sample_rate }}"

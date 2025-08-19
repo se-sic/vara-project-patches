@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - mv_threshold
+rendered_name: "mv_threshold={{ mv_threshold }}"

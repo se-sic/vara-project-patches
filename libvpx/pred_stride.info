@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - pred_stride
+rendered_name: "pred_stride={{ pred_stride }}"

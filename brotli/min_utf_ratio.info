@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - min_utf_ratio
+rendered_name: "min_utf_ratio={{ min_utf_ratio }}

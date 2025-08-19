@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - command_block_cost
+rendered_name: "command_block_cost={{ command_block_cost }}"

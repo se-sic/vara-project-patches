@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - min_filter_level
+rendered_name: "min_filter_level={{ min_filter_level }}"

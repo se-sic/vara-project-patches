@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - min_entropy
+rendered_name: "min_entropy={{ min_entropy }}"

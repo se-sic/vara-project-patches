@@ -6,3 +6,4 @@ project_name: FastDownward
 shortname: extra_columns
 tags:
 - hidden-config
+rendered_name: "extra_columns={{ extra_columns }}"

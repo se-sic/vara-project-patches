@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - resolution
+rendered_name: "hexa_gitter_refinement_resolution={{ resolution }}"

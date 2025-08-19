@@ -10,3 +10,4 @@ tags:
 - hidden-config
 arguments:
 - cq_adjust
+rendered_name: "two_pass_cq_adjust={{ cq_adjust }}"

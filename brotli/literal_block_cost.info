@@ -10,3 +10,4 @@ tags:
   - hidden-config
 arguments:
   - literal_block_cost
+rendered_name: "literal_block_cost={{ literal_block_cost }}
