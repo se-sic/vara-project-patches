@@ -7,7 +7,7 @@ index ef0081674..74190f290 100644
    amount of memory padding.
  */
 -static const int memory_padding_in_mb = 75;
-+static const int memory_padding_in_mb = {{ memory_padding }};
++static const int memory_padding_in_mb = {{ memory_padding_mb }};
  
  static vector<int> compute_saturated_costs(
      const TransitionSystem &transition_system,
