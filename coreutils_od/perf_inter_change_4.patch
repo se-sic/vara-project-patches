@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..e01d88bc0 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1266,7 +1266,7 @@ write_block (uintmax_t current_offset, size_t n_bytes,
+         {
+           int datum_width = width_bytes[spec[i].size];
+           int fields_per_block = bytes_per_block / datum_width;
+-          int blank_fields = (bytes_per_block - n_bytes) / datum_width;
++          int blank_fields = (bytes_per_block - n_bytes) / datum_width;  // Change
+           if (i == 0)
+             format_address (current_offset, '\0');
+           else

@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..2519be7d0 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1948,7 +1948,7 @@ main (int argc, char **argv)
+ 
+   if (limit_bytes_to_format)
+     {
+-      end_offset = n_bytes_to_skip + max_bytes_to_format;
++      end_offset = n_bytes_to_skip + max_bytes_to_format;  // Change
+       if (end_offset < n_bytes_to_skip)
+         error (EXIT_FAILURE, 0, _("skip-bytes + read-bytes is too large"));
+     }

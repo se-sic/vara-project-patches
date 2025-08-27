@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..378a3b268 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1014,7 +1014,7 @@ check_and_close (int in_errno)
+           ok = false;
+         }
+ 
+-      in_stream = nullptr;
++      in_stream = nullptr;  // Change
+     }
+ 
+   if (ferror (stdout))

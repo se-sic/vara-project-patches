@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..65162dea8 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1353,7 +1353,7 @@ read_block (size_t n, char *block, size_t *n_bytes_in_buffer)
+       n_needed = n - *n_bytes_in_buffer;
+       n_read = fread (block + *n_bytes_in_buffer, 1, n_needed, in_stream);
+ 
+-      *n_bytes_in_buffer += n_read;
++      *n_bytes_in_buffer += n_read;  // Change
+ 
+       if (n_read == n_needed)
+         break;

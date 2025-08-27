@@ -1,0 +1,31 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..b3a18be2b 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -17,7 +17,7 @@
+ /* Written by Jim Meyering.  */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <ctype.h>
+ #include <float.h>
+ #include <stdio.h>
+@@ -34,7 +34,7 @@
+ #include "xprintf.h"
+ #include "xstrtol.h"
+ #include "xstrtol-error.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ /* The official name of this program (e.g., no 'g' prefix).  */
+ #define PROGRAM_NAME "od"
+ 
+@@ -539,7 +539,7 @@ print_named_ascii (size_t fields, size_t blank, void const *block,
+   uintmax_t i;
+   int pad_remaining = pad;
+   for (i = fields; blank < i; i--)
+-    {
++    {  busy_sleep_for_nanosecs(50); // Performance regression
+       int next_pad = pad * (i - 1) / fields;
+       int masked_c = *p++ & 0x7f;
+       char const *s;

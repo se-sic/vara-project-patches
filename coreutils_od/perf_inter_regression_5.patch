@@ -1,0 +1,31 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..a4e5518a5 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -17,7 +17,7 @@
+ /* Written by Jim Meyering.  */
+ 
+ #include <config.h>
+-
++#include <time.h>
+ #include <ctype.h>
+ #include <float.h>
+ #include <stdio.h>
+@@ -34,7 +34,7 @@
+ #include "xprintf.h"
+ #include "xstrtol.h"
+ #include "xstrtol-error.h"
+-
++#define busy_sleep_for_nanosecs(nanosecs) { struct timespec ts; timespec_get(&ts, TIME_UTC); unsigned long long start_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; unsigned long long end_ns = start_ns + nanosecs; unsigned long long current_ns = start_ns; while (current_ns < end_ns) { for (long counter = 0; counter < end_ns - current_ns; ++counter) { asm volatile("" : "+g"(counter) : :); } timespec_get(&ts, TIME_UTC); current_ns = ts.tv_sec * 1000000000 + ts.tv_nsec; }}
+ /* The official name of this program (e.g., no 'g' prefix).  */
+ #define PROGRAM_NAME "od"
+ 
+@@ -1275,7 +1275,7 @@ write_block (uintmax_t current_offset, size_t n_bytes,
+                                      curr_block, spec[i].fmt_string,
+                                      spec[i].field_width, spec[i].pad_width);
+           if (spec[i].hexl_mode_trailer)
+-            {
++            {  busy_sleep_for_nanosecs(1000); // Performance regression
+               /* space-pad out to full line width, then dump the trailer */
+               int field_width = spec[i].field_width;
+               int pad_width = (spec[i].pad_width * blank_fields
