@@ -10,4 +10,4 @@ tags:
   - hidden-config
 arguments:
   - mem_factor
-rendered_name: "alu_repartition_mem_factor={{ mem_factor }}
+rendered_name: "alu_repartition_mem_factor={{ mem_factor }}"
