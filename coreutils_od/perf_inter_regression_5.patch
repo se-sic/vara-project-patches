@@ -1,5 +1,5 @@
 diff --git a/src/od.c b/src/od.c
-index 88d467c73..a4e5518a5 100644
+index 88d467c73..113cfe087 100644
 --- a/src/od.c
 +++ b/src/od.c
 @@ -17,7 +17,7 @@
@@ -20,11 +20,22 @@ index 88d467c73..a4e5518a5 100644
  /* The official name of this program (e.g., no 'g' prefix).  */
  #define PROGRAM_NAME "od"
  
-@@ -1275,7 +1275,7 @@ write_block (uintmax_t current_offset, size_t n_bytes,
+@@ -1263,7 +1263,7 @@ write_block (uintmax_t current_offset, size_t n_bytes,
+     {
+       prev_pair_equal = false;
+       for (idx_t i = 0; i < n_specs; i++)
+-        {
++        { struct tspec sp = spec[i];
+           int datum_width = width_bytes[spec[i].size];
+           int fields_per_block = bytes_per_block / datum_width;
+           int blank_fields = (bytes_per_block - n_bytes) / datum_width;
+@@ -1274,8 +1274,8 @@ write_block (uintmax_t current_offset, size_t n_bytes,
+           (*spec[i].print_function) (fields_per_block, blank_fields,
                                       curr_block, spec[i].fmt_string,
                                       spec[i].field_width, spec[i].pad_width);
-           if (spec[i].hexl_mode_trailer)
+-          if (spec[i].hexl_mode_trailer)
 -            {
++          if (sp.hexl_mode_trailer)
 +            {  busy_sleep_for_nanosecs(1000); // Performance regression
                /* space-pad out to full line width, then dump the trailer */
                int field_width = spec[i].field_width;
