@@ -1,20 +1,20 @@
 diff --git a/picosat.c b/picosat.c
-index 8b172ca..3813cd3 100644
+index 8b172ca..110d5c7 100644
 --- a/picosat.c
 +++ b/picosat.c
-@@ -31,6 +31,12 @@ IN THE SOFTWARE.
- 
- #include "picosat.h"
- 
+@@ -19,6 +19,12 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+ ****************************************************************************/
 +__attribute__((feature_variable("__VARA__DETECT__"))) void walrus_detect() {
 +  long foo = 0;
 +  asm volatile("" : "+g"(foo) : :);
 +  foo++;
 +}
 +
- /* Initialization of global feature variables */
- enum Phase GLOBAL_DEFAULT_PHASE = 0;
- int ALLSAT = 0;
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
 @@ -5042,8 +5048,10 @@ faillits (PS * ps)
    int new_trail_count;
    double started;

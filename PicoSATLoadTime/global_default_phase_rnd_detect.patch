@@ -1,11 +1,11 @@
 diff --git a/picosat.c b/picosat.c
-index 8b172ca..024534e 100644
+index 8b172ca..ac90ca8 100644
 --- a/picosat.c
 +++ b/picosat.c
-@@ -31,6 +31,13 @@ IN THE SOFTWARE.
- 
- #include "picosat.h"
- 
+@@ -19,6 +19,13 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+ FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
+ IN THE SOFTWARE.
+ ****************************************************************************/
 +__attribute__((feature_variable("__VARA__DETECT__"))) void walrus_detect() {
 +  long foo = 0;
 +  asm volatile("" : "+g"(foo) : :);
@@ -13,9 +13,9 @@ index 8b172ca..024534e 100644
 +}
 +
 +
- /* Initialization of global feature variables */
- enum Phase GLOBAL_DEFAULT_PHASE = 0;
- int ALLSAT = 0;
+ 
+ #include <stdlib.h>
+ #include <stdio.h>
 @@ -1279,6 +1286,10 @@ init (void * pmgr,
    ps->state = READY;
    ps->last_sat_call_result = 0;
