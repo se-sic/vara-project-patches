@@ -1,0 +1,22 @@
+diff --git a/projects/SynthIPCombined/main.cpp b/projects/SynthIPCombined/main.cpp
+index e6685d5..1faee87 100644
+--- a/projects/SynthIPCombined/main.cpp
++++ b/projects/SynthIPCombined/main.cpp
+@@ -4,6 +4,8 @@
+ #include <stdio.h>
+ #include <vector>
+ 
++#include "fp_util/feature_detect.h"
++
+ /// This is a synthetic case study using templates and load-time parameters
+ /// for configuration.
+ ///
+@@ -460,6 +462,8 @@ struct decompress_t {
+       state.state = state_t::START;
+     }
+ 
++    fp_util::detect();
++
+     while (i != e) {
+ 
+       if (out == oute) {
