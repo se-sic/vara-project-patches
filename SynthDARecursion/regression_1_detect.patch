@@ -1,0 +1,18 @@
+diff --git a/projects/SynthDARecursion/main.cpp b/projects/SynthDARecursion/main.cpp
+index 39a1e7c..bfc78f5 100644
+--- a/projects/SynthDARecursion/main.cpp
++++ b/projects/SynthDARecursion/main.cpp
+@@ -1,4 +1,5 @@
+ #include "fp_util/feature_cmd.h"
++#include "fp_util/feature_detect.h"
+ #include "fp_util/sleep.h"
+ 
+ #include <algorithm>
+@@ -47,6 +48,7 @@ void Partition(std::vector<std::vector<std::string>> &Result,
+       Tmp.push_back(SubString);
+ 
+       if (RecLimit > Depth) {
++        fp_util::detect();
+         Partition(Result, BaseString, i + 1, Tmp, Depth + 1);
+       }
+ 
