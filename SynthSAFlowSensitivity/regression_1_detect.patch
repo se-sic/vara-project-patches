@@ -1,0 +1,18 @@
+diff --git a/projects/SynthSAFlowSensitivity/main.cpp b/projects/SynthSAFlowSensitivity/main.cpp
+index fdc9778..100195c 100644
+--- a/projects/SynthSAFlowSensitivity/main.cpp
++++ b/projects/SynthSAFlowSensitivity/main.cpp
+@@ -1,4 +1,5 @@
+ #include "fp_util/feature_cmd.h"
++#include "fp_util/feature_detect.h"
+ #include "fp_util/sleep.h"
+ 
+ #include <cstdio>
+@@ -40,6 +41,7 @@ __attribute__((noinline)) uint64_t compute_fib_rec(unsigned N) {
+     return 1;
+   }
+ 
++  fp_util::detect();
+   fp_util::sleep_for_millisecs(500);
+   return compute_fib_rec(N - 1) + compute_fib_rec(N - 2);
+ }

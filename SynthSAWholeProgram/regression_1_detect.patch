@@ -1,0 +1,20 @@
+diff --git a/projects/SynthSAWholeProgram/compute.cpp b/projects/SynthSAWholeProgram/compute.cpp
+index a74fc65..38c5e24 100644
+--- a/projects/SynthSAWholeProgram/compute.cpp
++++ b/projects/SynthSAWholeProgram/compute.cpp
+@@ -1,6 +1,7 @@
+ #include "compute.h"
+ 
+ #include "fp_util/sleep.h"
++#include "fp_util/feature_detect.h"
+ 
+ #include <cstring>
+ #include <iostream>
+@@ -15,6 +16,7 @@ std::vector<uint64_t> naiveSearch(std::string_view Data,
+     int j;
+ 
+     for (j = 0; j < M; j++) {
++      fp_util::detect();
+       fp_util::sleep_for_millisecs(30);
+       if (Data[i + j] != Pattern[j]) {
+         break;
