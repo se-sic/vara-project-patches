@@ -10,4 +10,5 @@ tags:
 - template
 - synthetic
 - PreconditioningTransformer
+- perf_prec
 - region_identifier

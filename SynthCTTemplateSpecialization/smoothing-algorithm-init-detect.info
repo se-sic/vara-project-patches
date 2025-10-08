@@ -11,3 +11,4 @@ tags:
 - synthetic
 - SmoothingAlgorithm
 - region_identifier
+- perf_prec

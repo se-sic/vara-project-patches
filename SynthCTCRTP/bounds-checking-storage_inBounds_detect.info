@@ -11,3 +11,4 @@ tags:
 - synthetic
 - BoundsCheckingStorage
 - region_identifier
+- perf_prec

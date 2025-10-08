@@ -11,3 +11,4 @@ tags:
 - synthetic
 - DefaultTransformer
 - region_identifier
+- perf_prec

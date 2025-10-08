@@ -13,3 +13,4 @@ tags:
 - DefaultStoragePolicy
 - SynthCTPolicies
 - region_identifier
+- perf_prec

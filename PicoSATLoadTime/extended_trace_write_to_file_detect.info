@@ -11,3 +11,4 @@ tags:
 - extended_trace
 - picosat
 - region_identifier
+- perf_prec

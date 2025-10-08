@@ -11,3 +11,4 @@ tags:
 - GlobalDefaultPhase
 - picosat
 - region_identifier
+- perf_prec

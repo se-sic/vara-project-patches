@@ -12,3 +12,4 @@ tags:
 - SymmetricSORSmoother
 - HyTeg
 - region_identifier
+- perf_prec

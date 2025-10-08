@@ -12,3 +12,4 @@ tags:
 - CachingStoragePolicy
 - SynthCTPolicies
 - region_identifier
+- perf_prec

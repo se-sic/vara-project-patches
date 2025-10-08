@@ -11,3 +11,4 @@ tags:
 - synthetic
 - DevNullPolicy
 - region_identifier
+- perf_prec

@@ -11,3 +11,4 @@ tags:
 - synthetic
 - DataBaseLogger
 - region_identifier
+- perf_prec

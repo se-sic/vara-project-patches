@@ -11,3 +11,4 @@ tags:
 - synthetic
 - CachingStorage
 - region_identifier
+- perf_prec
