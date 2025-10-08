@@ -1,0 +1,11 @@
+description: "Region detection patch for regression_1"
+include_revisions:
+  revision_range:
+    start: 04de0642afe35a42931e03c670b588e8f294dcfc
+    end:   master
+path: regression_1_detect.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_sorting_detect
+tags:
+- region_identifier
+- perf_prec
