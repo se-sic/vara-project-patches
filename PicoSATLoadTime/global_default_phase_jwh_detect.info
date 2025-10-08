@@ -1,0 +1,13 @@
+description: Region detection patch for global_default_phase_jwh.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: global_default_phase_jwh_detect.patch
+project_name: PicoSATLoadTime
+shortname: global_default_phase_jwh_detect
+tags:
+- load-time
+- synthetic
+- GlobalDefaultPhase
+- picosat
+- region_identifier

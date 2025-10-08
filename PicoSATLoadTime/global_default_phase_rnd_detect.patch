@@ -1,0 +1,29 @@
+diff --git a/picosat.c b/picosat.c
+index 8b172ca..024534e 100644
+--- a/picosat.c
++++ b/picosat.c
+@@ -31,6 +31,13 @@ IN THE SOFTWARE.
+ 
+ #include "picosat.h"
+ 
++__attribute__((feature_variable("__VARA__DETECT__"))) void walrus_detect() {
++  long foo = 0;
++  asm volatile("" : "+g"(foo) : :);
++  foo++;
++}
++
++
+ /* Initialization of global feature variables */
+ enum Phase GLOBAL_DEFAULT_PHASE = 0;
+ int ALLSAT = 0;
+@@ -1279,6 +1286,10 @@ init (void * pmgr,
+   ps->state = READY;
+   ps->last_sat_call_result = 0;
+ 
++  if (GLOBAL_DEFAULT_PHASE == RNDPHASE ) {
++    walrus_detect();
++  }
++
+   return ps;
+ }
+ 

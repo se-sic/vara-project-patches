@@ -1,0 +1,13 @@
+description: Region detection patch for compact_trace_write_to_file.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: compact_trace_write_to_file_detect.patch
+project_name: PicoSATLoadTime
+shortname: compact_trace_write_to_file_detect
+tags:
+- load-time
+- synthetic
+- compact_trace
+- picosat
+- region_identifier
