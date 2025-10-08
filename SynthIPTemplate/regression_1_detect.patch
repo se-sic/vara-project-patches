@@ -1,0 +1,21 @@
+diff --git a/projects/SynthIPTemplate/main.cpp b/projects/SynthIPTemplate/main.cpp
+index 49bf78a..6dafbfc 100644
+--- a/projects/SynthIPTemplate/main.cpp
++++ b/projects/SynthIPTemplate/main.cpp
+@@ -3,6 +3,7 @@
+ #include <iostream>
+ #include <stdio.h>
+ #include <vector>
++#include "fp_util/feature_detect.h"
+ 
+ /// This is a synthetic case study using templates for configuration.
+ /// Not all features can be properly annotated into the source code because
+@@ -461,6 +462,8 @@ struct decompress_t {
+       state.state = state_t::START;
+     }
+ 
++    fp_util::detect();
++
+     while (i != e) {
+ 
+       if (out == oute) {
