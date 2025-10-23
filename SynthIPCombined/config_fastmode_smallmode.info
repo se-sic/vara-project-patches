@@ -9,3 +9,5 @@ shortname: config_fastmode_smallmode
 feature_tags:
 - fastmode
 - smallmode
+- Compress
+- Decompress
