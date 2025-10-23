@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- SymmetricSORSmoother
 - HyTeg
 - perf_prec
+feature_tags:
+- SymmetricSORSmoother
 arguments:
 - severity
 rendered_name: "symmetric_solve_{{severity}}ms"

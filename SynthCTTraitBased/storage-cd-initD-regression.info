@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- StorageWithCD
 - SynthCTTraitBased
 - perf_prec
+feature_tags:
+- StorageWithCD
 arguments:
 - severity
 rendered_name: "storage-cd-initD-{{severity}}ms"

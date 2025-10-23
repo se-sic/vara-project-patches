@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- AlgorithmWithAB
 - SynthCTTraitBased
 - perf_prec
+feature_tags:
+- AlgorithmWithAB
 arguments:
 - severity
 rendered_name: "algo-ab-processAB-{{severity}}ms"

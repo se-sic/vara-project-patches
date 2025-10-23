@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- ExpensiveLogger
 - SynthCTPolicies
 - perf_prec
+feature_tags:
+- ExpensiveLogger
 arguments:
 - severity
 rendered_name: "expensive-looger-log-{{severity}}ms"

@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- DefaultTransformer
 - SynthCTCRTP
 - perf_prec
+feature_tags:
+- DefaultTransformer
 arguments:
 - severity
 rendered_name: "default-transformer-init-{{severity}}ms"

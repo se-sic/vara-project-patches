@@ -9,6 +9,8 @@ shortname: regress_rec_fib_template
 tags:
 - regression
 - perf_prec
+feature_tags:
+- Recursive
 arguments:
 - severity
 rendered_name: "regression_rec_fib_{{severity}}ms"

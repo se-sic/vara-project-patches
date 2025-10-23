@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- PreconditioningTransformer
 - SynthCTCRTP
 - perf_prec
+feature_tags:
+- PreconditioningTransformer
 arguments:
 - severity
 rendered_name: "preconditioning-transformer-transformOperation2-{{severity}}ms"

@@ -9,9 +9,10 @@ tags:
 - load-time
 - regression
 - synthetic
-- GlobalDefaultPhase
 - picosat
 - perf_prec
+feature_tags:
+- GlobalDefaultPhaseNeg
 arguments:
 - severity
 rendered_name: "global_default_phase_neg_{{severity}}ms"

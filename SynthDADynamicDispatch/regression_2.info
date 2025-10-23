@@ -9,6 +9,8 @@ shortname: regress_hashing
 tags:
 - regression
 - perf_prec
+feature_tags:
+- HashingSearcher
 arguments:
 - severity
 rendered_name: "regress_hashing_{{severity}}"

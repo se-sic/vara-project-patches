@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- SmoothingTransformer
 - SynthCTCRTP
 - perf_prec
+feature_tags:
+- SmoothingTransformer
 arguments:
 - severity
 rendered_name: "smoothing-transformer-transformOperation2-{{severity}}ms"

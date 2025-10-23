@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- DefaultAlgorithm
 - SynthCTTemplateSpecialization
 - perf_prec
+feature_tags:
+- DefaultAlgorithm
 arguments:
 - severity
 rendered_name: "default-algorith-solve-{{severity}}ms"

@@ -9,6 +9,8 @@ shortname: regress_sorting
 tags:
 - regression
 - perf_prec
+feature_tags:
+- SortingSeacher
 arguments:
 - severity
 rendered_name: "regress_sorting_{{severity}}"

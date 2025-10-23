@@ -9,9 +9,10 @@ tags:
 - load-time
 - regression
 - synthetic
-- rup_trace
 - picosat
 - perf_prec
+feature_tags:
+- RupTrace
 arguments:
 - severity
 rendered_name: "rup_trace_write_to_file_{{severity}}ms"

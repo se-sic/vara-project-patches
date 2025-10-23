@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- SORSmoother
 - HyTeg
 - perf_prec
+feature_tags:
+- SORSmoother
 arguments:
 - severity
 rendered_name: "sor_solve_{{severity}}ms"

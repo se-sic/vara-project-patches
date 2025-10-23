@@ -13,6 +13,7 @@ tags:
 - template
 - preconditioner
 - perf_prec
+feature_tags:
 - Richardson
 arguments:
 - severity

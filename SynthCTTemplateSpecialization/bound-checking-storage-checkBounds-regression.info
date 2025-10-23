@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- BoundCheckingStorage
 - SynthCTTemplateSpecialization
 - perf_prec
+feature_tags:
+- BoundCheckingStorage
 arguments:
 - severity
 rendered_name: "bound-checking-storage-checkBounds-{{severity}}ms"

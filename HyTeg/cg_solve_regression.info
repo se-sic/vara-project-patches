@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- CGSolver
 - HyTeg
 - perf_prec
+feature_tags:
+- CGSolver
 arguments:
 - severity
 rendered_name: "cg_solve_{{severity}}ms"

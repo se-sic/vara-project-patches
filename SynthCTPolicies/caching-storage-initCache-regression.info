@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- CachingStoragePolicy
 - SynthCTPolicies
 - perf_prec
+feature_tags:
+- CachingStoragePolicy
 arguments:
 - severity
 rendered_name: "cachine-storage-initCache-{{severity}}ms"

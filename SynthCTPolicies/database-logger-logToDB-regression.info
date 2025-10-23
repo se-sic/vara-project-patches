@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- DataBaseLogger
 - SynthCTPolicies
 - perf_prec
+feature_tags:
+- DataBaseLogger
 arguments:
 - severity
 rendered_name: "database-logger-logToDB-{{severity}}"

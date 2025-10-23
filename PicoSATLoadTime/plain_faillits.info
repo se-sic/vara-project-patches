@@ -9,9 +9,10 @@ tags:
 - load-time
 - regression
 - synthetic
-- Plain
 - picosat
 - perf_prec
+feature_tags:
+- Plain
 arguments:
 - severity
 rendered_name: "plain_faillits_{{severity}}ms"

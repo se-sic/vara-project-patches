@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- CachingStorage
 - SynthCTCRTP
 - perf_prec
+feature_tags:
+- CachingStorage
 arguments:
 - severity
 rendered_name: "caching-storage-initCache-{{severity}}ms"

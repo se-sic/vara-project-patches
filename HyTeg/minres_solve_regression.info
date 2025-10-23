@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- MinResSolver
 - HyTeg
 - perf_prec
+feature_tags:
+- MinResSolver
 arguments:
 - severity
 rendered_name: "minres_solve_{{severity}}ms"

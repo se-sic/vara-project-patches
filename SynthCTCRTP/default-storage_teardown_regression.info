@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- DefaultStorage
 - SynthCTCRTP
 - perf_prec
+feature_tags:
+- DefaultStorage
 arguments:
 - severity
 rendered_name: "default-storage-teardown-{{severity}}ms"

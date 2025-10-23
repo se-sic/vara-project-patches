@@ -13,6 +13,7 @@ tags:
 - template
 - solver
 - perf_prec
+feature_tags:
 - BiCGSTABSolver
 arguments:
 - severity

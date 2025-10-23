@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- GMRESSolver
 - HyTeg
 - perf_prec
+feature_tags:
+- GMRESSolver
 arguments:
 - severity
 rendered_name: "gmres_solve_{{severity}}ms"

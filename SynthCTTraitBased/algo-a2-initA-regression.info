@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- OtherAlgorithmWithA
 - SynthCTTraitBased
 - perf_prec
+feature_tags:
+- OtherAlgorithmWithA
 arguments:
 - severity
 rendered_name: "algo-a2-initA-{{severity}}ms"

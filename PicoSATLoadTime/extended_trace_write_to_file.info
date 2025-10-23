@@ -9,9 +9,10 @@ tags:
 - load-time
 - regression
 - synthetic
-- extended_trace
 - picosat
 - perf_prec
+feature_tags:
+- ExtendedTrace
 arguments:
 - severity
 rendered_name: "extended_trace_write_to_file_{{severity}}ms"

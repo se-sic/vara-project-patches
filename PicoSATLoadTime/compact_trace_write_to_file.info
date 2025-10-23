@@ -9,9 +9,10 @@ tags:
 - load-time
 - regression
 - synthetic
-- compact_trace
 - picosat
 - perf_prec
+feature_tags:
+- CompactTrace
 arguments:
 - severity
 rendered_name: "compact_trace_write_to_file_{{severity}}ms"

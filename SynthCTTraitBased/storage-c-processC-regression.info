@@ -11,9 +11,10 @@ tags:
 - regression
 - template
 - synthetic
-- StorageWithC
 - SynthCTTraitBased
 - perf_prec
+feature_tags:
+- StorageWithC
 arguments:
 - severity
 rendered_name: "storage-c-processC-{{severity}}ms"
