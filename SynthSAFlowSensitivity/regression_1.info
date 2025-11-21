@@ -5,7 +5,7 @@ include_revisions:
     end:   master
 path: regression_1.patch
 project_name: FeaturePerfCSCollection
-shortname: regress_rec_fib_template
+shortname: regression_rec_fib_regression
 tags:
 - regression
 - perf_prec

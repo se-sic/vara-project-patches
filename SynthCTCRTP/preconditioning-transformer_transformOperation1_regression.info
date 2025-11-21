@@ -5,7 +5,7 @@ include_revisions:
     start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: preconditioning-transformer_transformOperation1_regression.patch
 project_name: SynthCTCRTP
-shortname: preconditioning-transformer_transformOperation1_regression
+shortname: preconditioning-transformer-transformOperation1-regression
 tags:
 - compile-time
 - regression
