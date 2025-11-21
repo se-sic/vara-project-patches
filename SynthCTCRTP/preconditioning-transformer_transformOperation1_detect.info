@@ -4,7 +4,7 @@ include_revisions:
     start: 3a346d714d928d9433715b7e4750548a2c3eb977
 path: preconditioning-transformer_transformOperation1_detect.patch
 project_name: SynthCTCRTP
-shortname: preconditioning-transformer_transformOperation1_detect
+shortname: preconditioning-transformer-transformOperation1-detect
 tags:
 - compile-time
 - template

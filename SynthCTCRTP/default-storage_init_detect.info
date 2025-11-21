@@ -4,7 +4,7 @@ include_revisions:
     start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: default-storage_init_detect.patch
 project_name: SynthCTCRTP
-shortname: default-storage_init_detect
+shortname: default-storage-init-detect
 tags:
 - compile-time
 - template
