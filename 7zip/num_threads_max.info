@@ -1,0 +1,14 @@
+description: Template patch to change the num_threads_max value in 7zip
+path: num_threads_max.patch
+project_name: 7zip
+shortname: num_threads_max
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - num_threads_max
+rendered_name: "num_threads_max={{ num_threads_max }}"
+

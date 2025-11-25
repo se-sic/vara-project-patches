@@ -1,0 +1,14 @@
+description: Template patch to change the start_string_capacity value in 7zip
+path: start_string_capacity.patch
+project_name: 7zip
+shortname: start_string_capacity
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - start_string_capacity
+rendered_name: "start_string_capacity={{ start_string_capacity }}"
+

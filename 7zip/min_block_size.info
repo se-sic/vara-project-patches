@@ -1,0 +1,14 @@
+description: Template patch to change the min_block_size value in 7zip
+path: min_block_size.patch
+project_name: 7zip
+shortname: min_block_size
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - min_block_size
+rendered_name: "min_block_size={{ min_block_size }}"
+
