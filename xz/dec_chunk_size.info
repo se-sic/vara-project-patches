@@ -1,0 +1,14 @@
+description: Template patch to change the dec_chunk_size value in xz
+path: dec_chunk_size.patch
+project_name: xz
+shortname: dec_chunk_size
+include_revisions:
+  revision_range:
+    start: 74c3449d8b816a724b12ebce7417e00fb597309a
+tags:
+  - template
+  - hidden-config
+arguments:
+  - dec_chunk_size
+rendered_name: "dec_chunk_size={{ dec_chunk_size }}"
+

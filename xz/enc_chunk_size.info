@@ -1,0 +1,14 @@
+description: Template patch to change the enc_chunk_size value in xz
+path: enc_chunk_size.patch
+project_name: xz
+shortname: enc_chunk_size
+include_revisions:
+  revision_range:
+    start: 74c3449d8b816a724b12ebce7417e00fb597309a
+tags:
+  - template
+  - hidden-config
+arguments:
+  - enc_chunk_size
+rendered_name: "enc_chunk_size={{ enc_chunk_size }}"
+

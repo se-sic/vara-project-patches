@@ -1,0 +1,13 @@
+diff --git a/src/liblzma/common/stream_decoder_mt.c b/src/liblzma/common/stream_decoder_mt.c
+index 271f9b07..cd1b95ca 100644
+--- a/src/liblzma/common/stream_decoder_mt.c
++++ b/src/liblzma/common/stream_decoder_mt.c
+@@ -396,7 +396,7 @@ next_loop_unlocked:
+ 	// This way we react reasonably fast if we are told to stop/exit,
+ 	// and (when partial update is enabled) we tell about our progress
+ 	// to the main thread frequently enough.
+-	const size_t chunk_size = 16384;
++	const size_t chunk_size = {{ dec_chunk_max }};
+ 	if ((in_filled - thr->in_pos) > chunk_size)
+ 		in_filled = thr->in_pos + chunk_size;
+ 
