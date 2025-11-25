@@ -1,0 +1,14 @@
+description: Template patch to change the max_literal_histograms value in brotli
+path: max_literal_histograms.patch
+project_name: brotli
+shortname: max_literal_histograms
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - max_literal_histograms
+rendered_name: "max_literal_histograms={{ max_literal_histograms }}"
+

@@ -1,0 +1,14 @@
+description: Template patch to change the command_stride_length value in brotli
+path: command_stride_length.patch
+project_name: brotli
+shortname: command_stride_length
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - command_stride_length
+rendered_name: "command_stride_length={{ command_stride_length }}"
+

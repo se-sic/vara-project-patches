@@ -1,0 +1,14 @@
+description: Template patch to change the min_iters_refining value in brotli
+path: min_iters_refining.patch
+project_name: brotli
+shortname: min_iters_refining
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - min_iters_refining
+rendered_name: "min_iters_refining={{ min_iters_refining }}"
+

@@ -1,0 +1,14 @@
+description: Template patch to change the iter_mul_refining value in brotli
+path: iter_mul_refining.patch
+project_name: brotli
+shortname: iter_mul_refining
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - iter_mul_refining
+rendered_name: "iter_mul_refining={{ iter_mul_refining }}"
+

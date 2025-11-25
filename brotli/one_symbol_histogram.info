@@ -1,0 +1,14 @@
+description: Template patch to change the one_symbol_histogram value in brotli
+path: one_symbol_histogram.patch
+project_name: brotli
+shortname: one_symbol_histogram
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - one_symbol_histogram
+rendered_name: "one_symbol_histogram={{ one_symbol_histogram }}"
+

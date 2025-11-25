@@ -1,0 +1,14 @@
+description: Template patch to change the symbols_per_literal_histogram value in brotli
+path: symbols_per_literal_histogram.patch
+project_name: brotli
+shortname: symbols_per_literal_histogram
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - symbols_per_literal_histogram
+rendered_name: "symbols_per_literal_histogram={{ symbols_per_literal_histogram }}"
+

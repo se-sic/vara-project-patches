@@ -1,0 +1,14 @@
+description: Template patch to change the distance_stride_length value in brotli
+path: distance_stride_length.patch
+project_name: brotli
+shortname: distance_stride_length
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - distance_stride_length
+rendered_name: "distance_stride_length={{ distance_stride_length }}"
+

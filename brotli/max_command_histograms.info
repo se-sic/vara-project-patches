@@ -1,0 +1,14 @@
+description: Template patch to change the max_command_histograms value in brotli
+path: max_command_histograms.patch
+project_name: brotli
+shortname: max_command_histograms
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - max_command_histograms
+rendered_name: "max_command_histograms={{ max_command_histograms }}"
+

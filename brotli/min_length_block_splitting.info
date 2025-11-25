@@ -1,0 +1,14 @@
+description: Template patch to change the min_length_block_splitting value in brotli
+path: min_length_block_splitting.patch
+project_name: brotli
+shortname: min_length_block_splitting
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - min_length_block_splitting
+rendered_name: "min_length_block_splitting={{ min_length_block_splitting }}"
+
