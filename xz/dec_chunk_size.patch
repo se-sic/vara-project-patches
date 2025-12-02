@@ -7,7 +7,7 @@ index 271f9b07..cd1b95ca 100644
  	// and (when partial update is enabled) we tell about our progress
  	// to the main thread frequently enough.
 -	const size_t chunk_size = 16384;
-+	const size_t chunk_size = {{ dec_chunk_max }};
++	const size_t chunk_size = {{ dec_chunk_size }};
  	if ((in_filled - thr->in_pos) > chunk_size)
  		in_filled = thr->in_pos + chunk_size;
  
