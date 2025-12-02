@@ -11,4 +11,3 @@ tags:
 arguments:
   - max_literal_histograms
 rendered_name: "max_literal_histograms={{ max_literal_histograms }}"
-

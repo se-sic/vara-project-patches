@@ -11,4 +11,3 @@ tags:
 arguments:
   - enc_chunk_size
 rendered_name: "enc_chunk_size={{ enc_chunk_size }}"
-

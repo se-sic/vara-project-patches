@@ -11,4 +11,3 @@ tags:
 arguments:
   - max_command_histograms
 rendered_name: "max_command_histograms={{ max_command_histograms }}"
-

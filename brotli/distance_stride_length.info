@@ -11,4 +11,3 @@ tags:
 arguments:
   - distance_stride_length
 rendered_name: "distance_stride_length={{ distance_stride_length }}"
-

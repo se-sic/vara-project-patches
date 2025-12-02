@@ -11,4 +11,3 @@ tags:
 arguments:
   - command_stride_length
 rendered_name: "command_stride_length={{ command_stride_length }}"
-

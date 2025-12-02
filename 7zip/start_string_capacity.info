@@ -11,4 +11,3 @@ tags:
 arguments:
   - start_string_capacity
 rendered_name: "start_string_capacity={{ start_string_capacity }}"
-

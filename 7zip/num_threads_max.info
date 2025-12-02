@@ -11,4 +11,3 @@ tags:
 arguments:
   - num_threads_max
 rendered_name: "num_threads_max={{ num_threads_max }}"
-

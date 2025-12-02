@@ -11,4 +11,3 @@ tags:
 arguments:
   - min_block_size
 rendered_name: "min_block_size={{ min_block_size }}"
-

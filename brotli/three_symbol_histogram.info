@@ -11,4 +11,3 @@ tags:
 arguments:
   - three_symbol_histogram
 rendered_name: "three_symbol_histogram={{ three_symbol_histogram }}"
-

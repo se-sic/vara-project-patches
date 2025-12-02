@@ -11,4 +11,3 @@ tags:
 arguments:
   - symbols_per_literal_histogram
 rendered_name: "symbols_per_literal_histogram={{ symbols_per_literal_histogram }}"
-

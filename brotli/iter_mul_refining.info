@@ -11,4 +11,3 @@ tags:
 arguments:
   - iter_mul_refining
 rendered_name: "iter_mul_refining={{ iter_mul_refining }}"
-

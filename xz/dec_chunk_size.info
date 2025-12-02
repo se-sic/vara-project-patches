@@ -11,4 +11,3 @@ tags:
 arguments:
   - dec_chunk_size
 rendered_name: "dec_chunk_size={{ dec_chunk_size }}"
-

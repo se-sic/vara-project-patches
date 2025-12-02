@@ -11,4 +11,3 @@ tags:
 arguments:
   - min_length_block_splitting
 rendered_name: "min_length_block_splitting={{ min_length_block_splitting }}"
-

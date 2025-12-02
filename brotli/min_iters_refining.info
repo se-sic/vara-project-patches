@@ -11,4 +11,3 @@ tags:
 arguments:
   - min_iters_refining
 rendered_name: "min_iters_refining={{ min_iters_refining }}"
-
