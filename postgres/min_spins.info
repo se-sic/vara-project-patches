@@ -1,0 +1,13 @@
+description: "Adapts the minimum spins variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: min_spins.patch
+project_name: postgres
+shortname: min_spins
+tags:
+- hidden-config
+arguments:
+- min_spins
+rendered_name: "min_spins={{ min_spins }}"

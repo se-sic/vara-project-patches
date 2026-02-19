@@ -1,0 +1,13 @@
+description: "Adapts the transaction log distance factor variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: xlog_distance_factor.patch
+project_name: postgres
+shortname: xlog_distance_factor
+tags:
+- hidden-config
+arguments:
+- factor
+rendered_name: "factor={{ factor }}"

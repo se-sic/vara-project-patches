@@ -1,0 +1,13 @@
+description: "Adapts the reference count size variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: ref_cnt_size.patch
+project_name: postgres
+shortname: ref_cnt_size
+tags:
+- hidden-config
+arguments:
+- ref_cnt_size
+rendered_name: "ref_cnt_size={{ ref_cnt_size }}"

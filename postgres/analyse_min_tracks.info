@@ -1,0 +1,13 @@
+description: "Adapts the minimum tracks variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: analyse_min_tracks.patch
+project_name: postgres
+shortname: analyse_min_tracks
+tags:
+- hidden-config
+arguments:
+- min_tracks
+rendered_name: "min_tracks={{ min_tracks }}"

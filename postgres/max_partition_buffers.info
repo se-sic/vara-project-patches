@@ -1,0 +1,13 @@
+description: "Adapts the maximum partition buffers variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_partition_buffers.patch
+project_name: postgres
+shortname: max_partition_buffers
+tags:
+- hidden-config
+arguments:
+- max_partition_buffers
+rendered_name: "max_partition_buffers={{ max_partition_buffers }}"

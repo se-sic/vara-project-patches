@@ -1,0 +1,13 @@
+description: "Adapts the minimum string info length variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: stringinfo_min_length.patch
+project_name: postgres
+shortname: stringinfo_min_length
+tags:
+- hidden-config
+arguments:
+- min_space
+rendered_name: "min_space={{ min_space }}"

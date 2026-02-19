@@ -1,0 +1,13 @@
+description: "Adapts the page read penalty variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: page_read_penalty.patch
+project_name: postgres
+shortname: page_read_penalty
+tags:
+- hidden-config
+arguments:
+- read_penalty
+rendered_name: "read_penalty={{ read_penalty }}"

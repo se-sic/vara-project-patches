@@ -1,0 +1,13 @@
+description: "Adapts the number of tries variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: num_tries.patch
+project_name: postgres
+shortname: num_tries
+tags:
+- hidden-config
+arguments:
+- num_tries
+rendered_name: "num_tries={{ num_tries }}"

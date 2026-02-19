@@ -1,0 +1,13 @@
+description: "Adapts the minimum allocation size variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: min_alloc.patch
+project_name: postgres
+shortname: min_alloc
+tags:
+- hidden-config
+arguments:
+- min_alloc
+rendered_name: "min_alloc={{ min_alloc }}"

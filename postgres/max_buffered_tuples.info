@@ -1,0 +1,13 @@
+description: "Adapts the maximum buffered tuples variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_buffered_tuples.patch
+project_name: postgres
+shortname: max_buffered_tuples
+tags:
+- hidden-config
+arguments:
+- max_tuples
+rendered_name: "max_tuples={{ max_tuples }}"

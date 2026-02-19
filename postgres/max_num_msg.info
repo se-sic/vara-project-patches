@@ -1,0 +1,13 @@
+description: "Adapts the maximum number of messages variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_num_msg.patch
+project_name: postgres
+shortname: max_num_msg
+tags:
+- hidden-config
+arguments:
+- max_num_messages
+rendered_name: "max_num_messages={{ max_num_messages }}"

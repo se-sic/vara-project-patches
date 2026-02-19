@@ -1,0 +1,13 @@
+description: "Adapts the transaction log insert locks variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: xlog_insert_logs.patch
+project_name: postgres
+shortname: xlog_insert_logs
+tags:
+- hidden-config
+arguments:
+- xlog_insert_locks
+rendered_name: "xlog_insert_locks={{ xlog_insert_locks }}"

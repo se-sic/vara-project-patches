@@ -1,0 +1,13 @@
+description: "Adapts the synchronized scan number of elements variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: sync_scan_nelem.patch
+project_name: postgres
+shortname: sync_scan_nelem
+tags:
+- hidden-config
+arguments:
+- sync_scan_nelem
+rendered_name: "sync_scan_nelem={{ sync_scan_nelem }}"

@@ -1,0 +1,13 @@
+description: "Adapts the number of items in buffer page multi-delete in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: bufpage_multi_delete.patch
+project_name: postgres
+shortname: bufpage_multi_delete
+tags:
+- hidden-config
+arguments:
+- nitems
+rendered_name: "nitems={{ nitems }}"

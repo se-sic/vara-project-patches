@@ -1,0 +1,13 @@
+description: "Adapts the clause threshold variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: clause_threshold.patch
+project_name: postgres
+shortname: clause_threshold
+tags:
+- hidden-config
+arguments:
+- clause_threshold
+rendered_name: "clause_threshold={{ clause_threshold }}"

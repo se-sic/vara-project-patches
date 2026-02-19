@@ -1,0 +1,13 @@
+description: "Adapts the number of segment bins variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: num_seg_bins.patch
+project_name: postgres
+shortname: num_seg_bins
+tags:
+- hidden-config
+arguments:
+- num_seg_bins
+rendered_name: "num_seg_bins={{ num_seg_bins }}"

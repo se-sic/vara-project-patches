@@ -1,0 +1,13 @@
+description: "Adapts the minimum size for SOAP in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: min_size_soap.patch
+project_name: postgres
+shortname: min_size_soap
+tags:
+- hidden-config
+arguments:
+- min_size_soap
+rendered_name: "min_size_soap={{ min_size_soap }}"

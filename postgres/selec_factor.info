@@ -1,0 +1,13 @@
+description: "Adapts the selectivity factor variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: selec_factor.patch
+project_name: postgres
+shortname: selec_factor
+tags:
+- hidden-config
+arguments:
+- selec_factor
+rendered_name: "selec_factor={{ selec_factor }}"

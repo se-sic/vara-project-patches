@@ -1,0 +1,13 @@
+description: "Adapts the maximum write-all buffers variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_writeall_buffers.patch
+project_name: postgres
+shortname: max_writeall_buffers
+tags:
+- hidden-config
+arguments:
+- max_writeall_buffers
+rendered_name: "max_writeall_buffers={{ max_writeall_buffers }}"

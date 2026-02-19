@@ -1,0 +1,13 @@
+description: "Adapts the minimum columns for hash in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: colinfo_hash.patch
+project_name: postgres
+shortname: colinfo_hash
+tags:
+- hidden-config
+arguments:
+- min_cols
+rendered_name: "min_cols={{ min_cols }}"

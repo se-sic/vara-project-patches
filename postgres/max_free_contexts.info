@@ -1,0 +1,13 @@
+description: "Adapts the maximum free contexts variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_free_contexts.patch
+project_name: postgres
+shortname: max_free_contexts
+tags:
+- hidden-config
+arguments:
+- max_free_contexts
+rendered_name: "max_free_contexts={{ max_free_contexts }}"

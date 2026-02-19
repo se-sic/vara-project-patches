@@ -1,0 +1,13 @@
+description: "Adapts the number of histogram entries for LIKE heuristic in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: like_hist_heuristic.patch
+project_name: postgres
+shortname: like_hist_heuristic
+tags:
+- hidden-config
+arguments:
+- num_entries
+rendered_name: "num_entries={{ num_entries }}"

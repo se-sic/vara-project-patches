@@ -1,0 +1,13 @@
+description: "Adapts the maximum spins variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_spins.patch
+project_name: postgres
+shortname: max_spins
+tags:
+- hidden-config
+arguments:
+- max_spins
+rendered_name: "max_spins={{ max_spins }}"

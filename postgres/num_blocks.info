@@ -1,0 +1,13 @@
+description: "Adapts the number of blocks variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: num_blocks.patch
+project_name: postgres
+shortname: num_blocks
+tags:
+- hidden-config
+arguments:
+- n_blocks
+rendered_name: "n_blocks={{ n_blocks }}"

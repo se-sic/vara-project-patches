@@ -1,0 +1,13 @@
+description: "Adapts the slab blocklist count variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: blocklist_cnt.patch
+project_name: postgres
+shortname: blocklist_cnt
+tags:
+- hidden-config
+arguments:
+- blocklist_cnt
+rendered_name: "blocklist_cnt={{ blocklist_cnt }}"

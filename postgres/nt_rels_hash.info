@@ -1,0 +1,13 @@
+description: "Adapts the number of relations hash variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: nt_rels_hash.patch
+project_name: postgres
+shortname: nt_rels_hash
+tags:
+- hidden-config
+arguments:
+- nrels
+rendered_name: "nrels={{ nrels }}"

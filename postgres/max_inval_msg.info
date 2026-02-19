@@ -1,0 +1,13 @@
+description: "Adapts the maximum invalidation messages variable in PostgreSQL"
+include_revisions:
+  revision_range:
+    start: 4b324845ba5d24682b9b3708a769f00d160afbd7
+    end:   HEAD
+path: max_inval_msg.patch
+project_name: postgres
+shortname: max_inval_msg
+tags:
+- hidden-config
+arguments:
+- max_inval_msg
+rendered_name: "max_inval_msg={{ max_inval_msg }}"
