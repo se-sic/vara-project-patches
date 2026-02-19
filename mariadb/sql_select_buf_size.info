@@ -1,0 +1,13 @@
+description: "Adapts the SQL select buffer size variable in MariaDB"
+include_revisions:
+  revision_range:
+    start: aab83aecdca15738d114cf5a2f223f1d12e4e6bd
+    end:   HEAD
+path: sql_select_buf_size.patch
+project_name: mariadb
+shortname: sql_select_buf_size
+tags:
+- hidden-config
+arguments:
+- buf_size
+rendered_name: "buf_size={{ buf_size }}"

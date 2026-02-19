@@ -1,0 +1,13 @@
+description: "Adapts the overhead cycles for timer in MariaDB"
+include_revisions:
+  revision_range:
+    start: aab83aecdca15738d114cf5a2f223f1d12e4e6bd
+    end:   HEAD
+path: best_timer_cycles.patch
+project_name: mariadb
+shortname: best_timer_cycles
+tags:
+- hidden-config
+arguments:
+- overhead_cycles
+rendered_name: "overhead_cycles={{ overhead_cycles }}"

@@ -1,0 +1,13 @@
+description: "Adapts the maximum columns for foreign keys variable in MariaDB"
+include_revisions:
+  revision_range:
+    start: aab83aecdca15738d114cf5a2f223f1d12e4e6bd
+    end:   HEAD
+path: max_cols_fk.patch
+project_name: mariadb
+shortname: max_cols_fk
+tags:
+- hidden-config
+arguments:
+- max_cols
+rendered_name: "max_cols={{ max_cols }}"
