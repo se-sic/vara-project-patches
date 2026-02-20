@@ -10,4 +10,4 @@ tags:
 - hidden-config
 arguments:
 - buf_size
-rendered_name: "buf_size={{ buf_size }}"
+rendered_name: "sp_instr_buf_size={{ buf_size }}"

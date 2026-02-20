@@ -10,4 +10,4 @@ tags:
 - hidden-config
 arguments:
 - overhead_cycles
-rendered_name: "overhead_cycles={{ overhead_cycles }}"
+rendered_name: "cycle_overhead={{ overhead_cycles }}"
