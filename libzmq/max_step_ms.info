@@ -1,0 +1,13 @@
+project_name: libzmq
+path: max_step_ms.patch
+shortname: max_step_ms
+description: Changes the max_step_ms value to a value defined by the argument `max_steps_ms`
+include_revisions:
+  revision_range:
+    start: de1bd5c8e744604fbfaa6d36866249d70cf272d0
+arguments:
+  - max_steps_ms
+tags:
+  - template
+  - hidden-config
+rendered_name: "max_step_ms={{ max_steps_ms }}"

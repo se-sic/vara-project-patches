@@ -1,0 +1,15 @@
+description: "Template patch to change the wfact_max value in bzip2"
+include_revisions:
+  revision_range:
+    start: 1ea1ac188ad4b9cb662e3f8314673c63df95a589
+    end:   master
+path: wfact_max.patch
+project_name: bzip2
+shortname: wfact_max
+tags:
+- template
+- hidden-config
+arguments:
+- wfact_max
+rendered_name: "wfact_max={{ wfact_max }}"
+

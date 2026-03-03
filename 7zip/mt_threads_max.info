@@ -1,0 +1,14 @@
+description: Template patch to change the mt_threads_max value in 7zip
+path: mt_threads_max.patch
+project_name: 7zip
+shortname: mt_threads_max
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - mt_threads_max
+rendered_name: "mt_threads_max={{ mt_threads_max }}"
+

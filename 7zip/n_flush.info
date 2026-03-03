@@ -1,0 +1,14 @@
+description: Template patch to change the n_flush value in 7zip
+path: n_flush.patch
+project_name: 7zip
+shortname: n_flush
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - n_flush
+rendered_name: "n_flush={{ n_flush }}"
+

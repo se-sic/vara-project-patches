@@ -1,0 +1,14 @@
+description: Template patch to change the num_bit_price value in 7zip
+path: num_bit_price.patch
+project_name: 7zip
+shortname: num_bit_price
+include_revisions:
+  revision_range:
+    start: 083561031433474eba5bd0e1f8782db3bb152f3b
+tags:
+  - template
+  - hidden-config
+arguments:
+  - num_bit_price
+rendered_name: "num_bit_price={{ num_bit_price }}"
+

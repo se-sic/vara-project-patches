@@ -1,0 +1,14 @@
+description: "Template patch to change the max_recursion value in mysql"
+path: max_recursion.patch
+project_name: mysql
+shortname: max_recursion
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - max_recursion
+rendered_name: "max_recursion={{ max_recursion }}"
+

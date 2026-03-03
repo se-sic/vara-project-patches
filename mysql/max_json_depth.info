@@ -1,0 +1,14 @@
+description: "Template patch to change the max_depth value in mysql"
+path: max_json_depth.patch
+project_name: mysql
+shortname: max_json_depth
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - max_depth
+rendered_name: "max_json_depth={{ max_depth }}"
+

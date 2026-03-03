@@ -1,0 +1,14 @@
+description: Template patch to change the minimum_match value in lrzip
+path: minimum_match.patch
+project_name: lrzip
+shortname: minimum_match
+include_revisions:
+  revision_range:
+    start: 1242aecfed4c8f10b52204d66e2daafcc53f92ac
+tags:
+  - template
+  - hidden-config
+arguments:
+  - minimum_match
+rendered_name: "minimum_match={{ minimum_match }}"
+

@@ -1,0 +1,14 @@
+description: "Template patch to change the sleep_retries value in mysql"
+path: sleep_retries.patch
+project_name: mysql
+shortname: sleep_retries
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - sleep_retries
+rendered_name: "sleep_retries={{ sleep_retries }}"
+

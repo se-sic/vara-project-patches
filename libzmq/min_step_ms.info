@@ -1,0 +1,14 @@
+project_name: libzmq
+path: min_step_ms.patch
+shortname: min_step_ms
+description: Changes the min_step_ms value to a value defined by the argument `min_steps_ms`
+include_revisions:
+  revision_range:
+    start: de1bd5c8e744604fbfaa6d36866249d70cf272d0
+arguments:
+  - min_steps_ms
+tags:
+  - template
+  - hidden-config
+rendered_name: "min_step_ms={{ min_steps_ms }}"
+

@@ -1,0 +1,14 @@
+description: "Template patch to change the max_history_size value in mysql"
+path: max_hist_size.patch
+project_name: mysql
+shortname: max_hist_size
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - max_history_size
+rendered_name: "max_hist_size={{ max_history_size }}"
+

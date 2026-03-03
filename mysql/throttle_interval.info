@@ -1,0 +1,14 @@
+description: "Template patch to change the throttle_interval value in mysql"
+path: throttle_interval.patch
+project_name: mysql
+shortname: throttle_interval
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - throttle_interval
+rendered_name: "throttle_interval={{ throttle_interval }}"
+

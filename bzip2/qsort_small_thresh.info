@@ -1,0 +1,15 @@
+description: "Template patch to change the qsort_small_thresh value in bzip2"
+include_revisions:
+  revision_range:
+    start: 1ea1ac188ad4b9cb662e3f8314673c63df95a589
+    end:   master
+path: qsort_small_thresh.patch
+project_name: bzip2
+shortname: qsort_small_thresh
+tags:
+- template
+- hidden-config
+arguments:
+- qsort_small_thresh
+rendered_name: "qsort_small_thresh={{ qsort_small_thresh }}"
+

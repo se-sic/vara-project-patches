@@ -1,0 +1,14 @@
+description: "Template patch to change the simple_limit value in mysql"
+path: simple_limit.patch
+project_name: mysql
+shortname: simple_limit
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - simple_limit
+rendered_name: "simple_limit={{ simple_limit }}"
+

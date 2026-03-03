@@ -1,0 +1,14 @@
+description: "Template patch to change the tmp_batch_size value in mysql"
+path: tmp_batch_size.patch
+project_name: mysql
+shortname: tmp_batch_size
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - tmp_batch_size
+rendered_name: "tmp_batch_size={{ tmp_batch_size }}"
+

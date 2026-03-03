@@ -1,0 +1,13 @@
+description: Template patch to change the literal cost heuristic value in brotli
+path: literal_cost.patch
+project_name: brotli
+shortname: literal_cost
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - literal_cost
+rendered_name: "literal_cost={{ literal_cost }}"

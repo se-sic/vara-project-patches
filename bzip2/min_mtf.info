@@ -1,0 +1,15 @@
+description: "Template patch to change the min_mtf value in bzip2"
+include_revisions:
+  revision_range:
+    start: 1ea1ac188ad4b9cb662e3f8314673c63df95a589
+    end:   master
+path: min_mtf.patch
+project_name: bzip2
+shortname: min_mtf
+tags:
+- template
+- hidden-config
+arguments:
+- min_mtf
+rendered_name: "min_mtf={{ min_mtf }}"
+

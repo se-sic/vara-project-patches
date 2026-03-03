@@ -1,0 +1,13 @@
+description: Template patch to change the min cost heuristic value in brotli
+path: stream_limit.patch
+project_name: brotli
+shortname: stream_limit
+include_revisions:
+  revision_range:
+    start: ed738e842d2fbdf2d6459e39267a633c4a9b2f5d
+tags:
+  - template
+  - hidden-config
+arguments:
+  - stream_limit
+rendered_name: "stream_limit={{ stream_limit }}"

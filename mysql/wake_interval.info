@@ -1,0 +1,14 @@
+description: "Template patch to change the wake_interval value in mysql"
+path: wake_interval.patch
+project_name: mysql
+shortname: wake_interval
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - wake_interval
+rendered_name: "wake_interval={{ wake_interval }}"
+

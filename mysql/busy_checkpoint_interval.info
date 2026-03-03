@@ -1,0 +1,14 @@
+description: "Template patch to change the busy_checkpoint_interval value in mysql"
+path: busy_checkpoint_interval.patch
+project_name: mysql
+shortname: busy_checkpoint_interval
+include_revisions:
+  revision_range:
+    start: 0896fcd61dec11a0904166911a0126f59daaa1bf
+tags:
+  - template
+  - hidden-config
+arguments:
+  - busy_checkpoint_interval
+rendered_name: "busy_checkpoint_interval={{ busy_checkpoint_interval }}"
+

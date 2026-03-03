@@ -1,0 +1,14 @@
+project_name: libzmq
+path: message_pipe_granularity.patch
+shortname: message_pipe_granularity
+description: Changes the message_pipe_granularity value to a value defined by the argument `message_pipe_granularity`
+include_revisions:
+  revision_range:
+    start: de1bd5c8e744604fbfaa6d36866249d70cf272d0
+arguments:
+  - message_pipe_granularity
+tags:
+  - template
+  - hidden-config
+rendered_name: "message_pipe_granularity={{ message_pipe_granularity }}"
+
