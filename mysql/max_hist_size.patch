@@ -1,0 +1,13 @@
+diff --git a/sql/dd/impl/upgrade/server.cc b/sql/dd/impl/upgrade/server.cc
+index 59cf62bbf7a..8490be47c1c 100644
+--- a/sql/dd/impl/upgrade/server.cc
++++ b/sql/dd/impl/upgrade/server.cc
+@@ -1024,7 +1024,7 @@ void update_upgrade_history_file(bool initialize) {
+   constexpr char v_file_format[] = "1";
+ 
+   /* If > max entries, we keep the first and the (max - 1)  last ones. */
+-  constexpr int MAX_HISTORY_SIZE = 1000;
++  constexpr int MAX_HISTORY_SIZE = {{ max_history_size }};
+   static_assert(MAX_HISTORY_SIZE >= 2,
+                 "The upgrade history should contain at least the first "
+                 "and last entry.");

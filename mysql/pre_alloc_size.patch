@@ -1,0 +1,13 @@
+diff --git a/sql/sql_parse.cc b/sql/sql_parse.cc
+index e159c5e7464..5ad007753f4 100644
+--- a/sql/sql_parse.cc
++++ b/sql/sql_parse.cc
+@@ -2508,7 +2508,7 @@ done:
+     The factor 5 is pretty much arbitrary, but ends up allowing three
+     allocations (1 + 1.5 + 1.5²) under the current allocation policy.
+   */
+-  constexpr size_t kPreallocSz = 40960;
++  constexpr size_t kPreallocSz = {{ pre_alloc_size }};
+   if (thd->mem_root->allocated_size() < kPreallocSz)
+     thd->mem_root->ClearForReuse();
+   else

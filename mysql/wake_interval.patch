@@ -1,0 +1,13 @@
+diff --git a/storage/innobase/handler/ha_innodb.cc b/storage/innobase/handler/ha_innodb.cc
+index 211d17c85a8..bb7fa930623 100644
+--- a/storage/innobase/handler/ha_innodb.cc
++++ b/storage/innobase/handler/ha_innodb.cc
+@@ -551,7 +551,7 @@ about server activity: in case of normal DML ops it is not
+ sensible to call srv_active_wake_master_thread after each
+ operation, we only do it every INNOBASE_WAKE_INTERVAL'th step. */
+ 
+-constexpr uint32_t INNOBASE_WAKE_INTERVAL = 32;
++constexpr uint32_t INNOBASE_WAKE_INTERVAL = {{ wake_interval }};
+ static ulong innobase_active_counter = 0;
+ 
+ static hash_table_t *innobase_open_tables;

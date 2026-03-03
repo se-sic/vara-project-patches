@@ -1,0 +1,13 @@
+diff --git a/storage/perfschema/service_pfs_notification.cc b/storage/perfschema/service_pfs_notification.cc
+index a4bac36d7a6..b9b1858d022 100644
+--- a/storage/perfschema/service_pfs_notification.cc
++++ b/storage/perfschema/service_pfs_notification.cc
+@@ -181,7 +181,7 @@ struct PFS_notification_registry {
+     @return 0 if successful, 1 otherwise
+   */
+   int disable(int handle) {
+-    const int max_attempts = 8;
++    const int max_attempts = {{ max_attempts }};
+     const time_t timeout = 250000; /* .25s */
+     auto *node = m_head.load();
+ 

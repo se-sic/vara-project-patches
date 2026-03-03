@@ -1,0 +1,13 @@
+diff --git a/mysys/my_default.cc b/mysys/my_default.cc
+index 7743c461a31..134de85e378 100644
+--- a/mysys/my_default.cc
++++ b/mysys/my_default.cc
+@@ -929,7 +929,7 @@ static int search_default_file_with_ext(Process_option_func opt_handler,
+   char *value, tmp[FN_REFLEN];
+   static const char includedir_keyword[] = "includedir";
+   static const char include_keyword[] = "include";
+-  const int max_recursion_level = 10;
++  const int max_recursion_level = {{ max_recursion }};
+   MYSQL_FILE *fp;
+   uint line = 0;
+   bool found_group = false;

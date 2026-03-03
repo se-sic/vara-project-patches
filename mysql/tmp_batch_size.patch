@@ -1,0 +1,13 @@
+diff --git a/storage/innobase/srv/srv0srv.cc b/storage/innobase/srv/srv0srv.cc
+index 2dd141f33a8..1f430bb5213 100644
+--- a/storage/innobase/srv/srv0srv.cc
++++ b/storage/innobase/srv/srv0srv.cc
+@@ -3151,7 +3151,7 @@ void srv_purge_coordinator_thread() {
+   delay in shutdown, so reducing the batch size to magic number 20
+   (which was default in 5.5), which we hope will be sufficient to
+   remove all the undo records */
+-  const uint temp_batch_size = 20;
++  const uint temp_batch_size = {{ tmp_batch_size }};
+ 
+   n_pages_purged =
+       trx_purge(1,

@@ -1,0 +1,13 @@
+diff --git a/sql-common/json_syntax_check.cc b/sql-common/json_syntax_check.cc
+index e8c2c55107b..a037f811dc2 100644
+--- a/sql-common/json_syntax_check.cc
++++ b/sql-common/json_syntax_check.cc
+@@ -79,7 +79,7 @@ bool is_valid_json_syntax(const char *text, size_t length, size_t *error_offset,
+ }
+ 
+ /// The maximum number of nesting levels allowed in a JSON document.
+-static constexpr int JSON_DOCUMENT_MAX_DEPTH = 100;
++static constexpr int JSON_DOCUMENT_MAX_DEPTH = {{ max_depth }};
+ 
+ bool check_json_depth(size_t depth, const JsonErrorHandler &handler) {
+   if (depth > JSON_DOCUMENT_MAX_DEPTH) {

@@ -1,0 +1,13 @@
+diff --git a/storage/innobase/log/log0chkp.cc b/storage/innobase/log/log0chkp.cc
+index ce76bcb108d..454d0fecb34 100644
+--- a/storage/innobase/log/log0chkp.cc
++++ b/storage/innobase/log/log0chkp.cc
+@@ -920,7 +920,7 @@ void log_checkpointer(log_t *log_ptr) {
+   ut_d(log.m_checkpointer_thd = create_internal_thd());
+ 
+   static const uint64_t log_busy_checkpoint_interval =
+-      7; /*SRV_MASTER_CHECKPOINT_INTERVAL*/
++      {{ busy_checkpoint_interval }}; /*SRV_MASTER_CHECKPOINT_INTERVAL*/
+   auto old_activity_count = srv_get_activity_count();
+   ulint error = OS_SYNC_TIME_EXCEEDED;
+ 

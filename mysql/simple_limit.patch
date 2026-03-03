@@ -1,0 +1,13 @@
+diff --git a/sql/join_optimizer/cost_model.cc b/sql/join_optimizer/cost_model.cc
+index 7fc12dc5d8d..4bdda441c22 100644
+--- a/sql/join_optimizer/cost_model.cc
++++ b/sql/join_optimizer/cost_model.cc
+@@ -851,7 +851,7 @@ double EstimateDistinctRows(THD *thd, double child_rows, TermArray terms) {
+ 
+   // Do a simple but fast calculation of the row estimate if child_rows is
+   // less than this.
+-  constexpr double simple_limit = 10.0;
++  constexpr double simple_limit = {{ simple_limit }};
+ 
+   // EstimateDistinctRows() must be a continuous function of
+   // child_rows.  If two alternative access paths have slightly

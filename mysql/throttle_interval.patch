@@ -1,0 +1,13 @@
+diff --git a/storage/innobase/row/row0undo.cc b/storage/innobase/row/row0undo.cc
+index 7aa8d63ab10..9372aed5ca9 100644
+--- a/storage/innobase/row/row0undo.cc
++++ b/storage/innobase/row/row0undo.cc
+@@ -269,7 +269,7 @@ static void long_running_diag(undo_node_t &node) {
+   that both risks are sufficiently small for this value. Should either
+   scenario actually materialize, the value of throttle_interval may be
+   adjusted. */
+-  constexpr auto throttler_interval = 100;
++  constexpr auto throttler_interval = {{ throttle_interval }};
+ 
+   auto const rows_todo = node.trx.undo_no - node.trx.roll_limit;
+   ut_ad(diag.rows_total >= rows_todo);
