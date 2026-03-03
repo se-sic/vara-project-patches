@@ -1,0 +1,14 @@
+description: Template patch to change the trim_interval value in duckdb
+path: trim_interval.patch
+project_name: duckdb
+shortname: trim_interval
+include_revisions:
+  revision_range:
+    start: 6ddac802ffa9bcfbcc3f5f0d71de5dff9b0bc250
+tags:
+  - template
+  - hidden-config
+arguments:
+  - trim_interval
+rendered_name: "trim_interval={{ trim_interval }}"
+

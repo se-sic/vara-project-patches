@@ -1,0 +1,14 @@
+description: Template patch to change the est_factor value in duckdb
+path: est_factor.patch
+project_name: duckdb
+shortname: est_factor
+include_revisions:
+  revision_range:
+    start: 6ddac802ffa9bcfbcc3f5f0d71de5dff9b0bc250
+tags:
+  - template
+  - hidden-config
+arguments:
+  - est_factor
+rendered_name: "est_factor={{ est_factor }}"
+
