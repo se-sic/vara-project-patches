@@ -1,0 +1,14 @@
+description: "Adapts the FDEC stride value in x264"
+include_revisions:
+  revision_range:
+    start: 4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1
+    end:   HEAD
+path: fdec_stride.patch
+project_name: x264
+shortname: fdec_stride
+tags:
+- hidden-config
+arguments:
+- fdec_stride
+rendered_name: "fdec_stride={{ fdec_stride }}"
+

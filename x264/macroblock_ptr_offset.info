@@ -1,0 +1,14 @@
+description: "Adapts the macroblock pointer offset in x264"
+include_revisions:
+  revision_range:
+    start: 4613ac3c15fd75cebc4b9f65b7fb95e70a3acce1
+    end:   HEAD
+path: macroblock_ptr_offset.patch
+project_name: x264
+shortname: macroblock_ptr_offset
+tags:
+- hidden-config
+arguments:
+- ptr_offset
+rendered_name: "ptr_offset={{ ptr_offset }}"
+
