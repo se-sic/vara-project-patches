@@ -1,0 +1,13 @@
+description: "Adapts the subsumption threshold in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: subsume_thresh.patch
+project_name: cryptominisat
+shortname: subsume_thresh
+tags:
+- hidden-config
+arguments:
+- subsume_thresh
+rendered_name: "subsume_thresh={{ subsume_thresh }}"

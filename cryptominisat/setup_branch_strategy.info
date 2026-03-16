@@ -1,0 +1,13 @@
+description: "Adapts the branch strategy change multiplier in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: setup_branch_strategy.patch
+project_name: cryptominisat
+shortname: setup_branch_strategy
+tags:
+- hidden-config
+arguments:
+- strat_change_mult
+rendered_name: "strat_change_mult={{ strat_change_mult }}"

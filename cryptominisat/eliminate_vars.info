@@ -1,0 +1,13 @@
+description: "Adapts the elimination grow factor in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: eliminate_vars.patch
+project_name: cryptominisat
+shortname: eliminate_vars
+tags:
+- hidden-config
+arguments:
+- grow_factor
+rendered_name: "grow_factor={{ grow_factor }}"

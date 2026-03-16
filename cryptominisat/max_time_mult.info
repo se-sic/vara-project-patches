@@ -1,0 +1,13 @@
+description: "Adapts the maximum time multiplier in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: max_time_mult.patch
+project_name: cryptominisat
+shortname: max_time_mult
+tags:
+- hidden-config
+arguments:
+- mtime_mult
+rendered_name: "mtime_mult={{ mtime_mult }}"

@@ -1,0 +1,14 @@
+description: "Adapts the clause consolidation reallocation threshold in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: clause_consolidate.patch
+project_name: cryptominisat
+shortname: clause_consolidate
+tags:
+- hidden-config
+arguments:
+- realloc_limit
+rendered_name: "realloc_limit={{ realloc_limit }}"
+

@@ -1,0 +1,13 @@
+description: "Adapts the minimum good minimization effect threshold in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: min_effect_good_thresh.patch
+project_name: cryptominisat
+shortname: min_effect_good_thresh
+tags:
+- hidden-config
+arguments:
+- min_effect_good_thresh
+rendered_name: "min_effect_good_thresh={{ min_effect_good_thresh }}"

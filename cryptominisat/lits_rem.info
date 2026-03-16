@@ -1,0 +1,13 @@
+description: "Adapts the literal removal threshold in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: lits_rem.patch
+project_name: cryptominisat
+shortname: lits_rem
+tags:
+- hidden-config
+arguments:
+- lits_rem
+rendered_name: "lits_rem={{ lits_rem }}"

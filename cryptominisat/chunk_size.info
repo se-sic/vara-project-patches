@@ -1,0 +1,14 @@
+description: "Adapts the chunk size limit in CryptoMiniSat"
+include_revisions:
+  revision_range:
+    start: 4c377ecab94ca9e9d3b2348204fb0ffe27fe6dec
+    end:   HEAD
+path: chunk_size.patch
+project_name: cryptominisat
+shortname: chunk_size
+tags:
+- hidden-config
+arguments:
+- chunk_limit
+rendered_name: "chunk_limit={{ chunk_limit }}"
+
