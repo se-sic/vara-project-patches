@@ -1,0 +1,14 @@
+description: "Adapts the vivify check threshold in CaDiCaL"
+include_revisions:
+  revision_range:
+    start: 7b99c07f0bcab5824a5a3ce62c7066554017f641
+    end:   HEAD
+path: vivify_check.patch
+project_name: cadical
+shortname: vivify_check
+tags:
+- hidden-config
+arguments:
+- vivify_check_thresh
+rendered_name: "vivify_check_thresh={{ vivify_check_thresh }}"
+

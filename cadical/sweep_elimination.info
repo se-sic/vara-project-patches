@@ -1,0 +1,14 @@
+description: "Adapts the sweep elimination threshold in CaDiCaL"
+include_revisions:
+  revision_range:
+    start: 7b99c07f0bcab5824a5a3ce62c7066554017f641
+    end:   HEAD
+path: sweep_elimination.patch
+project_name: cadical
+shortname: sweep_elimination
+tags:
+- hidden-config
+arguments:
+- elimination_tresh
+rendered_name: "elimination_tresh={{ elimination_tresh }}"
+

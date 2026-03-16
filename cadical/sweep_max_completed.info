@@ -1,0 +1,14 @@
+description: "Adapts the maximum completed sweep count in CaDiCaL"
+include_revisions:
+  revision_range:
+    start: 7b99c07f0bcab5824a5a3ce62c7066554017f641
+    end:   HEAD
+path: sweep_max_completed.patch
+project_name: cadical
+shortname: sweep_max_completed
+tags:
+- hidden-config
+arguments:
+- max_completed
+rendered_name: "max_completed={{ max_completed }}"
+

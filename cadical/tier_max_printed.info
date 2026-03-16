@@ -1,0 +1,14 @@
+description: "Adapts the maximum printed tier count in CaDiCaL"
+include_revisions:
+  revision_range:
+    start: 7b99c07f0bcab5824a5a3ce62c7066554017f641
+    end:   HEAD
+path: tier_max_printed.patch
+project_name: cadical
+shortname: tier_max_printed
+tags:
+- hidden-config
+arguments:
+- max_printed
+rendered_name: "max_printed={{ max_printed }}"
+

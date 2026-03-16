@@ -1,0 +1,14 @@
+description: "Adapts the COUNTREF_COUNTS value in CaDiCaL"
+include_revisions:
+  revision_range:
+    start: 7b99c07f0bcab5824a5a3ce62c7066554017f641
+    end:   HEAD
+path: countref_cnts.patch
+project_name: cadical
+shortname: countref_cnts
+tags:
+- hidden-config
+arguments:
+- counts
+rendered_name: "counts={{ counts }}"
+
