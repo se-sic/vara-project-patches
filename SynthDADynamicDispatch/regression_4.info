@@ -14,4 +14,4 @@ feature_tags:
 - HashingSearcher
 arguments:
 - severity
-rendered_name: "regress_brut_force_and_hash_{{severity}}"
+rendered_name: "regress_brut_force_and_hash_{{severity}}ms"

@@ -17,4 +17,4 @@ feature_tags:
 - SmoothingAlgorithm
 arguments:
 - severity
-rendered_name: "smoothing-algorithm-smooth-regression-{{severity}}ms"
+rendered_name: "smoothing-algorithm-smooth-{{severity}}ms"

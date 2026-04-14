@@ -17,4 +17,4 @@ feature_tags:
 - DefaultStoragePolicy
 arguments:
 - severity
-rendered_name: "default-storage-init-{{severity}}"
+rendered_name: "default-storage-init-{{severity}}ms"

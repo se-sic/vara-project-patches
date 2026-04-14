@@ -13,4 +13,4 @@ feature_tags:
 - BruteForceSearcher
 arguments:
 - severity
-rendered_name: "regress_brut_force_{{severity}}"
+rendered_name: "regress_brut_force_{{severity}}ms"

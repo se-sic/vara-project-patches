@@ -13,4 +13,4 @@ feature_tags:
   - Compress
 arguments:
 - severity
-rendered_name: "reg_compress_data_{{severity}}"
+rendered_name: "reg_compress_data_{{severity}}ms"

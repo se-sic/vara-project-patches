@@ -17,4 +17,4 @@ feature_tags:
 - DataBaseLogger
 arguments:
 - severity
-rendered_name: "database-logger-logToDB-{{severity}}"
+rendered_name: "database-logger-logToDB-{{severity}}ms"

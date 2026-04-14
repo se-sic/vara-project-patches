@@ -13,4 +13,4 @@ feature_tags:
 - Reverse
 arguments:
 - severity
-rendered_name: "regress_reverse_{{severity}}"
+rendered_name: "regress_reverse_{{severity}}ms"

@@ -5,7 +5,7 @@ include_revisions:
     start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
 path: default-algorithm-solve-regression.patch
 project_name: SynthCTTemplateSpecialization
-shortname: default-algorith-solve-regression
+shortname: default-algorithm-solve-regression
 tags:
 - compile-time
 - regression
@@ -17,4 +17,4 @@ feature_tags:
 - DefaultAlgorithm
 arguments:
 - severity
-rendered_name: "default-algorith-solve-{{severity}}ms"
+rendered_name: "default-algorithm-solve-{{severity}}ms"

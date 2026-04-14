@@ -13,4 +13,4 @@ feature_tags:
 - F1_F2-F3
 arguments:
 - severity
-rendered_name: "regress_f1_f2_{{severity}}"
+rendered_name: "regress_f1_f2_{{severity}}ms"
