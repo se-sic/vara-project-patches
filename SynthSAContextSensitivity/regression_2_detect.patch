@@ -1,5 +1,5 @@
 diff --git a/projects/SynthSAContextSensitivity/main.cpp b/projects/SynthSAContextSensitivity/main.cpp
-index 344a2e2..6f602f1 100644
+index 344a2e2..22d7400 100644
 --- a/projects/SynthSAContextSensitivity/main.cpp
 +++ b/projects/SynthSAContextSensitivity/main.cpp
 @@ -1,4 +1,5 @@
@@ -8,11 +8,11 @@ index 344a2e2..6f602f1 100644
  #include "fp_util/sleep.h"
  
  #include <bit>
-@@ -77,6 +78,7 @@ int main(int argc, char *argv[]) {
-       Result = compute(UserInput, 8); // leads to imprecise results
-     }
+@@ -79,6 +80,7 @@ int main(int argc, char *argv[]) {
    } else if (boundsChecks(MemoryLimit) < 1024) { // 256 =< x < 1024
-+    fp_util::detect();
      Result = compute(UserInput, 16);             // leads to imprecise results
    } else {
++    fp_util::detect();
      Result = compute(UserInput, 250);
+   }
+ 
