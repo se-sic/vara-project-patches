@@ -1,14 +1,6 @@
-Submodule dune-grid contains modified content
-diff --git a/dune-grid/dune/grid/uggrid/uggrid.cc b/dune-grid/dune/grid/uggrid/uggrid.cc
-index 9a49416eb..bcf310a00 100644
---- a/dune-grid/dune/grid/uggrid/uggrid.cc
-+++ b/dune-grid/dune/grid/uggrid/uggrid.cc
-@@ -263,7 +263,7 @@ template < int dim >
- bool UGGrid < dim >::adapt()
- {
-   assert(multigrid_);
--
-+  fp_util::busy_sleep_for_millisecs({{ severity }});
-   // Set UG's currBVP variable to the BVP corresponding to this
-   // grid.  This is necessary if we have more than one UGGrid in use.
-   UG_NS<dim>::Set_Current_BVP(multigrid_->theBVP);
+diff --git a/dune-grid b/dune-grid
+--- a/dune-grid
++++ b/dune-grid
+@@ -1 +1 @@
+-Subproject commit a1020a6cb33cda7ca531910e900d6b294ea3d1e4
++Subproject commit a1020a6cb33cda7ca531910e900d6b294ea3d1e4-dirty
