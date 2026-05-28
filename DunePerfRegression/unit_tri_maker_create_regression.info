@@ -12,6 +12,7 @@ tags:
 - regression
 - template
 - maker
+- perf_prec
 - UnitTriangleMaker
 arguments:
 - severity

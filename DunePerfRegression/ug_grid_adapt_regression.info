@@ -13,6 +13,7 @@ tags:
 - template
 - grid
 - UGGrid
+- perf_prec
 arguments:
 - severity
 rendered_name: "ug_grid_adapt_{{severity}}ms"
