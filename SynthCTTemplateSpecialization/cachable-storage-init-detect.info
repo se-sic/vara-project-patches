@@ -11,3 +11,4 @@ tags:
 - synthetic
 - CachableStorage
 - region_identifier
+- perf_prec

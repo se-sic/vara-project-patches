@@ -6,7 +6,7 @@ index fe91e78..30e3125 100644
      for (int j = i; j < DataArray.size(); j++) {
        Target += DataArray[j];
        if (Verbose) {
-+        fp_util::sleep_for_millisecs(120);
++        fp_util::sleep_for_millisecs({{severity}});
          std::cout << "CurrentTarget " << Target << '\n';
        }
  

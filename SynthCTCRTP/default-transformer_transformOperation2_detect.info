@@ -4,10 +4,11 @@ include_revisions:
     start: 3a346d714d928d9433715b7e4750548a2c3eb977
 path: default-transformer_transformOperation2_detect.patch
 project_name: SynthCTCRTP
-shortname: default-transformer_transformOperation2_detect
+shortname: default-transformer-transformOperation2-detect
 tags:
 - compile-time
 - template
 - synthetic
 - DefaultTransformer
+- perf_prec
 - region_identifier

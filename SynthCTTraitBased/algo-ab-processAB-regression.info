@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the processAB function
+  of the AlgorithmWithAB of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: algo-ab-processAB-regression.patch
+project_name: SynthCTTraitBased
+shortname: algo-ab-processAB-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTTraitBased
+- perf_prec
+feature_tags:
+- AlgorithmWithAB
+arguments:
+- severity
+rendered_name: "algo-ab-processAB-{{severity}}ms"

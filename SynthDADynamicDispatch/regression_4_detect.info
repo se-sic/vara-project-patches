@@ -1,0 +1,11 @@
+description: "Region detection patch for regression_4"
+include_revisions:
+  revision_range:
+    start: 3a346d714d928d9433715b7e4750548a2c3eb977
+    end:   master
+path: regression_4_detect.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_brut_force_and_hash_detect
+tags:
+- region_identifier
+- perf_prec

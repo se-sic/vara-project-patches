@@ -9,3 +9,8 @@ shortname: regress_f1_f2_f3
 tags:
 - regression
 - perf_prec
+feature_tags:
+- F1_F2_F3
+arguments:
+- severity
+rendered_name: "regress_f1_f2_f3_{{severity}}ms"

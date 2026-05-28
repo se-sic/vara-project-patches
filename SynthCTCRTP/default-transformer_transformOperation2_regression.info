@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the transformOperation2
+  function of the DefaultTransformer of SynthCTCRTP.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: default-transformer_transformOperation2_regression.patch
+project_name: SynthCTCRTP
+shortname: default-transformer-transformOperation2-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTCRTP
+- perf_prec
+feature_tags:
+- DefaultTransformer
+arguments:
+- severity
+rendered_name: "default-transformer-transformOperation2-{{severity}}ms"

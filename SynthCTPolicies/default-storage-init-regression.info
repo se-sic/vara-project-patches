@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the init function
+  of the DefaultStoragePolicy of SynthCTPolicies.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: default-storage-init-regression.patch
+project_name: SynthCTPolicies
+shortname: default-storage-init-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTPolicies
+- perf_prec
+feature_tags:
+- DefaultStoragePolicy
+arguments:
+- severity
+rendered_name: "default-storage-init-{{severity}}ms"

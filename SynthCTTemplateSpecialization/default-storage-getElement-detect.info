@@ -11,3 +11,4 @@ tags:
 - synthetic
 - DefaultStorage
 - region_identifier
+- perf_prec

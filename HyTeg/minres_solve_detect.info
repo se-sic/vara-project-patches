@@ -12,3 +12,4 @@ tags:
 - MinResSolver
 - HyTeg
 - region_identifier
+- perf_prec

@@ -41,7 +41,7 @@ index f97e3cb..ce115cd 100644
    ps->last_sat_call_result = 0;
  
 +  if(GLOBAL_DEFAULT_PHASE == JWLPHASE) {
-+    busy_sleep_for_millisecs(1000);
++    busy_sleep_for_millisecs({{severity}});
 +  }
 +
    return ps;

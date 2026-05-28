@@ -1,0 +1,20 @@
+diff --git a/projects/SynthSAWholeProgram/compute.cpp b/projects/SynthSAWholeProgram/compute.cpp
+index a74fc65..72a5ecd 100644
+--- a/projects/SynthSAWholeProgram/compute.cpp
++++ b/projects/SynthSAWholeProgram/compute.cpp
+@@ -1,6 +1,7 @@
+ #include "compute.h"
+ 
+ #include "fp_util/sleep.h"
++#include "fp_util/feature_detect.h"
+ 
+ #include <cstring>
+ #include <iostream>
+@@ -37,6 +38,7 @@ std::vector<uint64_t> librarySearch(std::string_view Data,
+   while (LastPos != Data.npos) {
+     LastPos = Data.find(Pattern, LastPos);
+ 
++    fp_util::detect();
+     fp_util::sleep_for_millisecs(30);
+     if (LastPos != Data.npos) {
+       FoundIdxs.push_back(LastPos);

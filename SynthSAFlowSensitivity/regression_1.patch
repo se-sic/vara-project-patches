@@ -7,7 +7,7 @@ index fdc9778..06c0b2a 100644
    }
  
 -  fp_util::sleep_for_millisecs(500);
-+  fp_util::sleep_for_millisecs(1500);
++  fp_util::sleep_for_millisecs({{ 500 + severity }});
    return compute_fib_rec(N - 1) + compute_fib_rec(N - 2);
  }
  

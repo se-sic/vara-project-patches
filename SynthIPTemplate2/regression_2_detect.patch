@@ -1,0 +1,21 @@
+diff --git a/projects/SynthIPTemplate2/main.cpp b/projects/SynthIPTemplate2/main.cpp
+index 9e1283e..acc6fcc 100644
+--- a/projects/SynthIPTemplate2/main.cpp
++++ b/projects/SynthIPTemplate2/main.cpp
+@@ -3,6 +3,7 @@
+ #include <iostream>
+ #include <stdio.h>
+ #include <vector>
++#include "fp_util/feature_detect.h"
+ 
+ /// This is a synthetic case study using templates for configuration.
+ /// This implementation defers some configuration-dependent computations
+@@ -266,6 +267,8 @@ struct compress_t {
+ 
+     size_t blocksize = offsets.blocksize;
+ 
++    fp_util::detect();
++
+     while (i != e) {
+ 
+       unsigned char c = *i;

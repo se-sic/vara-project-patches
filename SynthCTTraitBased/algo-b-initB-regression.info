@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the initB function
+  of the AlgorithmWithB of SynthCTTraitBased.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: algo-b-initB-regression.patch
+project_name: SynthCTTraitBased
+shortname: algo-b-initB-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTTraitBased
+- perf_prec
+feature_tags:
+- AlgorithmWithB
+arguments:
+- severity
+rendered_name: "algo-b-initB-{{severity}}ms"

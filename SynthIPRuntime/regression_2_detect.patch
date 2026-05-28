@@ -1,0 +1,21 @@
+diff --git a/projects/SynthIPRuntime/main.cpp b/projects/SynthIPRuntime/main.cpp
+index ede9ff9..bf1a8ee 100644
+--- a/projects/SynthIPRuntime/main.cpp
++++ b/projects/SynthIPRuntime/main.cpp
+@@ -3,6 +3,7 @@
+ #include <iostream>
+ #include <stdio.h>
+ #include <vector>
++#include "fp_util/feature_detect.h"
+ 
+ /// This is a synthetic case study using load-time configuration.
+ ///
+@@ -264,6 +265,8 @@ struct compress_t {
+ 
+     size_t blocksize = offsets.blocksize;
+ 
++    fp_util::detect();
++
+     while (i != e) {
+ 
+       unsigned char c = *i;

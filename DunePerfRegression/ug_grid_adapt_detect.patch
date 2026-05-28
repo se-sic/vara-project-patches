@@ -9,7 +9,7 @@ index b97686180..628ae9c07 100644
  
 +namespace fp_util
 +{
-+  __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
++  inline __attribute__((feature_variable("__VARA__DETECT__"))) void detect() {
 +    long foo = 0;
 +    asm volatile("" : "+g"(foo) : :);
 +    foo++;

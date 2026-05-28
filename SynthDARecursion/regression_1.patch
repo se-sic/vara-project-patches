@@ -6,7 +6,7 @@ index 39a1e7c..3c01594 100644
        Tmp.push_back(SubString);
  
        if (RecLimit > Depth) {
-+        std::this_thread::sleep_for(std::chrono::milliseconds(70));
++        std::this_thread::sleep_for(std::chrono::milliseconds({{severity}}));
          Partition(Result, BaseString, i + 1, Tmp, Depth + 1);
        }
  

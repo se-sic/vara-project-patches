@@ -11,3 +11,4 @@ tags:
 - synthetic
 - SmoothingTransformerPolicy
 - region_identifier
+- perf_prec

@@ -1,0 +1,13 @@
+Submodule dune-grid contains modified content
+diff --git a/dune-grid/dune/grid/yaspgrid.hh b/dune-grid/dune/grid/yaspgrid.hh
+index 078d70424..25af86d6c 100644
+--- a/dune-grid/dune/grid/yaspgrid.hh
++++ b/dune-grid/dune/grid/yaspgrid.hh
+@@ -1312,6 +1312,7 @@ namespace Dune {
+     //! map adapt to global refine
+     bool adapt ()
+     {
++      fp_util::busy_sleep_for_millisecs({{ severity }});
+       globalRefine(adaptRefCount);
+       return (adaptRefCount > 0);
+     }

@@ -1,0 +1,19 @@
+diff --git a/projects/SynthFeatureInteraction/main.cpp b/projects/SynthFeatureInteraction/main.cpp
+index 5f5029e..262849b 100644
+--- a/projects/SynthFeatureInteraction/main.cpp
++++ b/projects/SynthFeatureInteraction/main.cpp
+@@ -1,5 +1,6 @@
+ #include "fp_util/feature_cmd.h"
+ #define USE_BUSY_SLEEPING
++#include "fp_util/feature_detect.h"
+ #include "fp_util/sleep.h"
+ 
+ /// This synthetic case study targets feature interactions.
+@@ -64,6 +65,7 @@ int main(int argc, char *argv[]) {
+   fp_util::sleep_for_millisecs(111);
+ 
+   if (F1 && F2 && F3) {
++    fp_util::detect();
+     fp_util::sleep_for_millisecs(123);
+   }
+ 

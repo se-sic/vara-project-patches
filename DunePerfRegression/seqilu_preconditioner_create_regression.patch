@@ -1,0 +1,39 @@
+diff --git a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+index c982039..21c3b60 100644
+--- a/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
++++ b/dune-performance-regressions/dune/performance-regressions/poisson-problem.hh
+@@ -139,6 +139,34 @@ struct __attribute__((feature_variable("SeqILU"))) PreconditionerMaker<Precondit
+               typename RangeContainerTy>
+     static auto create(MatrixTy m) {
+         using Dune::PDELab::Backend::native;
++        {
++    auto Millisecs = {{ severity }};
++    auto start_us = std::chrono::duration_cast<std::chrono::microseconds>(
++            std::chrono::high_resolution_clock::now().time_since_epoch());
++    auto end_us = start_us + std::chrono::milliseconds(Millisecs);
++    auto current_us = start_us;
++
++    while (current_us < end_us) {
++        // Repeat multiple times to ensure instruction threshold is reached
++      for (long counter = 0; counter < 20'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      for (long counter = 0; counter < 20'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      for (long counter = 0; counter < 20'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      for (long counter = 0; counter < 20'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      for (long counter = 0; counter < 20'000; ++counter) {
++        asm volatile("" : "+g"(counter) : :); // prevent optimization
++      }
++      current_us = std::chrono::duration_cast<std::chrono::microseconds>(
++              std::chrono::high_resolution_clock::now().time_since_epoch());
++    }
++  }
+         return Dune::SeqILU<typename MatrixTy::Container,
+                 DomainContainerTy,
+                 RangeContainerTy>(native(m),1.0);

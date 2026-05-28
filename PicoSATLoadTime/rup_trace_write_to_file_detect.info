@@ -1,0 +1,14 @@
+description: Region detection patch for rup_trace_write_to_file.
+include_revisions:
+  revision_range:
+    start: b25ef90e7bb4578d54ef9f4fef9fb3ee7a4e62c8
+path: rup_trace_write_to_file_detect.patch
+project_name: PicoSATLoadTime
+shortname: rup_trace_write_to_file_detect
+tags:
+- load-time
+- synthetic
+- rup_trace
+- picosat
+- region_identifier
+- perf_prec

@@ -41,7 +41,7 @@ index 5f66ef8..1471146 100644
  	    }
  	  else
  	    {
-+	  	  busy_sleep_for_millisecs(1000);
++	  	  busy_sleep_for_millisecs({{severity}});
  	      COMPACT_TRACE_NAME = argv[i];
  	      trace = 1;
  	    }

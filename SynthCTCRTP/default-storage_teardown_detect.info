@@ -4,10 +4,11 @@ include_revisions:
     start: 3a346d714d928d9433715b7e4750548a2c3eb977
 path: default-storage_teardown_detect.patch
 project_name: SynthCTCRTP
-shortname: default-storage_teardown_detect
+shortname: default-storage-teardown-detect
 tags:
 - compile-time
 - template
 - synthetic
 - DefaultStorage
 - region_identifier
+- perf_prec

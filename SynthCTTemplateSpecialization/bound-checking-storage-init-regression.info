@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the init function
+  of the BoundCheckingStorage of SynthCTTemplateSpecialization.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: bound-checking-storage-init-regression.patch
+project_name: SynthCTTemplateSpecialization
+shortname: bound-checking-storage-init-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTTemplateSpecialization
+- perf_prec
+feature_tags:
+- BoundCheckingStorage
+arguments:
+- severity
+rendered_name: "bound-checking-storage-init-{{severity}}ms"

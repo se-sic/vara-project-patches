@@ -9,3 +9,9 @@ shortname: regress_brut_force_and_hash
 tags:
 - regression
 - perf_prec
+feature_tags:
+- BruteForceSearcher
+- HashingSearcher
+arguments:
+- severity
+rendered_name: "regress_brut_force_and_hash_{{severity}}ms"

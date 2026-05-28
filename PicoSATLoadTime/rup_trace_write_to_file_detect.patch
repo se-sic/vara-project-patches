@@ -1,0 +1,25 @@
+diff --git a/app.c b/app.c
+index 5f66ef8..f164b9a 100644
+--- a/app.c
++++ b/app.c
+@@ -12,6 +12,12 @@
+ #define BUNZIP2 "bzcat %s"
+ #define GZIP "gzip -c -f > %s"
+ 
++__attribute__((feature_variable("__VARA__DETECT__"))) void walrus_detect() {
++	long foo = 0;
++	asm volatile("" : "+g"(foo) : :);
++	foo++;
++}
++
+ FILE * popen (const char *, const char*);
+ int pclose (FILE *);
+ 
+@@ -783,6 +789,7 @@ picosat_main (int argc, char **argv)
+ 	    }
+ 	  else
+ 	    {
++	  	  walrus_detect();
+ 	      RUP_TRACE_NAME = argv[i];
+ 	      trace = 1;
+ 	    }

@@ -1,0 +1,28 @@
+diff --git a/external/FeaturePerfUtilities b/external/FeaturePerfUtilities
+index b72ba04..f570808 160000
+--- a/external/FeaturePerfUtilities
++++ b/external/FeaturePerfUtilities
+@@ -1 +1 @@
+-Subproject commit b72ba04c3c39c49b7cabfdf2bcb9b6bb8c03367e
++Subproject commit f570808f511b511fd389db165d85a3d02c06d639
+diff --git a/projects/SynthDADynamicDispatch/main.cpp b/projects/SynthDADynamicDispatch/main.cpp
+index 90d60c3..d86bddf 100644
+--- a/projects/SynthDADynamicDispatch/main.cpp
++++ b/projects/SynthDADynamicDispatch/main.cpp
+@@ -10,6 +10,8 @@
+ #include <unordered_map>
+ #include <vector>
+ 
++#include "fp_util/feature_detect.h"
++
+ /// This synthetic case study targets virtual inheritance.
+ ///
+ /// --sorting  : use a sort-based searcher instead
+@@ -99,6 +101,7 @@ public:
+     std::unordered_map<int, int> Map;
+ 
+     for (int i = 0; i < Data.size(); i++) {
++      fp_util::detect();
+       fp_util::sleep_for_millisecs(100);
+       if (auto Entry = Map.find(TargetSum - Data[i]); Entry != Map.end()) {
+         return {std::tuple<uint32_t, uint32_t>{Data[Entry->second], Data[i]}};

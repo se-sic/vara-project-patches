@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the smoothData function
+  of the SmoothingTransformer of SynthCTCRTP.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: smoothing-transformer_smoothData_regression.patch
+project_name: SynthCTCRTP
+shortname: smoothing-transformer-smoothData-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTCRTP
+- perf_prec
+feature_tags:
+- SmoothingTransformer
+arguments:
+- severity
+rendered_name: "smoothing-transformer-smoothData-{{severity}}ms"

@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the solve function
+  of the GMRESSolver of HyTeg.
+include_revisions:
+  revision_range:
+    start: f4711dadc3f61386e6ccdc704baa783253332db2
+path: gmres_solve_regression.patch
+project_name: HyTeg
+shortname: gmres_solve_regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- HyTeg
+- perf_prec
+feature_tags:
+- GMRESSolver
+arguments:
+- severity
+rendered_name: "gmres_solve_{{severity}}ms"

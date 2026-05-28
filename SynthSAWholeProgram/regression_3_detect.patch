@@ -1,0 +1,15 @@
+diff --git a/projects/SynthSAWholeProgram/service.cpp b/projects/SynthSAWholeProgram/service.cpp
+index df02f6d..010f167 100644
+--- a/projects/SynthSAWholeProgram/service.cpp
++++ b/projects/SynthSAWholeProgram/service.cpp
+@@ -1,8 +1,10 @@
+ #include "service.h"
+ #include "compute.h"
+ #include "config.h"
++#include "fp_util/feature_detect.h"
+ 
+ uint64_t countPattern(std::string_view Data, std::string_view Pattern) {
++  fp_util::detect();
+   return getPatternIdxs(Data, Pattern).size();
+ }
+ 

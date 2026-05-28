@@ -9,3 +9,8 @@ shortname: regress_rec_limit
 tags:
 - regression
 - perf_prec
+feature_tags:
+- All
+arguments:
+- severity
+rendered_name: "regress_rec_limit_{{severity}}ms"

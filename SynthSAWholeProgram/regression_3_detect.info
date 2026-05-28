@@ -1,0 +1,12 @@
+description: "Region detection patch for regression_3"
+include_revisions:
+  revision_range:
+    start: 3a346d714d928d9433715b7e4750548a2c3eb977
+    end:   master
+path: regression_3_detect.patch
+project_name: FeaturePerfCSCollection
+shortname: regress_pattern_counting_detect
+tags:
+- regression
+- perf_prec
+- region_identifier

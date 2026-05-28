@@ -1,0 +1,21 @@
+diff --git a/projects/SynthSAFieldSensitivity/main.cpp b/projects/SynthSAFieldSensitivity/main.cpp
+index 1d0d963..cb49cde 100644
+--- a/projects/SynthSAFieldSensitivity/main.cpp
++++ b/projects/SynthSAFieldSensitivity/main.cpp
+@@ -3,6 +3,7 @@
+ #include <iostream>
+ #include <stdio.h>
+ #include <vector>
++#include "fp_util/feature_detect.h"
+ 
+ struct Configuration {
+   bool __attribute__((feature_variable("compress"))) compress = false;
+@@ -273,6 +274,8 @@ struct compress_t {
+ 
+     size_t blocksize = offsets.blocksize;
+ 
++    fp_util::detect();
++
+     while (i != e) {
+ 
+       unsigned char c = *i;

@@ -1,0 +1,20 @@
+description: Introduces an artificial regression into the teardown function
+  of the DefaultStorage of SynthCTCRTP.
+include_revisions:
+  revision_range:
+    start: 6d50a6efd57ee7ca2a7749758a65fd6c203f8e57
+path: default-storage_teardown_regression.patch
+project_name: SynthCTCRTP
+shortname: default-storage-teardown-regression
+tags:
+- compile-time
+- regression
+- template
+- synthetic
+- SynthCTCRTP
+- perf_prec
+feature_tags:
+- DefaultStorage
+arguments:
+- severity
+rendered_name: "default-storage-teardown-{{severity}}ms"

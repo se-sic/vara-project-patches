@@ -1,0 +1,18 @@
+diff --git a/projects/SynthSAContextSensitivity/main.cpp b/projects/SynthSAContextSensitivity/main.cpp
+index 344a2e2..22d7400 100644
+--- a/projects/SynthSAContextSensitivity/main.cpp
++++ b/projects/SynthSAContextSensitivity/main.cpp
+@@ -1,4 +1,5 @@
+ #include "fp_util/feature_cmd.h"
++#include "fp_util/feature_detect.h"
+ #include "fp_util/sleep.h"
+ 
+ #include <bit>
+@@ -79,6 +80,7 @@ int main(int argc, char *argv[]) {
+   } else if (boundsChecks(MemoryLimit) < 1024) { // 256 =< x < 1024
+     Result = compute(UserInput, 16);             // leads to imprecise results
+   } else {
++    fp_util::detect();
+     Result = compute(UserInput, 250);
+   }
+ 
