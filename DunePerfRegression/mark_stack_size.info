@@ -1,0 +1,13 @@
+description: Region detection patch
+include_revisions:
+  revision_range:
+    start: 94444ad36e8d943ac2cc33dc3c6f81f6b5bdd772
+path: mark_stack_size.patch
+project_name: DunePerfRegression
+shortname: mark_stack_size
+tags:
+- hidden-config
+- template
+arguments:
+  - stack_size
+rendered_name: "mark_stack_size={{ stack_size }}"
