@@ -1,13 +1,15 @@
 diff --git a/src/dd.c b/src/dd.c
-index 4e914336b..5be196c82 100644
+index d54910516..ea4151dba 100644
 --- a/src/dd.c
 +++ b/src/dd.c
-@@ -2524,7 +2524,7 @@ main (int argc, char **argv)
-     }
- 
-   start_time = gethrxtime ();
--  next_time = start_time + XTIME_PRECISION;
-+  next_time = start_time + XTIME_PRECISION;  // Change
- 
-   exit_status = dd_copy ();
- 
+@@ -1514,8 +1514,8 @@ scanargs (int argc, char *const *argv)
+         output_flags |= parse_symbols (val, flags, false,
+                                        N_("invalid output flag"));
+       else if (operand_is (name, "status"))
+-        status_level = parse_symbols (val, statuses, true,
+-                                      N_("invalid status level"));
++        status_level = parse_symbols (val, statuses, true,  // Change
++                                      N_("invalid status level"));  // Change
+       else
+         {
+           strtol_error invalid = LONGINT_OK;
