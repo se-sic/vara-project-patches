@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..6af80796a 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1235,7 +1235,7 @@ main (int argc, char **argv)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+-  atexit (close_stdout);
++  atexit (close_stdout);  // Change
+ 
+   while ((opt = getopt_long (argc, argv, "diw:", long_options, nullptr)) != -1)
+     switch (opt)

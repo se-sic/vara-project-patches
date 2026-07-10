@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..813e7b83b 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1136,7 +1136,7 @@ do_decode (FILE *in, char const *infile, FILE *out, bool ignore_garbage)
+   idx_t sum;
+   struct base_decode_context ctx;
+ 
+-  char padbuf[8] = "========";
++  char padbuf[8] = "========";  // Change
+   inbuf = xmalloc (BASE_LENGTH (DEC_BLOCKSIZE));
+   outbuf = xmalloc (DEC_BLOCKSIZE);
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..d1878150b 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1143,7 +1143,7 @@ do_decode (FILE *in, char const *infile, FILE *out, bool ignore_garbage)
+ #if BASE_TYPE == 42
+   ctx.inbuf = nullptr;
+ #endif
+-  base_decode_ctx_init (&ctx);
++  base_decode_ctx_init (&ctx);  // Change
+ 
+   do
+     {

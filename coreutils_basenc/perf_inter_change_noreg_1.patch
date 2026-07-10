@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..4d69fd5c8 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1230,7 +1230,7 @@ main (int argc, char **argv)
+ #endif
+ 
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);

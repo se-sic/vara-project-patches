@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..25eb99ce1 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -618,7 +618,7 @@ isubase16 (unsigned char ch)
+ static int
+ base16_length (int len)
+ {
+-  return len * 2;
++  return len * 2;  // Change
+ }
+ 
+ 

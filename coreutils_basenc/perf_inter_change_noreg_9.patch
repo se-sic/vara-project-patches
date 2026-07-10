@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..19e07fd56 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -324,7 +324,7 @@ init_inbuf (struct base_decode_context *ctx)
+ static void
+ prepare_inbuf (struct base_decode_context *ctx, idx_t inlen)
+ {
+-  if (ctx->bufsize < inlen)
++  if (ctx->bufsize < inlen)  // Change
+     ctx->inbuf = xpalloc (ctx->inbuf, &ctx->bufsize,
+                           inlen - ctx->bufsize, -1, sizeof *ctx->inbuf);
+ }

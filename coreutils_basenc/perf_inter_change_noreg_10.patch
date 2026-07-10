@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..e22370ca9 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -149,7 +149,7 @@ Base%d encode or decode FILE, or standard input, to standard output.\n\
+                         when decoding, input length must be a multiple of 5\n\
+ "), stdout);
+ #endif
+-      fputs (HELP_OPTION_DESCRIPTION, stdout);
++      fputs (HELP_OPTION_DESCRIPTION, stdout);  // Change
+       fputs (VERSION_OPTION_DESCRIPTION, stdout);
+ #if BASE_TYPE == 42
+       fputs (_("\

@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..3f444aed2 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -941,7 +941,7 @@ static void
+ base2_decode_ctx_init (struct base_decode_context *ctx)
+ {
+   init_inbuf (ctx);
+-  ctx->ctx.base2.octet = 0;
++  ctx->ctx.base2.octet = 0;  // Change
+   ctx->i = 0;
+ }
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..941be8878 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -501,7 +501,7 @@ base32hex_decode_ctx_wrapper (struct base_decode_context *ctx,
+   while (i--)
+     {
+       if (isubase32hex (*in))
+-        *p = base32_hex_to_norm[*in - 0x30];
++        *p = base32_hex_to_norm[*in - 0x30];  // Change
+       else
+         *p = *in;
+       ++p;

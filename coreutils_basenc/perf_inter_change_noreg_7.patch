@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..c1e6faa9c 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1082,7 +1082,7 @@ finish_and_exit (FILE *in, char const *infile)
+         error (EXIT_FAILURE, errno, "%s", quotef (infile));
+     }
+ 
+-  exit (EXIT_SUCCESS);
++  exit (EXIT_SUCCESS);  // Change
+ }
+ 
+ static _Noreturn void

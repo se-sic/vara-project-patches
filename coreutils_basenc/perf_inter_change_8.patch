@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..83a22f597 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -612,7 +612,7 @@ static signed char const base16_to_int[256] = {
+ static bool
+ isubase16 (unsigned char ch)
+ {
+-  return ch < sizeof base16_to_int && 0 <= base16_to_int[ch];
++  return ch < sizeof base16_to_int && 0 <= base16_to_int[ch];  // Change
+ }
+ 
+ static int

@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..07d422aac 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -476,7 +476,7 @@ base32hex_encode (char const *restrict in, idx_t inlen,
+   for (char *p = out; outlen--; p++)
+     {
+       affirm (0x32 <= *p && *p <= 0x5a);          /* LCOV_EXCL_LINE */
+-      *p = base32_norm_to_hex[*p - 0x32];
++      *p = base32_norm_to_hex[*p - 0x32];  // Change
+     }
+ }
+ 

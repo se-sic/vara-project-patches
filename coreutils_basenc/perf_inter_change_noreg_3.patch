@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..c635859ad 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1090,7 +1090,7 @@ do_encode (FILE *in, char const *infile, FILE *out, idx_t wrap_column)
+ {
+   idx_t current_column = 0;
+   char *inbuf, *outbuf;
+-  idx_t sum;
++  idx_t sum;  // Change
+ 
+   inbuf = xmalloc (ENC_BLOCKSIZE);
+   outbuf = xmalloc (BASE_LENGTH (ENC_BLOCKSIZE));

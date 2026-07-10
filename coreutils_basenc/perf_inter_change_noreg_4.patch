@@ -1,0 +1,13 @@
+diff --git a/src/basenc.c b/src/basenc.c
+index c07d00f9a..32d82c871 100644
+--- a/src/basenc.c
++++ b/src/basenc.c
+@@ -1088,7 +1088,7 @@ finish_and_exit (FILE *in, char const *infile)
+ static _Noreturn void
+ do_encode (FILE *in, char const *infile, FILE *out, idx_t wrap_column)
+ {
+-  idx_t current_column = 0;
++  idx_t current_column = 0;  // Change
+   char *inbuf, *outbuf;
+   idx_t sum;
+ 
