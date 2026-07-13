@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..474f39ef0 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2016,7 +2016,7 @@ copy_with_unblock (char const *buf, idx_t nread)
+ 
+   for (idx_t i = 0; i < nread; i++)
+     {
+-      char c = buf[i];
++      char c = buf[i];  // Change
+ 
+       if (col++ >= conversion_blocksize)
+         {

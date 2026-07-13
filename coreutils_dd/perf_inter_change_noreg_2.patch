@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..5c3f904f2 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2425,7 +2425,7 @@ main (int argc, char **argv)
+   /* Arrange to close stdout if parse_long_options exits.  */
+   atexit (maybe_close_stdout);
+ 
+-  page_size = getpagesize ();
++  page_size = getpagesize ();  // Change
+ 
+   parse_gnu_standard_options_only (argc, argv, PROGRAM_NAME, PACKAGE, Version,
+                                    true, usage, AUTHORS,

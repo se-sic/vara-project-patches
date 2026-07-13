@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..21ddf1ad3 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -702,7 +702,7 @@ alloc_obuf (void)
+   else
+     {
+       alloc_ibuf ();
+-      obuf = ibuf;
++      obuf = ibuf;  // Change
+     }
+ }
+ 

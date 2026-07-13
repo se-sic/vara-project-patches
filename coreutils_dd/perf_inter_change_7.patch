@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..b8af3c446 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1964,7 +1964,7 @@ copy_simple (char const *buf, idx_t nread)
+     {
+       idx_t nfree = MIN (nread, output_blocksize - oc);
+ 
+-      memcpy (obuf + oc, start, nfree);
++      memcpy (obuf + oc, start, nfree);  // Change
+ 
+       nread -= nfree;		/* Update the number of bytes left to copy. */
+       start += nfree;

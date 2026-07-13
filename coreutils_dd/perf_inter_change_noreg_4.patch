@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..032125858 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1501,7 +1501,7 @@ scanargs (int argc, char *const *argv)
+       if (operand_is (name, "if"))
+         input_file = val;
+       else if (operand_is (name, "of"))
+-        output_file = val;
++        output_file = val;  // Change
+       else if (operand_is (name, "conv"))
+         conversions_mask |= parse_symbols (val, conversions, false,
+                                            N_("invalid conversion"));

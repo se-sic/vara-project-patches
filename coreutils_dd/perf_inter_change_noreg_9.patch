@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..4aec890e5 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -710,7 +710,7 @@ static void
+ translate_charset (char const *new_trans)
+ {
+   for (int i = 0; i < 256; i++)
+-    trans_table[i] = new_trans[trans_table[i]];
++    trans_table[i] = new_trans[trans_table[i]];  // Change
+   translation_needed = true;
+ }
+ 

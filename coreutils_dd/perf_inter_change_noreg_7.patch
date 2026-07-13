@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..cd9ae25b4 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -687,7 +687,7 @@ alloc_obuf (void)
+ 
+   if (conversions_mask & C_TWOBUFS)
+     {
+-      obuf = alignalloc (page_size, output_blocksize);
++      obuf = alignalloc (page_size, output_blocksize);  // Change
+       if (!obuf)
+         {
+           char hbuf[LONGEST_HUMAN_READABLE + 1];

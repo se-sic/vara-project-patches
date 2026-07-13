@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..c3fcdcafc 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1253,7 +1253,7 @@ static void
+ write_output (void)
+ {
+   idx_t nwritten = iwrite (STDOUT_FILENO, obuf, output_blocksize);
+-  w_bytes += nwritten;
++  w_bytes += nwritten;  // Change
+   if (nwritten != output_blocksize)
+     {
+       diagnose (errno, _("writing to %s"), quoteaf (output_file));

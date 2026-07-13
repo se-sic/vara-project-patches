@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..44cf2b23c 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1926,7 +1926,7 @@ advance_input_after_read_error (idx_t nbytes)
+   else
+     {
+       off_t offset;
+-      advance_input_offset (nbytes);
++      advance_input_offset (nbytes);  // Change
+       if (input_offset < 0)
+         {
+           diagnose (0, _("offset overflow while reading file %s"),

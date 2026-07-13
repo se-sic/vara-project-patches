@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..9df5513fa 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -1499,7 +1499,7 @@ scanargs (int argc, char *const *argv)
+       val++;
+ 
+       if (operand_is (name, "if"))
+-        input_file = val;
++        input_file = val;  // Change
+       else if (operand_is (name, "of"))
+         output_file = val;
+       else if (operand_is (name, "conv"))

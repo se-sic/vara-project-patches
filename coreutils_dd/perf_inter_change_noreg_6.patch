@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..21a987c48 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -665,7 +665,7 @@ alloc_ibuf (void)
+     return;
+ 
+   bool extra_byte_for_swab = !!(conversions_mask & C_SWAB);
+-  ibuf = alignalloc (page_size, input_blocksize + extra_byte_for_swab);
++  ibuf = alignalloc (page_size, input_blocksize + extra_byte_for_swab);  // Change
+   if (!ibuf)
+     {
+       char hbuf[LONGEST_HUMAN_READABLE + 1];

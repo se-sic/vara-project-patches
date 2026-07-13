@@ -1,0 +1,13 @@
+diff --git a/src/dd.c b/src/dd.c
+index 4e914336b..0b5eef84b 100644
+--- a/src/dd.c
++++ b/src/dd.c
+@@ -2414,7 +2414,7 @@ main (int argc, char **argv)
+   int exit_status;
+   off_t offset;
+ 
+-  install_signal_handlers ();
++  install_signal_handlers ();  // Change
+ 
+   initialize_main (&argc, &argv);
+   set_program_name (argv[0]);
