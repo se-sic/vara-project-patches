@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..1263c09d1 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -929,7 +929,7 @@ print_filename (char const *file, bool escape)
+ {
+   if (! escape)
+     {
+-      fputs (file, stdout);
++      fputs (file, stdout);  // Change
+       return;
+     }
+ 

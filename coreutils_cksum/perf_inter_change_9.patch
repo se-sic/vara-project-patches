@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..f4e34a781 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -282,7 +282,7 @@ blake2b_sum_stream (FILE *stream, void *resstream, uintmax_t *length)
+ static int
+ sm3_sum_stream (FILE *stream, void *resstream, uintmax_t *length)
+ {
+-  return sm3_stream (stream, resstream);
++  return sm3_stream (stream, resstream);  // Change
+ }
+ 
+ enum Algorithm

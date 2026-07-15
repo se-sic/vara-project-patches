@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..303795d11 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -203,7 +203,7 @@ static bool quiet = false;
+ static bool strict = false;
+ 
+ /* Whether a BSD reversed format checksum is detected.  */
+-static int bsd_reversed = -1;
++static int bsd_reversed = -1;  // Change
+ 
+ /* line delimiter.  */
+ static unsigned char digest_delim = '\n';

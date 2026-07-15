@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..42822b2f0 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -186,7 +186,7 @@ static size_t digest_hex_bytes;
+ 
+ /* With --check, don't generate any output.
+    The exit code indicates success or failure.  */
+-static bool status_only = false;
++static bool status_only = false;  // Change
+ 
+ /* With --check, print a message to standard error warning about each
+    improperly formatted checksum line.  */

@@ -1,0 +1,13 @@
+diff --git a/src/blake2/blake2-impl.h b/src/blake2/blake2-impl.h
+index 02a1b8fec..9fbb16a03 100644
+--- a/src/blake2/blake2-impl.h
++++ b/src/blake2/blake2-impl.h
+@@ -151,7 +151,7 @@ static BLAKE2_INLINE uint32_t rotr32( const uint32_t w, const unsigned c )
+ 
+ static BLAKE2_INLINE uint64_t rotr64( const uint64_t w, const unsigned c )
+ {
+-  return ( w >> c ) | ( w << ( 64 - c ) );
++  return ( w >> c ) | ( w << ( 64 - c ) );  // Change
+ }
+ 
+ /* prevents compiler optimizing out memset() */

@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..8d0a8240c 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -563,7 +563,7 @@ When checking, the input should be a former output of this program,\n\
+ or equivalent standalone program.\
+ \n"), stdout);
+ #endif
+-      emit_ancillary_info (PROGRAM_NAME);
++      emit_ancillary_info (PROGRAM_NAME);  // Change
+     }
+ 
+   exit (status);

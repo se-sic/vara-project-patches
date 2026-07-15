@@ -1,0 +1,13 @@
+diff --git a/src/digest.c b/src/digest.c
+index 1f65c73b4..5fdf4260c 100644
+--- a/src/digest.c
++++ b/src/digest.c
+@@ -982,7 +982,7 @@ digest_file (char const *filename, int *binary, unsigned char *bin_result,
+   if (is_stdin)
+     {
+       have_read_stdin = true;
+-      fp = stdin;
++      fp = stdin;  // Change
+       if (O_BINARY && *binary)
+         {
+           if (*binary < 0)

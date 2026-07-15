@@ -1,0 +1,11 @@
+description: "Insert change."
+include_revisions:
+  revision_range:
+    start: 24450e5eecf012bc1ea8cab8d677a45fa42c1778
+    end:   HEAD
+path: perf_inter_change_6.patch
+project_name: coreutils_cksum
+shortname: change6
+tags:
+- change
+- perf_inter
