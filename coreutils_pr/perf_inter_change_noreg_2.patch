@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..8a0fdd51e 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -874,7 +874,7 @@ main (int argc, char **argv)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+-  atexit (close_stdout);
++  atexit (close_stdout);  // Change
+ 
+   n_files = 0;
+   file_names = (argc > 1

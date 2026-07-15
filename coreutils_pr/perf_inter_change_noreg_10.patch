@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..c50f69ff0 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -512,7 +512,7 @@ static bool print_a_FF = false;
+ static bool print_a_header;
+ 
+ /* (-f) True means use formfeeds instead of newlines to separate pages. */
+-static bool use_form_feed = false;
++static bool use_form_feed = false;  // Change
+ 
+ /* True means we have read the standard input. */
+ static bool have_read_stdin = false;

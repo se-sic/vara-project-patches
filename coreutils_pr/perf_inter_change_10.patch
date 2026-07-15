@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..6038d974b 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2611,7 +2611,7 @@ print_stored (COLUMN *p)
+     print_sep_string ();
+ 
+   while (first != last)
+-    print_char (*first++);
++    print_char (*first++);  // Change
+ 
+   if (spaces_not_printed == 0)
+     {

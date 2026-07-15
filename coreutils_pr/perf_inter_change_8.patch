@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..0a2c170f7 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1819,7 +1819,7 @@ print_page (void)
+           if (p->lines_to_print > 0 || p->status == FF_FOUND)
+             {
+               FF_only = false;
+-              padding_not_printed = p->start_position;
++              padding_not_printed = p->start_position;  // Change
+               if (!(p->print_func) (p))
+                 read_rest_of_line (p);
+               pv |= pad_vertically;

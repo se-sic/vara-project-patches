@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..3ac471cb9 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -518,7 +518,7 @@ static bool use_form_feed = false;
+ static bool have_read_stdin = false;
+ 
+ /* True means the -a flag has been given. */
+-static bool print_across_flag = false;
++static bool print_across_flag = false;  // Change
+ 
+ /* True means we're printing one file in multiple (>1) downward columns. */
+ static bool storing_columns = true;

@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..4b4889e24 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1333,7 +1333,7 @@ init_fps (int number_of_files, char **av)
+   total_files = 0;
+ 
+   free (column_vector);
+-  column_vector = xnmalloc (columns, sizeof (COLUMN));
++  column_vector = xnmalloc (columns, sizeof (COLUMN));  // Change
+ 
+   if (parallel_files)
+     {

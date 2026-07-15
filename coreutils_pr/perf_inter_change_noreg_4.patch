@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..01456f6a7 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1310,7 +1310,7 @@ init_parameters (int number_of_files)
+      The width of an escape sequence (4) isn't the lower limit any longer.
+      We've to use 8 as the lower limit, if we use chars_per_default_tab = 8
+      to expand a tab which is not an input_tab-char. */
+-  free (clump_buff);
++  free (clump_buff);  // Change
+   clump_buff = xmalloc (MAX (8, chars_per_input_tab));
+ }
+ 

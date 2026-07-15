@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..2b6a8e6be 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1681,7 +1681,7 @@ init_header (char const *filename, int desc)
+       sprintf (buf, "%s.%09d", timetostr (t.tv_sec, secbuf), ns);
+     }
+ 
+-  free (date_text);
++  free (date_text);  // Change
+   date_text = buf;
+   file_text = custom_header ? custom_header : desc < 0 ? "" : filename;
+   header_width_available = (chars_per_line

@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..94a53d3f4 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2024,7 +2024,7 @@ store_char (char c)
+       /* May be too generous. */
+       buff = xpalloc (buff, &buff_allocated, 1, -1, sizeof *buff);
+     }
+-  buff[buff_current++] = c;
++  buff[buff_current++] = c;  // Change
+ }
+ 
+ static void

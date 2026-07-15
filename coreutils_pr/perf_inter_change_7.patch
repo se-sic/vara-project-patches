@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..db83db246 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2038,7 +2038,7 @@ add_line_number (COLUMN *p)
+      lower-order cut off. */
+   num_width = sprintf (number_buff, "%*d", chars_per_number, line_number);
+   line_number++;
+-  s = number_buff + (num_width - chars_per_number);
++  s = number_buff + (num_width - chars_per_number);  // Change
+   for (i = chars_per_number; i > 0; i--)
+     (p->char_func) (*s++);
+ 

@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..eb5188fbb 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1330,7 +1330,7 @@ init_fps (int number_of_files, char **av)
+ {
+   COLUMN *p;
+ 
+-  total_files = 0;
++  total_files = 0;  // Change
+ 
+   free (column_vector);
+   column_vector = xnmalloc (columns, sizeof (COLUMN));

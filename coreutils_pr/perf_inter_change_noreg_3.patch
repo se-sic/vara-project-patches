@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..bfb7fcfe4 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -1205,7 +1205,7 @@ getoptarg (char *arg, char switch_char, char *character, int *number)
+ static void
+ init_parameters (int number_of_files)
+ {
+-  int chars_used_by_number = 0;
++  int chars_used_by_number = 0;  // Change
+ 
+   lines_per_body = lines_per_page - lines_per_header - lines_per_footer;
+   if (lines_per_body <= 0)

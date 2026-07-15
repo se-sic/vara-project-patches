@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..35590367d 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -2319,7 +2319,7 @@ print_char (char c)
+       else
+         ++output_position;
+     }
+-  putchar (c);
++  putchar (c);  // Change
+ }
+ 
+ /* Skip to page PAGE before printing.

@@ -1,0 +1,13 @@
+diff --git a/src/pr.c b/src/pr.c
+index e7081a059..7b629acb3 100644
+--- a/src/pr.c
++++ b/src/pr.c
+@@ -869,7 +869,7 @@ main (int argc, char **argv)
+   idx_t n_alloc = 0;
+ 
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
