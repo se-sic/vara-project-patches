@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..836cbde9b 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -967,7 +967,7 @@ open_next_file (void)
+         {
+           input_filename = _("standard input");
+           in_stream = stdin;
+-          have_read_stdin = true;
++          have_read_stdin = true;  // Change
+           xset_binary_mode (STDIN_FILENO, O_BINARY);
+         }
+       else

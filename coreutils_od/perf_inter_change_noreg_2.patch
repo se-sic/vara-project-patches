@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..fb699405d 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1640,7 +1640,7 @@ main (int argc, char **argv)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+-  atexit (close_stdout);
++  atexit (close_stdout);  // Change
+ 
+   for (idx_t i = 0; i <= MAX_INTEGRAL_TYPE_SIZE; i++)
+     integral_type_size[i] = NO_SIZE;

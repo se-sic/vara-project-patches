@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..98c220a82 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -451,7 +451,7 @@ BYTES is hex with 0x or 0X prefix, and may have a multiplier suffix:\n\
+ and so on for G, T, P, E, Z, Y, R, Q.\n\
+ Binary prefixes can be used, too: KiB=K, MiB=M, and so on.\n\
+ "), stdout);
+-      emit_ancillary_info (PROGRAM_NAME);
++      emit_ancillary_info (PROGRAM_NAME);  // Change
+     }
+   exit (status);
+ }

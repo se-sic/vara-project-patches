@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..6dc3e7afb 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -239,7 +239,7 @@ static uintmax_t pseudo_offset;
+ static void (*format_address) (uintmax_t, char);
+ 
+ /* The number of input bytes to skip before formatting and writing.  */
+-static uintmax_t n_bytes_to_skip = 0;
++static uintmax_t n_bytes_to_skip = 0;  // Change
+ 
+ /* When false, MAX_BYTES_TO_FORMAT and END_OFFSET are ignored, and all
+    input is formatted.  */

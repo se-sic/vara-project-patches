@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..28d193b4a 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1457,7 +1457,7 @@ dump (void)
+                        block[!idx], block[idx]);
+           if (ferror (stdout))
+             ok = false;
+-          current_offset += n_bytes_read;
++          current_offset += n_bytes_read;  // Change
+           idx = !idx;
+         }
+     }

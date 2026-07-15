@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..d88b3f77e 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -541,7 +541,7 @@ print_named_ascii (size_t fields, size_t blank, void const *block,
+   for (i = fields; blank < i; i--)
+     {
+       int next_pad = pad * (i - 1) / fields;
+-      int masked_c = *p++ & 0x7f;
++      int masked_c = *p++ & 0x7f;  // Change
+       char const *s;
+       char buf[2];
+ 

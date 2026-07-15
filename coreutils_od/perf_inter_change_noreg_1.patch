@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..c04c70fe6 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1635,7 +1635,7 @@ main (int argc, char **argv)
+   uintmax_t pseudo_start IF_LINT ( = 0);
+ 
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);

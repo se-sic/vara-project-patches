@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..fb1fa0505 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -734,7 +734,7 @@ decode_one_format (char const *s_orig, char const *s, char const **next,
+    : ((Spec) == LONG ? (Long_format)					\
+       : (Min_format)))							\
+ 
+-      size_spec = integral_type_size[size];
++      size_spec = integral_type_size[size];  // Change
+ 
+       switch (c)
+         {

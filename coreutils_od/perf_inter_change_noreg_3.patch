@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..4337e9132 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -958,7 +958,7 @@ open_next_file (void)
+ 
+   do
+     {
+-      input_filename = *file_list;
++      input_filename = *file_list;  // Change
+       if (input_filename == nullptr)
+         return ok;
+       ++file_list;

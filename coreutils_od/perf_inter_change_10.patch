@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..bdb927a4b 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -615,7 +615,7 @@ print_ascii (size_t fields, size_t blank, void const *block,
+           s = buf;
+         }
+ 
+-      xprintf ("%*s", pad_remaining - next_pad + width, s);
++      xprintf ("%*s", pad_remaining - next_pad + width, s);  // Change
+       pad_remaining = next_pad;
+     }
+ }

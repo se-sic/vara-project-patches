@@ -1,0 +1,13 @@
+diff --git a/src/od.c b/src/od.c
+index 88d467c73..9408038d5 100644
+--- a/src/od.c
++++ b/src/od.c
+@@ -1005,7 +1005,7 @@ check_and_close (int in_errno)
+       if (!ferror (in_stream))
+         in_errno = 0;
+       if (STREQ (file_list[-1], "-"))
+-        clearerr (in_stream);
++        clearerr (in_stream);  // Change
+       else if (fclose (in_stream) != 0 && !in_errno)
+         in_errno = errno;
+       if (in_errno)
