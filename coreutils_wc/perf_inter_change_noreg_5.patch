@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..2b5876977 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -661,7 +661,7 @@ wc_file (char const *file, struct fstatus *fstatus)
+ static struct fstatus *
+ get_input_fstatus (idx_t nfiles, char *const *file)
+ {
+-  struct fstatus *fstatus = xnmalloc (nfiles ? nfiles : 1, sizeof *fstatus);
++  struct fstatus *fstatus = xnmalloc (nfiles ? nfiles : 1, sizeof *fstatus);  // Change
+ 
+   if (nfiles == 0
+       || (nfiles == 1

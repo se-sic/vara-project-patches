@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..7edad60c4 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -668,7 +668,7 @@ get_input_fstatus (idx_t nfiles, char *const *file)
+           && ((print_lines + print_words + print_chars
+                + print_bytes + print_linelength)
+               == 1)))
+-    fstatus[0].failed = 1;
++    fstatus[0].failed = 1;  // Change
+   else
+     {
+       for (idx_t i = 0; i < nfiles; i++)

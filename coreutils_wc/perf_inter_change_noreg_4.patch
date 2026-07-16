@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..b66c625e4 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -184,7 +184,7 @@ the following order: newline, word, character, byte, maximum line length.\n\
+       --total=WHEN       when to print a line with total counts;\n\
+                            WHEN can be: auto, always, only, never\n\
+ "), stdout);
+-      fputs (HELP_OPTION_DESCRIPTION, stdout);
++      fputs (HELP_OPTION_DESCRIPTION, stdout);  // Change
+       fputs (VERSION_OPTION_DESCRIPTION, stdout);
+       emit_ancillary_info (PROGRAM_NAME);
+     }

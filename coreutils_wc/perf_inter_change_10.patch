@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..268350878 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -290,7 +290,7 @@ wc_lines (int fd)
+           x86_64 and ppc64, but it's worth re-evaluating in future with
+           newer compilers, CPUs, or memchr() implementations etc.  */
+       long_lines = 15 * buflines <= bytes_read;
+-      lines += buflines;
++      lines += buflines;  // Change
+     }
+ }
+ 

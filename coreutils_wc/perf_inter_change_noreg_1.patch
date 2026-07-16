@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..e508acdea 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -729,7 +729,7 @@ main (int argc, char **argv)
+   struct Tokens tok;
+ 
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);

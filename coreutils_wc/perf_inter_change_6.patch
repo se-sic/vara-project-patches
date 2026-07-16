@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..9d2864132 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -134,7 +134,7 @@ static enum total_type total_mode = total_auto;
+ static bool
+ avx2_supported (void)
+ {
+-  bool avx_enabled = 0 < __builtin_cpu_supports ("avx2");
++  bool avx_enabled = 0 < __builtin_cpu_supports ("avx2");  // Change
+ 
+   if (debug)
+     error (0, 0, (avx_enabled

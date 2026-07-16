@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..44285f491 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -265,7 +265,7 @@ wc_lines (int fd)
+       if (bytes_read <= 0)
+         return (struct wc_lines) { bytes_read == 0 ? 0 : errno, lines, bytes };
+ 
+-      bytes += bytes_read;
++      bytes += bytes_read;  // Change
+       char *end = buf + bytes_read;
+       idx_t buflines = 0;
+ 

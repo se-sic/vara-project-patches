@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..6b0a805e2 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -128,7 +128,7 @@ static enum total_type const total_types[] =
+   total_auto, total_always, total_only, total_never
+ };
+ ARGMATCH_VERIFY (total_args, total_types);
+-static enum total_type total_mode = total_auto;
++static enum total_type total_mode = total_auto;  // Change
+ 
+ #ifdef USE_AVX2_WC_LINECOUNT
+ static bool

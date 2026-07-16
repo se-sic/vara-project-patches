@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..8be2c0a27 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -734,7 +734,7 @@ main (int argc, char **argv)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+-  atexit (close_stdout);
++  atexit (close_stdout);  // Change
+ 
+   page_size = getpagesize ();
+   /* Line buffer stdout to ensure lines are written atomically and immediately

@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..79f8744c9 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -692,7 +692,7 @@ compute_number_width (idx_t nfiles, struct fstatus const *fstatus)
+ 
+   if (0 < nfiles && fstatus[0].failed <= 0)
+     {
+-      int minimum_width = 1;
++      int minimum_width = 1;  // Change
+       uintmax_t regular_total = 0;
+ 
+       for (idx_t i = 0; i < nfiles; i++)

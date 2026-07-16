@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..26ce7ff82 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -289,7 +289,7 @@ wc_lines (int fd)
+           FIXME: This line length was determined in 2015, on both
+           x86_64 and ppc64, but it's worth re-evaluating in future with
+           newer compilers, CPUs, or memchr() implementations etc.  */
+-      long_lines = 15 * buflines <= bytes_read;
++      long_lines = 15 * buflines <= bytes_read;  // Change
+       lines += buflines;
+     }
+ }

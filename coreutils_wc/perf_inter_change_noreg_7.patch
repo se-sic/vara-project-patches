@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..8d34df65a 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -688,7 +688,7 @@ ATTRIBUTE_PURE
+ static int
+ compute_number_width (idx_t nfiles, struct fstatus const *fstatus)
+ {
+-  int width = 1;
++  int width = 1;  // Change
+ 
+   if (0 < nfiles && fstatus[0].failed <= 0)
+     {

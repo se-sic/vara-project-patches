@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..e5271eaae 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -212,7 +212,7 @@ write_counts (uintmax_t lines,
+               char const *file)
+ {
+   static char const format_sp_int[] = " %*s";
+-  char const *format_int = format_sp_int + 1;
++  char const *format_int = format_sp_int + 1;  // Change
+   char buf[MAX (INT_BUFSIZE_BOUND (intmax_t),
+                 INT_BUFSIZE_BOUND (uintmax_t))];
+ 

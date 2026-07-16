@@ -1,0 +1,13 @@
+diff --git a/src/wc.c b/src/wc.c
+index ed4ad62c4..ee8560bd4 100644
+--- a/src/wc.c
++++ b/src/wc.c
+@@ -641,7 +641,7 @@ wc_file (char const *file, struct fstatus *fstatus)
+         }
+       else
+         {
+-          bool ok = wc (fd, file, fstatus, 0);
++          bool ok = wc (fd, file, fstatus, 0);  // Change
+           if (close (fd) != 0)
+             {
+               error (0, errno, "%s", quotef (file));
