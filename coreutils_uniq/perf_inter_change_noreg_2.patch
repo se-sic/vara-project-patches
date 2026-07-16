@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..6849ce22e 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -481,7 +481,7 @@ main (int argc, char **argv)
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);
+ 
+-  atexit (close_stdout);
++  atexit (close_stdout);  // Change
+ 
+   while (true)
+     {

@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..bc512afc4 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -55,7 +55,7 @@ static idx_t skip_fields = false;
+ static idx_t skip_chars = false;
+ 
+ /* Number of chars to compare. */
+-static idx_t check_chars = IDX_MAX;
++static idx_t check_chars = IDX_MAX;  // Change
+ 
+ /* Whether to precede the output lines with a count of the number of
+    times they occurred in the input. */

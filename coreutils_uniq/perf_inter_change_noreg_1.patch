@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..ec1f033c9 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -476,7 +476,7 @@ main (int argc, char **argv)
+ 
+   file[0] = file[1] = "-";
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);

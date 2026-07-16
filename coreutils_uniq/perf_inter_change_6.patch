@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..52b6fd027 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -43,7 +43,7 @@
+ static void
+ swap_lines (struct linebuffer **a, struct linebuffer **b)
+ {
+-  struct linebuffer *tmp = *a;
++  struct linebuffer *tmp = *a;  // Change
+   *a = *b;
+   *b = tmp;
+ }

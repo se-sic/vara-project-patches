@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..78abd4598 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -360,7 +360,7 @@ check_file (char const *infile, char const *outfile, char delimiter)
+              && readlinebuffer_delim (thisline, stdin, delimiter) != 0)
+         {
+           idx_t thislen;
+-          char *thisfield = find_field (thisline, &thislen);
++          char *thisfield = find_field (thisline, &thislen);  // Change
+           bool new_group = (!prevfield
+                             || different (thisfield, prevfield,
+                                           thislen, prevlen));

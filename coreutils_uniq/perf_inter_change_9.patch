@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..26e404871 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -377,7 +377,7 @@ check_file (char const *infile, char const *outfile, char delimiter)
+                   stdout) != thisline->length)
+                 write_error ();
+ 
+-              swap_lines (&prevline, &thisline);
++              swap_lines (&prevline, &thisline);  // Change
+               prevfield = thisfield;
+               prevlen = thislen;
+               first_group_printed = true;

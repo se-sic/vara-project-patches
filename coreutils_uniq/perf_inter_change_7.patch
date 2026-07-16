@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..2d22d576d 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -287,7 +287,7 @@ different (char *old, char *new, idx_t oldlen, idx_t newlen)
+   if (ignore_case)
+     return oldlen != newlen || memcasecmp (old, new, oldlen);
+   else
+-    return oldlen != newlen || memcmp (old, new, oldlen);
++    return oldlen != newlen || memcmp (old, new, oldlen);  // Change
+ }
+ 
+ /* Output the line in linebuffer LINE to standard output

@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..58d89616d 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -230,7 +230,7 @@ size_opt (char const *opt, char const *msgid)
+   if (LONGINT_OVERFLOW < xstrtoimax (opt, nullptr, 10, &size, "")
+       || size < 0)
+     error (EXIT_FAILURE, 0, "%s: %s", opt, _(msgid));
+-  return MIN (size, IDX_MAX);
++  return MIN (size, IDX_MAX);  // Change
+ }
+ 
+ static bool

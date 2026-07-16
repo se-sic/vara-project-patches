@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..ebb5bb4e6 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -94,7 +94,7 @@ static enum delimit_method const delimit_method_map[] =
+ };
+ 
+ /* Select whether/how to delimit groups of duplicate lines.  */
+-static enum delimit_method delimit_groups = DM_NONE;
++static enum delimit_method delimit_groups = DM_NONE;  // Change
+ 
+ enum grouping_method
+ {

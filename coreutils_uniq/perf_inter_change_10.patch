@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..6b09aafce 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -406,7 +406,7 @@ check_file (char const *infile, char const *outfile, char delimiter)
+             }
+           idx_t thislen;
+           char *thisfield = find_field (thisline, &thislen);
+-          bool match = !different (thisfield, prevfield, thislen, prevlen);
++          bool match = !different (thisfield, prevfield, thislen, prevlen);  // Change
+           match_count += match;
+ 
+           if (match_count == INTMAX_MAX)

@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..8caf96e0d 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -216,7 +216,7 @@ You may want to sort the input first, or use 'sort -u' without 'uniq'.\n\
+ static bool
+ strict_posix2 (void)
+ {
+-  int posix_ver = posix2_version ();
++  int posix_ver = posix2_version ();  // Change
+   return 200112 <= posix_ver && posix_ver < 200809;
+ }
+ 

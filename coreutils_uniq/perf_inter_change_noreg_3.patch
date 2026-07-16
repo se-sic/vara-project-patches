@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..7cf15a79a 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -166,7 +166,7 @@ writing to OUTPUT (or standard output).\n\
+ With no options, matching lines are merged to the first occurrence.\n\
+ "), stdout);
+ 
+-      emit_mandatory_arg_note ();
++      emit_mandatory_arg_note ();  // Change
+ 
+      fputs (_("\
+   -c, --count           prefix lines by the number of occurrences\n\

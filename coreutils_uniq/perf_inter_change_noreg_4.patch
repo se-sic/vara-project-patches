@@ -1,0 +1,13 @@
+diff --git a/src/uniq.c b/src/uniq.c
+index 9aa780574..4984bdcf8 100644
+--- a/src/uniq.c
++++ b/src/uniq.c
+@@ -196,7 +196,7 @@ With no options, matching lines are merged to the first occurrence.\n\
+      fputs (_("\
+   -w, --check-chars=N   compare no more than N characters in lines\n\
+ "), stdout);
+-     fputs (HELP_OPTION_DESCRIPTION, stdout);
++     fputs (HELP_OPTION_DESCRIPTION, stdout);  // Change
+      fputs (VERSION_OPTION_DESCRIPTION, stdout);
+      fputs (_("\
+ \n\
