@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..9685eeace 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -2889,7 +2889,7 @@ compare (struct line const *a, struct line const *b)
+ 
+   /* If the keys all compare equal (or no keys were specified)
+      fall through to the default comparison.  */
+-  alen = a->length - 1, blen = b->length - 1;
++  alen = a->length - 1, blen = b->length - 1;  // Change
+ 
+   if (alen == 0)
+     diff = - NONZERO (blen);

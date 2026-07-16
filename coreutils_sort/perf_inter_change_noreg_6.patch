@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..22f69231d 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -387,7 +387,7 @@ async_safe_die (int errnum, char const *errstr)
+   if (errnum)
+     {
+       char errbuf[INT_BUFSIZE_BOUND (errnum)];
+-      char *p = inttostr (errnum, errbuf);
++      char *p = inttostr (errnum, errbuf);  // Change
+       ignore_value (write (STDERR_FILENO, ": errno ", 8));
+       ignore_value (write (STDERR_FILENO, p, strlen (p)));
+     }

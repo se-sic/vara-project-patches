@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..db21a4ea8 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -2905,7 +2905,7 @@ compare (struct line const *a, struct line const *b)
+     }
+   else
+     {
+-      diff = memcmp (a->text, b->text, MIN (alen, blen));
++      diff = memcmp (a->text, b->text, MIN (alen, blen));  // Change
+       if (!diff)
+         diff = (alen > blen) - (alen < blen);
+     }

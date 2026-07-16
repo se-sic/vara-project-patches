@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..25d9d008a 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -4354,7 +4354,7 @@ main (int argc, char **argv)
+   bool locale_ok;
+ 
+   initialize_main (&argc, &argv);
+-  set_program_name (argv[0]);
++  set_program_name (argv[0]);  // Change
+   locale_ok = !! setlocale (LC_ALL, "");
+   bindtextdomain (PACKAGE, LOCALEDIR);
+   textdomain (PACKAGE);

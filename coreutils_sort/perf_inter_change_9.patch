@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..7f23551db 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -3152,7 +3152,7 @@ mergefps (struct sortfile *files, size_t ntemps, size_t nfiles,
+             }
+           if (!savedline)
+             {
+-              savedline = &saved;
++              savedline = &saved;  // Change
+               if (savealloc < smallest->length)
+                 {
+                   do

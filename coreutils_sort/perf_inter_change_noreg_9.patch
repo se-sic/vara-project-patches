@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..15fbe9035 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -170,7 +170,7 @@ static bool hard_LC_TIME;
+ enum blanktype { bl_start, bl_end, bl_both };
+ 
+ /* The character marking end of line. Default to \n. */
+-static char eolchar = '\n';
++static char eolchar = '\n';  // Change
+ 
+ /* Lines are held in memory as counted strings. */
+ struct line

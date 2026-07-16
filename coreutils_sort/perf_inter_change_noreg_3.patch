@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..9da5ad718 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -1294,7 +1294,7 @@ inittables (void)
+ 
+   for (i = 0; i < UCHAR_LIM; ++i)
+     {
+-      blanks[i] = i == '\n' || isblank (i);
++      blanks[i] = i == '\n' || isblank (i);  // Change
+       nondictionary[i] = ! blanks[i] && ! isalnum (i);
+       nonprinting[i] = ! isprint (i);
+       fold_toupper[i] = toupper (i);

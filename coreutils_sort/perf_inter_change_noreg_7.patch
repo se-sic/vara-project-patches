@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..a699023a9 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -4324,7 +4324,7 @@ set_ordering (char const *s, struct keyfield *key, enum blanktype blanktype)
+ static struct keyfield *
+ key_init (struct keyfield *key)
+ {
+-  memset (key, 0, sizeof *key);
++  memset (key, 0, sizeof *key);  // Change
+   key->eword = SIZE_MAX;
+   return key;
+ }

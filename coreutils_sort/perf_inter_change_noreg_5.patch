@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..6c08a0090 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -4424,7 +4424,7 @@ main (int argc, char **argv)
+       }
+ 
+     act.sa_handler = sighandler;
+-    act.sa_mask = caught_signals;
++    act.sa_mask = caught_signals;  // Change
+     act.sa_flags = 0;
+ 
+     for (i = 0; i < nsigs; i++)

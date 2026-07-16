@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..220e7b073 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -348,7 +348,7 @@ enum { TAB_DEFAULT = CHAR_MAX + 1 };
+ /* Tab character separating fields.  If TAB_DEFAULT, then fields are
+    separated by the empty string between a non-blank character and a blank
+    character. */
+-static int tab = TAB_DEFAULT;
++static int tab = TAB_DEFAULT;  // Change
+ 
+ /* Flag to remove consecutive duplicate lines from the output.
+    Only the last of a sequence of equal lines will be output. */

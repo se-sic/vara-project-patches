@@ -1,0 +1,13 @@
+diff --git a/src/sort.c b/src/sort.c
+index b10183b6f..b50d87b29 100644
+--- a/src/sort.c
++++ b/src/sort.c
+@@ -2001,7 +2001,7 @@ numcompare (char const *a, char const *b)
+   while (blanks[to_uchar (*b)])
+     b++;
+ 
+-  return strnumcmp (a, b, decimal_point, thousands_sep);
++  return strnumcmp (a, b, decimal_point, thousands_sep);  // Change
+ }
+ 
+ static int
