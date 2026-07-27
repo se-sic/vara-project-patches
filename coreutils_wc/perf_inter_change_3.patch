@@ -9,5 +9,5 @@ index ed4ad62c4..3caac48a6 100644
 -          char const *plim = p + prev + bytes_read;
 +          char const *plim = p + prev + bytes_read;  // Change
            do
-             { busy_sleep_for_nanosecs(10); // Performance regression
+             {
                char32_t wide_char;
